@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Про нас – It World IT</title>
+
+  <meta name="description" content="Ми допомагаємо бізнесу працювати стабільно, безпечно і технологічно. Людина плюс ШІ-помічник.">
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            spaceBg: "#0a0a1a",
+            spaceCard: "rgba(30,35,70,0.4)",
+            neon: "#8b5cf6"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
+
+  <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
+
+  <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
+    <div class="flex items-center gap-2">
+      <div class="text-neon font-bold text-xl">It World IT</div>
+      <div class="text-xs text-gray-400 italic">Про нас</div>
+    </div>
+
+    <div class="flex items-center gap-4 mt-4 sm:mt-0">
+      <button id="themeToggle" class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition">
+        <span id="themeIcon" class="text-lg">🌙</span>
+        <span class="hidden sm:inline" id="themeLabel">Dark</span>
+      </button>
+
+      <nav class="text-sm text-gray-300 flex gap-3">
+        <a href="index.html" class="hover:text-neon">Головна</a>
+        <a href="services/index.html" class="hover:text-neon">Послуги</a>
+        <a href="contact.html" class="hover:text-neon">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-3xl mx-auto px-6 py-12 space-y-10">
+
+    <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
+      <h1 class="text-white text-2xl font-bold mb-2">Хто ми</h1>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Я – Дмитро. 15+ років у системній інфраструктурі, автоматизації, інформаційній безпеці.
+        Робив все: від розгортання VPN і безпеки пошти до побудови CI/CD і створення MVP продуктів.
+        <br><br>
+        Поруч зі мною – Aoi. Це ваш перший контакт і цифровий асистент.
+        Вона отримує звернення, задає уточнюючі питання, фільтрує спам і передає мені лише те, що справді важливо.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white text-xl font-semibold mb-4">Наші принципи</h2>
+      <ul class="grid gap-4 text-sm text-gray-300">
+        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🎯 Рішення, а не відмазки. Ми не продаємо "ще одну систему", ми вирішуємо конкретний біль.</li>
+        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🔐 Безпека з першого дня. Нема сенсу будувати бізнес на дірявій інфраструктурі.</li>
+        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">⏱ Швидкий старт. Ми не малюємо презентації на 30 слайдів. Ми розгортаємо робоче рішення.</li>
+        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🤝 Прозорість. Узгоджуємо, робимо, показуємо. Без «ой, воно дорожче стало».</li>
+      </ul>
+    </section>
+
+    <section class="text-center">
+      <a href="contact.html"
+         class="bg-neon text-black font-semibold rounded-xl px-5 py-2 text-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] hover:scale-[1.02] transition">
+        Звʼязатися з нами
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4 mt-12">
+    <div class="mb-3 text-gray-500">
+      © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
+    </div>
+    <div class="text-[0.7rem] text-gray-600 italic">
+      If it doesn’t work — someone probably pressed the wrong button 😂
+    </div>
+  </footer>
+
+  <script src="assets/js/stars.js"></script>
+  <script src="assets/js/main.js"></script>
+    <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(console.error);
+    });
+  }
+</script>
+</body>
+</html>
