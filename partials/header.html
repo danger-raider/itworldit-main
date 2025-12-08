@@ -7,7 +7,8 @@
     <div class="text-neon font-bold text-xl font-poppins">It World IT</div>
     <div class="text-xs text-gray-400 italic">Turning complexity into simplicity</div>
   </div>
-
+  
+  <!-- Перемикач мови -->
   <div class="flex items-center gap-3 mt-4 sm:mt-0">
     <select id="langSwitcher"
       class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon/50">
@@ -15,14 +16,24 @@
       <option value="en" selected>EN</option>
     </select>
 
-    <button id="themeToggle"
+    <!-- Перемикач теми -->
+    <button id="theme-toggle"
       class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition">
       <span id="themeIcon" class="text-lg">🌙</span>
-      <span class="hidden sm:inline" id="themeLabel">Dark</span>
+      <span id="themeLabel" class="ml-1 text-sm hidden sm:inline">Dark</span>
     </button>
-
+    
+    <!-- Мобільне меню -->
     <button id="menuToggle" aria-label="Menu"
       class="text-gray-200 border border-gray-600 rounded px-3 py-1 hover:text-neon hover:border-neon">☰</button>
+    <!-- мобільні лінки -->
+    <nav id="mobileMenu" class="hidden opacity-0 transition-all text-sm text-gray-300 hidden sm:flex gap-4">
+      <a href="index.html" class="hover:text-neon">Головна</a>
+      <a href="services/index.html" class="hover:text-neon">Послуги</a>
+      <a href="blog.html" class="hover:text-neon">Блог</a>
+      <a href="about.html" class="hover:text-neon">Про нас</a>
+      <a href="contact.html" class="hover:text-neon">Контакти</a>
+    </nav>     
 
     <nav id="desktopNav" class="text-sm text-gray-300 hidden sm:flex gap-4">
       <a href="index.html" class="hover:text-neon">Головна</a>
@@ -32,24 +43,23 @@
       <a href="contact.html" class="hover:text-neon">Контакти</a>
     </nav>
 
-<!-- у правому блоці поруч із мовою й темою -->
-<select id="fontSwitcher"
-  class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100">
-  <option value="poppins">Poppins</option>
-  <option value="noto">Noto Sans</option>
-  <option value="roboto">Roboto</option>
-</select>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYP125Y815"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XYP125Y815');
-</script>
+    <!-- у правому блоці поруч із мовою й темою -->
+    <!-- Перемикач шрифтів -->
+    <select id="font-toggle"
+      class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100">
+      <option value="poppins">Poppins</option>
+      <option value="noto">Noto Sans</option>
+      <option value="roboto">Roboto</option>
+    </select>
 
   </div>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYP125Y815"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XYP125Y815');
+  </script>
 </header>
