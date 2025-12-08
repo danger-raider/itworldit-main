@@ -27,14 +27,14 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="manifest" href="manifest.json" />
 </head>
-<!-- Вставляємо header -->
-<div id="header"></div>
+
 <body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
 
   <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
   <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
-
-  <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
+  <!-- Вставляємо header -->
+  <div id="header"></div>
+  <!-- <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
     <div class="flex items-center gap-2">
       <div class="text-neon font-bold text-xl">It World IT</div>
       <div class="text-xs text-gray-400 italic">Контакти</div>
@@ -52,7 +52,7 @@
         <a href="about.html" class="hover:text-neon">Про нас</a>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <main class="relative z-10 max-w-xl mx-auto px-6 py-12 space-y-10">
     <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
@@ -68,7 +68,24 @@
       </div>
 
       <!-- Форма -->
-        <form class="space-y-4 text-sm" id="contactForm">
+        <form id="contactForm">
+          <input type="text" name="_honey" style="display:none">
+
+          <label>Name:</label>
+          <input type="email" name="name" required placeholder="Ім’я / Компанія">
+
+          <label>Email:</label>
+          <input type="email" name="email" required placeholder="name@example.com">
+
+          <label>Чим ми можемо допомогти?</label>
+          <textarea name="message" required placeholder="Опишіть вашу задачу"></textarea>
+
+          <button type="submit">Відправити</button>
+
+          <div id="formStatus" class="status-msg"></div>
+        </form>
+
+        <!-- <form class="space-y-4 text-sm" id="contactForm">
         <div class="flex flex-col">
           <label class="text-gray-200 mb-1">Ваше ім’я</label>
           <input name="name" required class="..." placeholder="Ім’я / Компанія" />
@@ -84,12 +101,12 @@
           <textarea name="message" rows="4" required class="..." placeholder="Коротко опишіть задачу"></textarea>
         </div>
 
-        <!-- Honeypot -->
+
         <input type="text" name="_honey" class="hidden" style="display:none!important" tabindex="-1" autocomplete="off" />
 
         <button type="submit" class="btn-aoi w-full text-center">Надіслати запит</button>
         <div id="formStatus" class="text-center text-xs text-gray-400 mt-2"></div>
-      </form>
+        </form> -->
 
       <p class="text-[0.7rem] text-gray-500 mt-6 italic">
         Надсилаючи форму, ви погоджуєтесь на обробку ваших даних для зворотного зв’язку. Дані не продаються третім сторонам, бо фу.

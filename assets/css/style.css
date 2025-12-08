@@ -1,4 +1,11 @@
 /* базові дрібниці, які Tailwind не покриває з коробки */
+:root {
+  --font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
@@ -48,3 +55,37 @@ body[data-font="poppins"] { font-family: "Poppins","Noto Sans",system-ui,Arial,s
 body[data-font="noto"]    { font-family: "Noto Sans","Poppins",system-ui,Arial,sans-serif; }
 body[data-font="roboto"]  { font-family: "Roboto","Noto Sans",system-ui,Arial,sans-serif; }
 
+/* Form CSS */
+form input,
+form textarea {
+  font-size: 1rem;
+  padding: 12px 14px;
+  color: #ffffff; /* або #000 у світлій темі */
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  width: 100%;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.success-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #0f5132;
+  color: #d1e7dd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #842029;
+  color: #f8d7da;
+  border-radius: 8px;
+  text-align: center;
+}

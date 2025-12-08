@@ -43,8 +43,7 @@
   <link rel="manifest" href="manifest.json" />
 
 </head>
-<!-- Вставляємо header -->
-<div id="header"></div>
+
 <body class="bg-spaceBg text-gray-100 dark:bg-spaceBg dark:text-gray-100 relative overflow-x-hidden transition-colors duration-300">
 
   <!-- Зоряний фон -->
@@ -52,7 +51,9 @@
   <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
 
   <!-- HEADER -->
-  <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
+  <!-- Вставляємо header -->
+  <div id="header"></div>
+  <!-- <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
     <div class="flex items-center gap-2">
       <div class="text-neon font-bold text-xl">It World IT</div>
       <div class="text-xs text-gray-400 italic">Turning complexity into simplicity</div>
@@ -60,21 +61,18 @@
 
     <div class="flex items-center gap-4 mt-4 sm:mt-0">
 
-      <!-- Language Switcher -->
       <select id="langSwitcher"
         class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon/50">
         <option value="ua">UA</option>
         <option value="en" selected>EN</option>
       </select>
 
-      <!-- Theme Toggle -->
       <button id="themeToggle"
         class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition-colors">
         <span id="themeIcon" class="text-lg">🌙</span>
         <span class="hidden sm:inline" id="themeLabel">Dark</span>
       </button>
 
-      <!-- Navigation -->
       <nav class="text-sm text-gray-300 flex gap-3">
         <a href="index.html" class="hover:text-neon">Головна</a>
         <a href="services/index.html" class="hover:text-neon">Послуги</a>
@@ -82,7 +80,7 @@
         <a href="contact.html" class="hover:text-neon">Контакти</a>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <!-- HERO -->
   <section class="relative z-10 text-center px-6 py-16 md:py-24">
@@ -198,7 +196,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4">
+   <!-- Вставляємо footer -->
+  <div id="footer"></div>
+  <!-- <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4">
     <div class="mb-3">
       <nav class="flex flex-wrap justify-center gap-4 text-[0.75rem]">
         <a href="index.html" class="hover:text-neon">Головна</a>
@@ -216,7 +216,7 @@
     <div class="text-[0.7rem] text-gray-600 italic">
       If it doesn’t work — someone probably pressed the wrong button 😂
     </div>
-  </footer>
+  </footer> -->
 
   <!-- Scripts -->
   <script src="assets/js/stars.js"></script>
@@ -228,9 +228,6 @@
     });
   }
 </script>
-
-<!-- Вставляємо footer -->
-<div id="footer"></div>
 
 <script>
   async function includeHTML(id, file) {
