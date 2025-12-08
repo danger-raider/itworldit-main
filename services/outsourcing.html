@@ -31,30 +31,13 @@
   <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
   <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
 
-  <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
-    <div class="flex items-center gap-2">
-      <div class="text-neon font-bold text-xl">It World IT</div>
-      <div class="text-xs text-gray-400 italic">IT Аутсорсинг</div>
-    </div>
-
-    <div class="flex items-center gap-4 mt-4 sm:mt-0">
-      <button id="themeToggle" class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition">
-        <span id="themeIcon" class="text-lg">🌙</span>
-        <span class="hidden sm:inline" id="themeLabel">Dark</span>
-      </button>
-
-      <nav class="text-sm text-gray-300 flex gap-3">
-        <a href="../index.html" class="hover:text-neon">Головна</a>
-        <a href="../services/index.html" class="hover:text-neon">Послуги</a>
-        <a href="../contact.html" class="hover:text-neon">Контакти</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Вставляємо header -->
+  <div id="header"></div>
 
   <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 space-y-10">
     <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-      <h1 class="text-white text-2xl font-bold mb-2">Ваш партнер у цифровій трансформації</h1>
-      <p class="text-gray-300 text-sm leading-relaxed">
+      <h1 class="text-white text-2xl font-bold mb-2 md:text-4xl text-center">Ваш партнер у цифровій трансформації</h1>
+      <p class="text-gray-300 text-sm leading-relaxed" >
         Забезпечення безперебійної роботи систем, оперативне вирішення технічних питань.
         Я працюю як зовнішній технічний відділ, щоб ви могли зосередитися на бізнесі.
       </p>
@@ -104,14 +87,8 @@
     </section>
   </main>
 
-  <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4 mt-12">
-    <div class="mb-3 text-gray-500">
-      © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
-    </div>
-    <div class="text-[0.7rem] text-gray-600 italic">
-      If it doesn’t work — someone probably pressed the wrong button 😂
-    </div>
-  </footer>
+<!-- Вставляємо footer -->
+<div id="footer"></div>
 
   <script src="../assets/js/stars.js"></script>
   <script src="../assets/js/main.js"></script>
