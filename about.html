@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,6 +27,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="manifest" href="manifest.json" />
 </head>
+<!-- Вставляємо header -->
+<div id="header"></div>
 <body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
 
   <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
@@ -83,6 +86,9 @@
 
   </main>
 
+<!-- Вставляємо footer -->
+<div id="footer"></div>
+
   <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4 mt-12">
     <div class="mb-3 text-gray-500">
       © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
@@ -101,5 +107,18 @@
     });
   }
 </script>
+
+<script>
+  async function includeHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+  includeHTML("header", "/partials/header.html");
+  includeHTML("footer", "/partials/footer.html");
+</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/partials.js"></script>
+
 </body>
 </html>

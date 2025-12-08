@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,6 +27,8 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="manifest" href="manifest.json" />
 </head>
+<!-- Вставляємо header -->
+<div id="header"></div>
 <body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
 
   <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
@@ -65,36 +68,26 @@
       </div>
 
       <!-- Форма -->
-      <form class="space-y-4 text-sm" id="contactForm">
+        <form class="space-y-4 text-sm" id="contactForm">
         <div class="flex flex-col">
           <label class="text-gray-200 mb-1">Ваше ім’я</label>
-          <input name="name" required
-            class="bg-spaceCard/50 border border-purple-900/40 rounded px-3 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon/50"
-            placeholder="Ім’я / компанія" />
+          <input name="name" required class="..." placeholder="Ім’я / Компанія" />
         </div>
 
         <div class="flex flex-col">
           <label class="text-gray-200 mb-1">Ваш email</label>
-          <input name="email" type="email" required
-            class="bg-spaceCard/50 border border-purple-900/40 rounded px-3 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon/50"
-            placeholder="name@example.com" />
+          <input name="email" type="email" required class="..." placeholder="name@example.com" />
         </div>
 
         <div class="flex flex-col">
           <label class="text-gray-200 mb-1">Чим ми можемо допомогти?</label>
-          <textarea name="message" rows="4" required
-            class="bg-spaceCard/50 border border-purple-900/40 rounded px-3 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon/50"
-            placeholder="Коротко опишіть задачу або проблему"></textarea>
+          <textarea name="message" rows="4" required class="..." placeholder="Коротко опишіть задачу"></textarea>
         </div>
 
-        <!-- Honeypot проти ботів -->
-        <input type="text" name="company" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off" />
+        <!-- Honeypot -->
+        <input type="text" name="_honey" class="hidden" style="display:none!important" tabindex="-1" autocomplete="off" />
 
-        <button type="submit"
-          class="bg-neon text-black font-semibold rounded-xl px-5 py-2 text-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] hover:scale-[1.02] transition w-full text-center">
-          Надіслати запит
-        </button>
-
+        <button type="submit" class="btn-aoi w-full text-center">Надіслати запит</button>
         <div id="formStatus" class="text-center text-xs text-gray-400 mt-2"></div>
       </form>
 
@@ -103,7 +96,9 @@
       </p>
     </section>
   </main>
-
+<!-- Вставляємо footer -->
+<div id="footer"></div>
+<!-- 
   <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4 mt-12">
     <div class="mb-3 text-gray-500">
       © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
@@ -111,7 +106,7 @@
     <div class="text-[0.7rem] text-gray-600 italic">
       If it doesn’t work — someone probably pressed the wrong button 😂
     </div>
-  </footer>
+  </footer> -->
 
   <script src="assets/js/stars.js"></script>
   <script src="assets/js/main.js"></script>
@@ -122,5 +117,16 @@
     });
   }
 </script>
+
+<script>
+  async function includeHTML(id, file) {
+    const res = await fetch(file);
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  }
+  includeHTML("header", "/partials/header.html");
+  includeHTML("footer", "/partials/footer.html");
+</script>
+
 </body>
 </html>

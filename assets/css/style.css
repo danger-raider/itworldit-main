@@ -43,3 +43,8 @@ body {
 input[name="company"] {
   display:none !important;
 }
+
+body[data-font="poppins"] { font-family: "Poppins","Noto Sans",system-ui,Arial,sans-serif; }
+body[data-font="noto"]    { font-family: "Noto Sans","Poppins",system-ui,Arial,sans-serif; }
+body[data-font="roboto"]  { font-family: "Roboto","Noto Sans",system-ui,Arial,sans-serif; }
+
