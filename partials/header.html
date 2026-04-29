@@ -1,77 +1,144 @@
-<!-- header.html -->
- <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!-- partials/header.html -->
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<header id="siteHeader" class="site-header">
+  <div class="site-header__inner">
 
-<header class="sticky flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
+    <!-- Brand -->
+    <a href="/index.html" class="site-header__brand" aria-label="It World IT homepage">
+      <span class="site-header__logo">It World IT</span>
+      <span class="site-header__tagline" data-i18n="brand_tagline">
+        Turning complexity into simplicity
+      </span>
+    </a>
 
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBQ2L0CB5Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BBQ2L0CB5Y');
-  </script>
-
-  <div class="flex items-center gap-2">
-    <div class="text-neon font-bold text-xl font-poppins">It World IT</div>
-    <div class="text-xs text-gray-400 italic">Turning complexity into simplicity</div>
-  </div>
-  
-  <!-- Перемикач мови -->
-  <div class="flex items-center gap-3 mt-4 sm:mt-0">
-    <select id="langSwitcher"
-      class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon/50">
-      <option value="ua">UA</option>
-      <option value="en" selected>EN</option>
-    </select>
-
-    <!-- Перемикач теми -->
-    <button id="theme-toggle"
-      class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition">
-      <span id="themeIcon" class="text-lg">🌙</span>
-      <span id="themeLabel" class="ml-1 text-sm hidden sm:inline">Dark</span>
-    </button>
-    
-    <!-- Мобільне меню -->
-    <button id="menuToggle" aria-label="Menu"
-      class="text-gray-200 border border-gray-600 rounded px-3 py-1 hover:text-neon hover:border-neon">☰</button>
-    <!-- мобільні лінки -->
-    <nav id="mobileMenu" class="hidden opacity-0 transition-all text-sm text-gray-300 hidden sm:flex gap-4">
-      <a href="index.html" class="hover:text-neon">Головна</a>
-      <a href="services/index.html" class="hover:text-neon">Послуги</a>
-      <a href="blog.html" class="hover:text-neon">Блог</a>
-      <a href="about.html" class="hover:text-neon">Про нас</a>
-      <a href="contact.html" class="hover:text-neon">Контакти</a>
-    </nav>     
-
-    <nav id="desktopNav" class="text-sm text-gray-300 hidden sm:flex gap-4">
-      <a href="index.html" class="hover:text-neon">Головна</a>
-      <a href="services/index.html" class="hover:text-neon">Послуги</a>
-      <a href="blog.html" class="hover:text-neon">Блог</a>
-      <a href="about.html" class="hover:text-neon">Про нас</a>
-      <a href="contact.html" class="hover:text-neon">Контакти</a>
+    <!-- Navigation -->
+    <nav id="mainNav" class="site-header__nav" aria-label="Main navigation">
+      <a href="/index.html" class="site-header__nav-link" data-i18n="nav_home">Головна</a>
+      <a href="/services/index.html" class="site-header__nav-link" data-i18n="nav_services">Послуги</a>
+      <a href="/blog.html" class="site-header__nav-link" data-i18n="nav_blog">Блог</a>
+      <a href="/about.html" class="site-header__nav-link" data-i18n="nav_about">Про нас</a>
+      <a href="/contact.html" class="site-header__nav-link" data-i18n="nav_contact">Контакти</a>
     </nav>
 
-    <!-- у правому блоці поруч із мовою й темою -->
-    <!-- Перемикач шрифтів -->
-    <select id="font-toggle"
-      class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100">
-      <option value="poppins">Poppins</option>
-      <option value="noto">Noto Sans</option>
-      <option value="roboto">Roboto</option>
-    </select>
+    <!-- Controls -->
+    <div class="site-header__controls">
+
+      <!-- Language dropdown -->
+      <div class="site-dropdown" data-dropdown>
+        <button
+          id="langDropdownButton"
+          type="button"
+          class="site-dropdown__button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-label="Choose language"
+        >
+          <span id="langCurrent" class="site-dropdown__current">UA</span>
+          <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
+        </button>
+
+        <div
+          class="site-dropdown__menu"
+          role="listbox"
+          aria-labelledby="langDropdownButton"
+        >
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="ua"
+          >
+            <span class="site-dropdown__option-main">UA</span>
+            <span class="site-dropdown__option-sub">Українська</span>
+          </button>
+
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="en"
+          >
+            <span class="site-dropdown__option-main">EN</span>
+            <span class="site-dropdown__option-sub">English</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Theme switcher -->
+      <button
+        id="themeToggle"
+        type="button"
+        class="site-header__button"
+        aria-label="Toggle theme"
+      >
+        <span id="themeIcon" class="site-header__icon" aria-hidden="true">🌙</span>
+        <span id="themeLabel" class="site-header__button-label">Dark</span>
+      </button>
+
+      <!-- Font dropdown -->
+      <div class="site-dropdown site-dropdown--font" data-dropdown>
+        <button
+          id="fontDropdownButton"
+          type="button"
+          class="site-dropdown__button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-label="Choose font"
+        >
+          <span id="fontCurrent" class="site-dropdown__current">Poppins</span>
+          <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
+        </button>
+
+        <div
+          class="site-dropdown__menu site-dropdown__menu--wide"
+          role="listbox"
+          aria-labelledby="fontDropdownButton"
+        >
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-font-value="poppins"
+          >
+            <span class="site-dropdown__option-main">Poppins</span>
+            <span class="site-dropdown__option-sub">Modern geometric</span>
+          </button>
+
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-font-value="noto"
+          >
+            <span class="site-dropdown__option-main">Noto Sans</span>
+            <span class="site-dropdown__option-sub">Clean multilingual</span>
+          </button>
+
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-font-value="roboto"
+          >
+            <span class="site-dropdown__option-main">Roboto</span>
+            <span class="site-dropdown__option-sub">Technical neutral</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menuToggle"
+        type="button"
+        class="site-header__menu-button"
+        aria-label="Open menu"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <span id="menuIcon" aria-hidden="true">☰</span>
+      </button>
+
+    </div>
 
   </div>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYP125Y815"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XYP125Y815');
-  </script>
 </header>
