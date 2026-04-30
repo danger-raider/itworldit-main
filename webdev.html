@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Розробка простих веб-сайтів та інтеграцій | It World IT</title>
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Розробка легких, стильних і швидких веб-сайтів: landing pages, сайти-візитки, портфоліо, інтеграції з CRM, email, формами, оплатами, Google Sheets, Notion і Telegram."
+  />
+  <meta
+    name="keywords"
+    content="розробка сайтів, landing page, сайт-візитка, веб інтеграції, CRM інтеграція, Google Sheets, Webflow, Tilda, Telegram бот, форми, оплати"
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://itworldit.com/webdev.html" />
+
+  <!-- Language versions -->
+  <link rel="alternate" hreflang="uk" href="https://itworldit.com/webdev.html" />
+  <link rel="alternate" hreflang="en" href="https://itworldit.com/en/webdev.html" />
+  <link rel="alternate" hreflang="x-default" href="https://itworldit.com/webdev.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Розробка простих веб-сайтів та інтеграцій | It World IT" />
+  <meta
+    property="og:description"
+    content="Легкі, стильні та функціональні сайти, які швидко завантажуються, гарно виглядають і легко підтримуються."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/webdev.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/services/webdev-hero.webp" />
+  <meta property="og:image:alt" content="It World IT website development and integrations visual" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Розробка простих веб-сайтів та інтеграцій | It World IT" />
+  <meta
+    name="twitter:description"
+    content="Landing pages, сайти-візитки, портфоліо та інтеграції з CRM, формами, email, оплатами, Google Sheets, Notion і Telegram."
+  />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/services/webdev-hero.webp" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="/assets/img/services/webdev-hero.webp" type="image/webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://itworldit.com/#organization",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "logo": "https://itworldit.com/favicon.ico"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://itworldit.com/webdev.html#service",
+          "name": "Розробка простих веб-сайтів та інтеграцій",
+          "url": "https://itworldit.com/webdev.html",
+          "description": "Розробка легких, стильних і швидких веб-сайтів: landing pages, сайти-візитки, портфоліо та інтеграції з CRM, email, формами, оплатами, месенджерами, Google Sheets і Notion.",
+          "provider": {
+            "@id": "https://itworldit.com/#organization"
+          },
+          "serviceType": "Website Development and Integrations",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ukraine"
+          },
+          "offers": {
+            "@type": "OfferCatalog",
+            "name": "Орієнтовна вартість веб-розробки",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Односторінковий сайт",
+                "description": "Повністю готовий landing page із формами.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 300,
+                  "maxPrice": 600
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Сайт-візитка до 5 сторінок",
+                "description": "Сайт-візитка з дизайном і базовим SEO.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 600,
+                  "maxPrice": 1200
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Набір інтеграцій",
+                "description": "Форми, CRM, пошта та інші інтеграції залежно від складності.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 150,
+                  "maxPrice": 500
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body>
+  <!-- Background -->
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+  <div class="site-background-glow" aria-hidden="true"></div>
+
+  <!-- Header partial -->
+  <div id="header"></div>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="webdev-hero section-glow" aria-labelledby="serviceTitle">
+      <div class="webdev-hero__inner">
+        <div class="webdev-hero__content">
+          <p class="eyebrow">
+            Websites / Integrations / Performance
+          </p>
+
+          <h1 id="serviceTitle" class="section-title section-title--large">
+            Розробка простих веб-сайтів та інтеграцій
+          </h1>
+
+          <p class="section-summary section-summary--hero">
+            Сайт — це обличчя бізнесу. А інтеграції — його зв’язки з цифровим світом.
+            Я створюю легкі, стильні та функціональні сайти, які швидко завантажуються,
+            гарно виглядають і легко підтримуються.
+          </p>
+
+          <p class="section-summary">
+            А ще підключаю все, що треба: CRM, email, форми, оплати, месенджери.
+          </p>
+
+          <div class="actions">
+            <a href="/contact.html" class="btn btn--primary">
+              Замовити розробку сайту
+            </a>
+
+            <a href="#webdevPackagesTitle" class="btn btn--secondary">
+              Що входить
+            </a>
+          </div>
+        </div>
+
+        <figure class="service-image service-image--hero">
+          <img
+            src="/assets/img/services/webdev-hero.webp"
+            alt="Абстрактна візуалізація розробки веб-сайту з responsive UI, інтеграціями та glass panels"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- VALUE STRIP -->
+    <section class="section section--compact" aria-labelledby="webdevValueTitle">
+      <div class="container">
+        <div class="webdev-value">
+          <div class="webdev-value__content">
+            <p class="eyebrow">
+              Simple, useful, maintainable
+            </p>
+
+            <h2 id="webdevValueTitle" class="section-title">
+              Сайт має не просто існувати. Він має працювати.
+            </h2>
+          </div>
+
+          <div class="webdev-value__items">
+            <div>
+              <span>01</span>
+              <strong>Швидке завантаження</strong>
+              <p>Легка структура, оптимізовані ресурси, без зайвого шуму.</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>Зручна підтримка</strong>
+              <p>Тексти, блоки та форми можна оновлювати без болю.</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Готовність до реклами</strong>
+              <p>CTA, форми, базова аналітика і зрозумілий шлях користувача.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="section section--compact" aria-labelledby="webdevPackagesTitle">
+      <div class="container">
+        <div class="section-header section-header--center has-line">
+          <p class="eyebrow eyebrow--center">
+            Service Scope
+          </p>
+
+          <h2 id="webdevPackagesTitle" class="section-title section-title--center">
+            Що входить у послугу
+          </h2>
+
+          <p class="section-summary section-summary--center">
+            Вибираємо формат під задачу: швидкий landing, охайний сайт-візитка або інтеграційний шар,
+            який з’єднує сайт із робочими інструментами бізнесу.
+          </p>
+        </div>
+
+        <div class="webdev-packages">
+          <article class="webdev-package webdev-package--landing">
+            <span class="webdev-package__number">01</span>
+            <h3>Односторінкові сайти / landing pages</h3>
+            <p>
+              Ідеально для запуску реклами або швидкого представлення себе світу.
+            </p>
+
+            <ul>
+              <li>Презентація продукту чи послуги</li>
+              <li>Адаптивний дизайн для мобільного і десктопу</li>
+              <li>CTA, форми, анімації</li>
+              <li>SEO-структура і базова аналітика</li>
+            </ul>
+          </article>
+
+          <article class="webdev-package webdev-package--site">
+            <span class="webdev-package__number">02</span>
+            <h3>Сайти-візитки та портфоліо</h3>
+            <p>
+              Твій сайт — твоя візитка. Зробимо його живим, затишним і корисним.
+            </p>
+
+            <ul>
+              <li>До 3–5 сторінок: Головна, Послуги, Про нас, Контакти</li>
+              <li>Просте керування через CMS, якщо потрібно</li>
+              <li>Підключення до пошти або месенджерів</li>
+            </ul>
+          </article>
+
+          <article class="webdev-package webdev-package--integrations">
+            <span class="webdev-package__number">03</span>
+            <h3>Інтеграції</h3>
+            <p>
+              Все, що треба, щоб працювало “само”, без зайвих рухів.
+            </p>
+
+            <ul>
+              <li>Google Sheets, Notion, Tilda, Webflow</li>
+              <li>Вивід даних на сайт: камери, ціни, таблиці</li>
+              <li>Telegram-боти, форми, CRM</li>
+              <li>Надсилання заявок, логів, листів — куди треба</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATION VISUAL SECTION -->
+    <section class="section section--compact" aria-labelledby="integrationsTitle">
+      <div class="container">
+        <div class="media-split media-split--reverse">
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/webdev-integrations.webp"
+              alt="Веб-сайт, підключений до CRM, email, оплат, Telegram, Google Sheets та аналітики"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="media-split__content">
+            <p class="eyebrow">
+              Integrations
+            </p>
+
+            <h2 id="integrationsTitle" class="section-title">
+              Сайт може бути центром маленької цифрової екосистеми
+            </h2>
+
+            <p class="section-summary">
+              Форма на сайті може створити запис у CRM, надіслати лист клієнту, додати log у таблицю,
+              повідомити команду в Telegram і зберегти дані для подальшої аналітики.
+            </p>
+
+            <div class="integration-rail__map" aria-label="Приклади інтеграцій">
+              <span>Form</span>
+              <span>CRM</span>
+              <span>Email</span>
+              <span>Telegram</span>
+              <span>Google Sheets</span>
+              <span>Notion</span>
+              <span>Payment</span>
+              <span>Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS WITH VISUAL -->
+    <section class="section section--compact" aria-labelledby="webdevProcessTitle">
+      <div class="container">
+        <div class="media-split">
+          <div class="media-split__content">
+            <div class="section-header has-line">
+              <p class="eyebrow">
+                Delivery Process
+              </p>
+
+              <h2 id="webdevProcessTitle" class="section-title">
+                Як виглядає процес
+              </h2>
+
+              <p class="section-summary">
+                Від ідеї до публікації: спочатку розуміємо ціль, потім збираємо структуру,
+                розробляємо, тестуємо і запускаємо.
+              </p>
+            </div>
+
+            <div class="webdev-process webdev-process--compact">
+              <article>
+                <span>01</span>
+                <h3>Бриф / техзавдання</h3>
+                <p>Обговорюємо ціль і вигляд.</p>
+              </article>
+
+              <article>
+                <span>02</span>
+                <h3>Прототип</h3>
+                <p>Макет, структура, блоки.</p>
+              </article>
+
+              <article>
+                <span>03</span>
+                <h3>Розробка</h3>
+                <p>Верстка, логіка, підключення інтеграцій.</p>
+              </article>
+
+              <article>
+                <span>04</span>
+                <h3>Тестування та публікація</h3>
+                <p>Все працює, все летить.</p>
+              </article>
+
+              <article>
+                <span>05</span>
+                <h3>Навчання</h3>
+                <p>Опціонально показую, як змінювати тексти чи блоки.</p>
+              </article>
+            </div>
+          </div>
+
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/webdev-workflow.webp"
+              alt="Абстрактний процес веб-розробки: бриф, прототип, розробка, тестування та запуск"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="section section--compact" aria-labelledby="techTitle">
+      <div class="container container--md">
+        <div class="tech-panel">
+          <div class="tech-panel__content">
+            <p class="eyebrow">
+              Technology Stack
+            </p>
+
+            <h2 id="techTitle" class="section-title">
+              Технології
+            </h2>
+
+            <p class="section-summary">
+              Підбираю стек під задачу: від простого статичного сайту до інтерактивного проєкту
+              або no-code рішення з легким керуванням.
+            </p>
+          </div>
+
+          <div class="tech-panel__tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Webflow</span>
+            <span>Tilda</span>
+            <span>Notion</span>
+            <span>Make</span>
+            <span>API</span>
+            <span>Webhooks</span>
+            <span>CRM</span>
+            <span>Telegram</span>
+            <span>Zapier</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLES WITH VISUAL -->
+    <section class="section section--compact" aria-labelledby="examplesTitle">
+      <div class="container">
+        <div class="media-split media-split--reverse">
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/webdev-examples.webp"
+              alt="Приклади різних сайтів: сайт-візитка, landing page, інтеграція з таблицею та формами"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="media-split__content">
+            <div class="section-header has-line">
+              <p class="eyebrow">
+                Examples
+              </p>
+
+              <h2 id="examplesTitle" class="section-title">
+                Приклади сайтів
+              </h2>
+
+              <p class="section-summary">
+                Формати, які можна швидко запустити, перевірити на аудиторії
+                і поступово масштабувати.
+              </p>
+            </div>
+
+            <div class="case-strip case-strip--vertical">
+              <article>
+                <span>01</span>
+                <h3>Сайт-візитка психолога</h3>
+                <p>Мінімалізм, календар, анкета.</p>
+              </article>
+
+              <article>
+                <span>02</span>
+                <h3>Landing сторінка онлайн-курсу</h3>
+                <p>Таймер, відео, форма, лендінг для реклами.</p>
+              </article>
+
+              <article>
+                <span>03</span>
+                <h3>Інтеграція з Google Sheets</h3>
+                <p>Заявка, автоматичний лист клієнту і log у таблицю.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--compact" aria-labelledby="pricingTitle">
+      <div class="container">
+        <div class="section-header has-line">
+          <p class="eyebrow">
+            Pricing
+          </p>
+
+          <h2 id="pricingTitle" class="section-title">
+            Вартість
+          </h2>
+
+          <p class="section-summary">
+            Усі сайти розробляються вручну або на no-code, залежно від потреби.
+            Оптимізація, швидкість та зручність завжди в пріоритеті.
+          </p>
+        </div>
+
+        <div class="webdev-pricing">
+          <article>
+            <div class="webdev-pricing__price">$300 – $600</div>
+            <h3>Односторінковий сайт / landing</h3>
+            <p>Повністю готовий сайт із формами.</p>
+          </article>
+
+          <article class="webdev-pricing__featured">
+            <div class="webdev-pricing__price">$600 – $1200</div>
+            <h3>Сайт-візитка до 5 сторінок</h3>
+            <p>З дизайном і базовим SEO.</p>
+          </article>
+
+          <article>
+            <div class="webdev-pricing__price">$150 – $500</div>
+            <h3>Набір інтеграцій</h3>
+            <p>Форми, CRM, пошта. Залежить від складності.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="serviceCtaTitle">
+      <div class="container container--md">
+        <article class="cta-card">
+          <div class="glow-line" aria-hidden="true"></div>
+
+          <div class="cta-content">
+            <p class="eyebrow">
+              Хочеш сайт, який працює?
+            </p>
+
+            <h2 id="serviceCtaTitle" class="cta-title">
+              Розкажи про ідею — і я зроблю сайт, який буде працювати на тебе.
+            </h2>
+
+            <p class="cta-text">
+              Можемо почати з простого, і поступово масштабувати.
+            </p>
+          </div>
+
+          <div class="cta-action">
+            <a href="/contact.html" class="btn btn--primary">
+              Замовити розробку сайту
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer partial -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/stars.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>
