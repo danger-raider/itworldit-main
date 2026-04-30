@@ -188,6 +188,42 @@ const DICT = {
     hero_slide_4_title: "Консалтинг",
     hero_slide_4_text:
       "Технічний аудит, планування архітектури та зрозумілі дорожні карти впровадження.",
+    services_preview_title: "Послуги",
+    services_preview_subtitle: "/ що ми робимо",
+    services_preview_more: "Дивитись усі послуги →",
+
+    service_outsourcing_title: "IT Аутсорсинг",
+    service_outsourcing_text:
+      "Підтримка інфраструктури, вирішення інцидентів, супровід бізнесу щодня.",
+
+    service_consulting_title: "IT Консалтинг та аудит",
+    service_consulting_text:
+      "Аналіз, аудит і рекомендації для безпечної та ефективної ІТ-екосистеми.",
+
+    service_mvp_title: "Розробка MVP",
+    service_mvp_text:
+      "Запуск ідеї за кілька тижнів. Мінімальний продукт → реальний ринок.",
+
+    service_automation_title: "Автоматизація бізнес-процесів",
+    service_automation_text:
+      "Скорочення рутини, документообіг, CRM, інтеграції з поштою, ботами.",
+
+    service_webdev_title: "Розробка сайтів та інтеграцій",
+    service_webdev_text:
+      "Лендінги, сайти-візитки, підключення форм, CRM, оплат.",
+
+    service_security_title: "Кібербезпека / VPN / Захист",
+    service_security_text:
+      "VPN-команди, безпека пошти (SPF/DKIM/DMARC), hardening серверів.",
+    about_preview_label: "About IT World IT",
+    about_preview_title: "Хто ми",
+    about_preview_text:
+      "Я – Дмитро. Незалежний ІТ-фахівець із багаторічним досвідом у системній інфраструктурі, автоматизації та безпеці. Поруч — Aoi, ваш цифровий асистент. Ми допомагаємо бізнесу запускатися, виживати, масштабуватися.",
+    about_preview_more: "Детальніше про нас →",
+    cta_preview_label: "Start a conversation",
+    cta_preview_title: "Готові поговорити про ваш проект?",
+    cta_preview_text:
+      "Усі звернення обробляє Aoi — персональний асистент. Жива людина відповідає, якщо треба 😉",
   },
 
   en: {
@@ -235,16 +271,201 @@ const DICT = {
     hero_slide_4_title: "Consulting",
     hero_slide_4_text:
       "Technical audits, architecture planning and clear implementation roadmaps.",
+    services_preview_title: "Services",
+    services_preview_subtitle: "/ what we do",
+    services_preview_more: "View all services →",
+
+    service_outsourcing_title: "IT Outsourcing",
+    service_outsourcing_text:
+      "Infrastructure support, incident resolution and daily business IT assistance.",
+
+    service_consulting_title: "IT Consulting & Audit",
+    service_consulting_text:
+      "Analysis, audits and recommendations for a secure and efficient IT ecosystem.",
+
+    service_mvp_title: "MVP Development",
+    service_mvp_text:
+      "Launch an idea in a few weeks. Minimum product → real market.",
+
+    service_automation_title: "Business Process Automation",
+    service_automation_text:
+      "Less routine, document workflows, CRM, email integrations and bots.",
+
+    service_webdev_title: "Website Development & Integrations",
+    service_webdev_text:
+      "Landing pages, business websites, form connections, CRM and payment integrations.",
+
+    service_security_title: "Cybersecurity / VPN / Protection",
+    service_security_text:
+      "VPN teams, email security (SPF/DKIM/DMARC) and server hardening.",
+    about_preview_label: "About IT World IT",
+    about_preview_title: "Who we are",
+    about_preview_text:
+      "I’m Dmytro, an independent IT specialist with many years of experience in system infrastructure, automation and security. Alongside me is Aoi, your digital assistant. We help businesses launch, survive and scale.",
+    about_preview_more: "More about us →",
+    cta_preview_label: "Start a conversation",
+    cta_preview_title: "Ready to talk about your project?",
+    cta_preview_text:
+      "All requests are handled by Aoi, a personal assistant. A real person replies when needed 😉",
   },
 };
 
 /**
  * Returns current language.
  */
-function getCurrentLang() {
-  return localStorage.getItem("lang") || "ua";
+/**
+ * Detects page language by URL.
+ * /en/ and /en/... are English.
+ * Everything else is Ukrainian.
+ */
+/**
+ * Detects page language by URL.
+ * /en/ and /en/... are English.
+ * Everything else is Ukrainian.
+ */
+/**
+ * Normalizes current page path to the non-localized base path.
+ */
+function getBaseLanguagePath(path = window.location.pathname) {
+  let cleanPath = path.replace(/\/index\.html$/, "/");
+
+  if (cleanPath === "/en") {
+    cleanPath = "/en/";
+  }
+
+  const isEnglishPath = cleanPath === "/en/" || cleanPath.startsWith("/en/");
+
+  if (isEnglishPath) {
+    cleanPath = cleanPath.replace(/^\/en(?=\/|$)/, "");
+  }
+
+  if (!cleanPath || cleanPath === "") {
+    cleanPath = "/";
+  }
+
+  if (!cleanPath.startsWith("/")) {
+    cleanPath = `/${cleanPath}`;
+  }
+
+  return cleanPath;
 }
 
+/**
+ * Builds localized URL for the current page.
+ */
+function getLocalizedUrl(targetLang) {
+  const basePath = getBaseLanguagePath();
+
+  if (targetLang === "en") {
+    return basePath === "/" ? "/en/" : `/en${basePath}`;
+  }
+
+  return basePath;
+}
+
+/**
+ * Converts internal navigation links to the current language.
+ */
+function localizePath(path, lang) {
+  let cleanPath = path || "/";
+
+  cleanPath = cleanPath.replace(/\/index\.html$/, "/");
+
+  if (!cleanPath.startsWith("/")) {
+    cleanPath = `/${cleanPath}`;
+  }
+
+  if (lang === "en") {
+    return cleanPath === "/" ? "/en/" : `/en${cleanPath}`;
+  }
+
+  return cleanPath;
+}
+
+/**
+ * Updates header and footer links for the current language.
+ */
+function updateLocalizedLinks(lang) {
+  document.querySelectorAll("[data-page-path]").forEach((link) => {
+    const pagePath = link.getAttribute("data-page-path");
+
+    if (!pagePath) {
+      return;
+    }
+
+    link.setAttribute("href", localizePath(pagePath, lang));
+  });
+}
+function getCurrentLang() {
+  const path = window.location.pathname;
+
+  if (path === "/en" || path.startsWith("/en/")) {
+    return "en";
+  }
+
+  return "ua";
+}
+/**
+ * Builds localized URL for the current page.
+ */
+function getLocalizedUrl(targetLang) {
+  let path = window.location.pathname;
+
+  path = path.replace(/\/index\.html$/, "/");
+
+  const isEnglishPath = path === "/en" || path.startsWith("/en/");
+  let basePath = isEnglishPath ? path.replace(/^\/en(?=\/|$)/, "") : path;
+
+  if (!basePath || basePath === "") {
+    basePath = "/";
+  }
+
+  if (!basePath.startsWith("/")) {
+    basePath = `/${basePath}`;
+  }
+
+  if (targetLang === "en") {
+    return basePath === "/" ? "/en/" : `/en${basePath}`;
+  }
+
+  return basePath;
+}
+
+/**
+ * Converts internal navigation links to current language.
+ */
+function localizePath(path, lang) {
+  if (!path) {
+    return lang === "en" ? "/en/" : "/";
+  }
+
+  let cleanPath = path.replace(/\/index\.html$/, "/");
+
+  if (!cleanPath.startsWith("/")) {
+    cleanPath = `/${cleanPath}`;
+  }
+
+  if (lang === "en") {
+    return cleanPath === "/" ? "/en/" : `/en${cleanPath}`;
+  }
+
+  return cleanPath;
+}
+
+/**
+ * Updates header links for current language.
+ */
+function updateLocalizedHeaderLinks(lang) {
+  document.querySelectorAll("[data-page-path]").forEach((link) => {
+    const pagePath = link.getAttribute("data-page-path");
+
+    if (!pagePath) {
+      return;
+    }
+
+    link.setAttribute("href", localizePath(pagePath, lang));
+  });
+}
 /**
  * Returns current theme.
  */
@@ -386,7 +607,6 @@ function initFontSwitcher() {
 function initLanguageSwitcher() {
   const langCurrent = document.getElementById("langCurrent");
   const langOptions = document.querySelectorAll("[data-lang-value]");
-
   function applyLang(code) {
     const dict = DICT[code];
 
@@ -395,6 +615,7 @@ function initLanguageSwitcher() {
     }
 
     document.documentElement.lang = code === "ua" ? "uk" : "en";
+    document.body.dataset.lang = code;
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.getAttribute("data-i18n");
@@ -416,7 +637,7 @@ function initLanguageSwitcher() {
     });
 
     localStorage.setItem("lang", code);
-
+    updateLocalizedLinks(code);
     updateThemeLabelOnly();
   }
 
@@ -438,6 +659,19 @@ function initLanguageSwitcher() {
         return;
       }
 
+      const targetUrl = getLocalizedUrl(selectedLang);
+
+      localStorage.setItem("lang", selectedLang);
+
+      if (window.closeHeaderDropdowns) {
+        window.closeHeaderDropdowns();
+      }
+
+      if (window.location.pathname !== targetUrl) {
+        window.location.href = targetUrl;
+        return;
+      }
+
       runSoftTransition(
         "is-lang-changing",
         () => {
@@ -445,10 +679,6 @@ function initLanguageSwitcher() {
         },
         100,
       );
-
-      if (window.closeHeaderDropdowns) {
-        window.closeHeaderDropdowns();
-      }
     });
   });
 }
@@ -534,7 +764,7 @@ function initMobileMenu() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 760) {
+    if (window.innerWidth >= 1024) {
       closeMenu();
     }
   });

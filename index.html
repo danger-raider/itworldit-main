@@ -1,374 +1,573 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT Аутсорсинг, DevOps та кібербезпека | It World IT</title>
 
-    <title>It World IT – Turning complexity into simplicity</title>
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="It World IT допомагає бізнесу з IT-аутсорсингом, системним адмініструванням, DevOps, автоматизацією, MVP, VPN, аудитом та кібербезпекою."
+  />
+  <meta
+    name="keywords"
+    content="IT аутсорсинг, системне адміністрування, DevOps, автоматизація бізнесу, кібербезпека, VPN, IT аудит, MVP розробка, розробка сайтів"
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
 
-    <!-- SEO -->
-    <meta name="description"
-      content="System administration, DevOps, automation, cybersecurity. Simplicity where others see complexity." />
-    <meta name="keywords"
-      content="sysadmin, devops, vpn, servers, automation, cybersecurity, it outsourcing, it audit, mvp development" />
-    <meta name="theme-color" content="#0a0a1a" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://itworldit.com/" />
+  <!-- Language versions -->
+<link rel="alternate" hreflang="uk" href="https://itworldit.com/" />
+<link rel="alternate" hreflang="en" href="https://itworldit.com/en/" />
+<link rel="alternate" hreflang="x-default" href="https://itworldit.com/" />
+<meta property="og:locale" content="uk_UA" />
+<meta property="og:locale:alternate" content="en_US" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="IT Аутсорсинг, DevOps та кібербезпека | It World IT" />
+  <meta
+    property="og:description"
+    content="IT-аутсорсинг, системне адміністрування, DevOps, автоматизація, MVP, VPN, аудит і кібербезпека для бізнесу."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/" />
+  <meta
+    property="og:image"
+    content="https://itworldit.com/assets/img/hero/hero-infrastructure.webp"
+  />
+  <meta property="og:image:alt" content="It World IT infrastructure and cybersecurity visual" />
+  <meta property="og:locale" content="uk_UA" />
 
-    <!-- OpenGraph / preview -->
-    <meta property="og:title" content="It World IT" />
-    <meta property="og:description"
-      content="Turning complexity into simplicity." />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="It World IT" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IT Аутсорсинг, DevOps та кібербезпека | It World IT" />
+  <meta
+    name="twitter:description"
+    content="IT-аутсорсинг, системне адміністрування, DevOps, автоматизація, MVP, VPN, аудит і кібербезпека для бізнесу."
+  />
+  <meta
+    name="twitter:image"
+    content="https://itworldit.com/assets/img/hero/hero-infrastructure.webp"
+  />
 
-    <!-- Plausible Analytics -->
-    <script defer data-domain="itworldit.com"
-      src="https://plausible.io/js/script.js"></script>
+  <!-- Performance -->
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/img/hero/hero-infrastructure.webp"
+    type="image/webp"
+  />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            spaceBg: "#0a0a1a",
-            spaceCard: "rgba(30,35,70,0.4)",
-            neon: "#8b5cf6"
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://itworldit.com/#organization",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "logo": "https://itworldit.com/favicon.ico",
+          "description": "It World IT provides IT outsourcing, system administration, DevOps, business automation, MVP development, VPN, IT audit and cybersecurity services.",
+          "founder": {
+            "@type": "Person",
+            "name": "Dmytro"
           }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://itworldit.com/#website",
+          "url": "https://itworldit.com/",
+          "name": "It World IT",
+          "description": "IT outsourcing, DevOps, automation and cybersecurity services for businesses.",
+          "publisher": {
+            "@id": "https://itworldit.com/#organization"
+          },
+          "inLanguage": ["uk", "en"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://itworldit.com/#professional-service",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "image": "https://itworldit.com/assets/img/hero/hero-infrastructure.webp",
+          "description": "Professional IT services: outsourcing, system administration, DevOps, automation, MVP development, VPN, IT audit and cybersecurity.",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Ukraine"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Europe"
+            }
+          ],
+          "serviceType": [
+            "IT Outsourcing",
+            "System Administration",
+            "DevOps",
+            "Business Automation",
+            "MVP Development",
+            "Website Development",
+            "VPN Setup",
+            "IT Audit",
+            "Cybersecurity"
+          ]
         }
-      }
+      ]
     }
   </script>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="manifest" href="manifest.json" />
+  <!-- Plausible Analytics -->
+  <script
+    defer
+    data-domain="itworldit.com"
+    src="https://plausible.io/js/script.js"
+  ></script>
 
-  </head>
 
-  <body
-    class="bg-spaceBg text-gray-100 dark:bg-spaceBg dark:text-gray-100 relative overflow-x-hidden transition-colors duration-300">
 
-    <!-- Зоряний фон -->
-    <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
-    <div
-      class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
 
-    <!-- HEADER -->
-    <!-- Вставляємо header -->
+<body>
+<!-- Background -->
+<canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+<div class="site-background-glow" aria-hidden="true"></div>
+
+    <!-- Header partial -->
     <div id="header"></div>
-<!-- HERO -->
-<section id="hero" class="hero-kiyo" aria-labelledby="heroTitle">
-  <div class="hero-kiyo__gallery" data-hero-gallery>
 
-    <!-- Slide 1 -->
-    <article class="hero-kiyo__slide is-active" data-hero-slide data-slide-index="0">
-      <div class="hero-kiyo__image hero-kiyo__image--infrastructure" aria-hidden="true"></div>
-      <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="hero" class="hero-kiyo" aria-labelledby="heroTitle">
+        <div class="hero-kiyo__gallery" data-hero-gallery>
+          <!-- Slide 1 -->
+          <article
+            class="hero-kiyo__slide is-active"
+            data-hero-slide
+            data-slide-index="0"
+          >
+            <div
+              class="hero-kiyo__image hero-kiyo__image--infrastructure"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-kiyo__overlay" aria-hidden="true"></div>
 
-      <div class="hero-kiyo__content">
-        <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
-          IT engineering / automation / security
-        </p>
+            <div class="hero-kiyo__content">
+              <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
+                IT engineering / automation / security
+              </p>
 
-        <h1 id="heroTitle" class="hero-kiyo__title" data-i18n="hero_title">
-          Ваш партнер у цифровій трансформації
-        </h1>
+              <h1 id="heroTitle" class="hero-kiyo__title" data-i18n="hero_title">
+                Ваш партнер у цифровій трансформації
+              </h1>
 
-        <p class="hero-kiyo__text" data-i18n="hero_sub">
-          Шукаємо прості рішення для складних проблем. Налаштування інфраструктури, безпека, автоматизація, MVP.
-        </p>
+              <p class="hero-kiyo__text" data-i18n="hero_sub">
+                Шукаємо прості рішення для складних проблем. Налаштування
+                інфраструктури, безпека, автоматизація, MVP.
+              </p>
 
-        <div class="hero-kiyo__actions">
-          <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
-            Записатись на консультацію
-          </a>
+              <div class="hero-kiyo__actions">
+                <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
+                  Записатись на консультацію
+                </a>
 
-          <a href="/services/index.html" class="hero-kiyo__secondary" data-i18n="hero_cta_services">
-            Переглянути послуги
+                <a
+                  href="/services/index.html"
+                  class="hero-kiyo__secondary"
+                  data-i18n="hero_cta_services"
+                >
+                  Переглянути послуги
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-kiyo__caption">
+              <span data-i18n="hero_slide_1_title">Infrastructure</span>
+              <small data-i18n="hero_slide_1_text">
+                Servers, networks, VPN, monitoring and stable business operations.
+              </small>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="hero-kiyo__slide" data-hero-slide data-slide-index="1">
+            <div
+              class="hero-kiyo__image hero-kiyo__image--security"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+
+            <div class="hero-kiyo__content">
+              <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
+                IT engineering / automation / security
+              </p>
+
+              <div class="hero-kiyo__title" data-i18n="hero_title">
+                Ваш партнер у цифровій трансформації
+              </div>
+
+              <p class="hero-kiyo__text" data-i18n="hero_sub">
+                Шукаємо прості рішення для складних проблем. Налаштування
+                інфраструктури, безпека, автоматизація, MVP.
+              </p>
+
+              <div class="hero-kiyo__actions">
+                <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
+                  Записатись на консультацію
+                </a>
+
+                <a
+                  href="/services/index.html"
+                  class="hero-kiyo__secondary"
+                  data-i18n="hero_cta_services"
+                >
+                  Переглянути послуги
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-kiyo__caption">
+              <span data-i18n="hero_slide_2_title">Cybersecurity</span>
+              <small data-i18n="hero_slide_2_text">
+                Hardening, access control, secure mail, VPN and incident prevention.
+              </small>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="hero-kiyo__slide" data-hero-slide data-slide-index="2">
+            <div
+              class="hero-kiyo__image hero-kiyo__image--automation"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+
+            <div class="hero-kiyo__content">
+              <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
+                IT engineering / automation / security
+              </p>
+
+              <div class="hero-kiyo__title" data-i18n="hero_title">
+                Ваш партнер у цифровій трансформації
+              </div>
+
+              <p class="hero-kiyo__text" data-i18n="hero_sub">
+                Шукаємо прості рішення для складних проблем. Налаштування
+                інфраструктури, безпека, автоматизація, MVP.
+              </p>
+
+              <div class="hero-kiyo__actions">
+                <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
+                  Записатись на консультацію
+                </a>
+
+                <a
+                  href="/services/index.html"
+                  class="hero-kiyo__secondary"
+                  data-i18n="hero_cta_services"
+                >
+                  Переглянути послуги
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-kiyo__caption">
+              <span data-i18n="hero_slide_3_title">Automation</span>
+              <small data-i18n="hero_slide_3_text">
+                Less routine, cleaner processes, connected tools and faster decisions.
+              </small>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="hero-kiyo__slide" data-hero-slide data-slide-index="3">
+            <div
+              class="hero-kiyo__image hero-kiyo__image--consulting"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+
+            <div class="hero-kiyo__content">
+              <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
+                IT engineering / automation / security
+              </p>
+
+              <div class="hero-kiyo__title" data-i18n="hero_title">
+                Ваш партнер у цифровій трансформації
+              </div>
+
+              <p class="hero-kiyo__text" data-i18n="hero_sub">
+                Шукаємо прості рішення для складних проблем. Налаштування
+                інфраструктури, безпека, автоматизація, MVP.
+              </p>
+
+              <div class="hero-kiyo__actions">
+                <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
+                  Записатись на консультацію
+                </a>
+
+                <a
+                  href="/services/index.html"
+                  class="hero-kiyo__secondary"
+                  data-i18n="hero_cta_services"
+                >
+                  Переглянути послуги
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-kiyo__caption">
+              <span data-i18n="hero_slide_4_title">Consulting</span>
+              <small data-i18n="hero_slide_4_text">
+                Technical audits, architecture planning and clear implementation roadmaps.
+              </small>
+            </div>
+          </article>
+
+          <!-- Hero controls -->
+          <div class="hero-kiyo__controls" aria-label="Hero gallery controls">
+            <button
+              type="button"
+              class="hero-kiyo__arrow"
+              data-hero-prev
+              aria-label="Previous slide"
+            >
+              ‹
+            </button>
+
+            <div class="hero-kiyo__dots" role="tablist" aria-label="Hero gallery slides">
+              <button
+                type="button"
+                class="hero-kiyo__dot is-active"
+                data-hero-thumb
+                data-slide-index="0"
+                role="tab"
+                aria-selected="true"
+                aria-label="Infrastructure"
+              ></button>
+
+              <button
+                type="button"
+                class="hero-kiyo__dot"
+                data-hero-thumb
+                data-slide-index="1"
+                role="tab"
+                aria-selected="false"
+                aria-label="Cybersecurity"
+              ></button>
+
+              <button
+                type="button"
+                class="hero-kiyo__dot"
+                data-hero-thumb
+                data-slide-index="2"
+                role="tab"
+                aria-selected="false"
+                aria-label="Automation"
+              ></button>
+
+              <button
+                type="button"
+                class="hero-kiyo__dot"
+                data-hero-thumb
+                data-slide-index="3"
+                role="tab"
+                aria-selected="false"
+                aria-label="Consulting"
+              ></button>
+            </div>
+
+            <button
+              type="button"
+              class="hero-kiyo__arrow"
+              data-hero-next
+              aria-label="Next slide"
+            >
+              ›
+            </button>
+          </div>
+
+          <div class="hero-kiyo__counter" aria-hidden="true">
+            <span data-hero-current>01</span>
+            <span>/</span>
+            <span data-hero-total>04</span>
+          </div>
+
+          <a href="#services" class="hero-kiyo__scroll" aria-label="Scroll to services">
+            <span></span>
           </a>
         </div>
-      </div>
+      </section>
 
-      <div class="hero-kiyo__caption">
-        <span data-i18n="hero_slide_1_title">Infrastructure</span>
-        <small data-i18n="hero_slide_1_text">Servers, networks, VPN, monitoring and stable business operations.</small>
-      </div>
-    </article>
+      <!-- SERVICES PREVIEW -->
+      <section id="services" class="services-preview" aria-labelledby="servicesTitle">
+        <div class="services-preview__inner">
+          <div class="services-preview__header">
+            <h2 id="servicesTitle" class="services-preview__title">
+              <span data-i18n="services_preview_title">Послуги</span>
+              <small data-i18n="services_preview_subtitle">/ що ми робимо</small>
+            </h2>
+          </div>
 
-    <!-- Slide 2 -->
-    <article class="hero-kiyo__slide" data-hero-slide data-slide-index="1">
-      <div class="hero-kiyo__image hero-kiyo__image--security" aria-hidden="true"></div>
-      <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+          <div class="services-preview__grid">
+            <a href="/services/outsourcing.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_outsourcing_title">IT Аутсорсинг</h3>
+              <p data-i18n="service_outsourcing_text">
+                Підтримка інфраструктури, вирішення інцидентів, супровід бізнесу щодня.
+              </p>
+            </a>
 
-      <div class="hero-kiyo__content">
-        <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
-          IT engineering / automation / security
-        </p>
+            <a href="/services/consulting.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_consulting_title">IT Консалтинг та аудит</h3>
+              <p data-i18n="service_consulting_text">
+                Аналіз, аудит і рекомендації для безпечної та ефективної ІТ-екосистеми.
+              </p>
+            </a>
 
-        <h2 class="hero-kiyo__title" data-i18n="hero_title">
-          Ваш партнер у цифровій трансформації
-        </h2>
+            <a href="/services/mvp.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_mvp_title">Розробка MVP</h3>
+              <p data-i18n="service_mvp_text">
+                Запуск ідеї за кілька тижнів. Мінімальний продукт → реальний ринок.
+              </p>
+            </a>
 
-        <p class="hero-kiyo__text" data-i18n="hero_sub">
-          Шукаємо прості рішення для складних проблем. Налаштування інфраструктури, безпека, автоматизація, MVP.
-        </p>
+            <a href="/services/automation.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_automation_title">Автоматизація бізнес-процесів</h3>
+              <p data-i18n="service_automation_text">
+                Скорочення рутини, документообіг, CRM, інтеграції з поштою, ботами.
+              </p>
+            </a>
 
-        <div class="hero-kiyo__actions">
-          <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
-            Записатись на консультацію
-          </a>
+            <a href="/services/webdev.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_webdev_title">Розробка сайтів та інтеграцій</h3>
+              <p data-i18n="service_webdev_text">
+                Лендінги, сайти-візитки, підключення форм, CRM, оплат.
+              </p>
+            </a>
 
-          <a href="/services/index.html" class="hero-kiyo__secondary" data-i18n="hero_cta_services">
-            Переглянути послуги
-          </a>
+            <a href="/services/security.html" class="service-card">
+              <span class="service-card__shine" aria-hidden="true"></span>
+              <h3 data-i18n="service_security_title">Кібербезпека / VPN / Захист</h3>
+              <p data-i18n="service_security_text">
+                VPN-команди, безпека пошти (SPF/DKIM/DMARC), hardening серверів.
+              </p>
+            </a>
+          </div>
+
+          <div class="services-preview__more">
+            <a
+              href="/services/index.html"
+              class="services-preview__link"
+              data-i18n="services_preview_more"
+            >
+              Дивитись усі послуги →
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="hero-kiyo__caption">
-        <span data-i18n="hero_slide_2_title">Cybersecurity</span>
-        <small data-i18n="hero_slide_2_text">Hardening, access control, secure mail, VPN and incident prevention.</small>
-      </div>
-    </article>
+      <!-- ABOUT PREVIEW -->
+      <section
+        id="about-preview"
+        class="about-preview"
+        aria-labelledby="aboutPreviewTitle"
+      >
+        <div class="about-preview__inner">
+          <div class="about-preview__card animate-fadeInUpSmall">
+            <div class="about-preview__glow" aria-hidden="true"></div>
 
-    <!-- Slide 3 -->
-    <article class="hero-kiyo__slide" data-hero-slide data-slide-index="2">
-      <div class="hero-kiyo__image hero-kiyo__image--automation" aria-hidden="true"></div>
-      <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+            <div class="about-preview__label" data-i18n="about_preview_label">
+              About IT World IT
+            </div>
 
-      <div class="hero-kiyo__content">
-        <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
-          IT engineering / automation / security
-        </p>
+            <h2
+              id="aboutPreviewTitle"
+              class="about-preview__title"
+              data-i18n="about_preview_title"
+            >
+              Хто ми
+            </h2>
 
-        <h2 class="hero-kiyo__title" data-i18n="hero_title">
-          Ваш партнер у цифровій трансформації
-        </h2>
+            <p id="about_snip" class="about-preview__text" data-i18n="about_preview_text">
+              Я – Дмитро. Незалежний ІТ-фахівець із багаторічним досвідом у
+              системній інфраструктурі, автоматизації та безпеці. Поруч — Aoi,
+              ваш цифровий асистент. Ми допомагаємо бізнесу запускатися,
+              виживати, масштабуватися.
+            </p>
 
-        <p class="hero-kiyo__text" data-i18n="hero_sub">
-          Шукаємо прості рішення для складних проблем. Налаштування інфраструктури, безпека, автоматизація, MVP.
-        </p>
-
-        <div class="hero-kiyo__actions">
-          <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
-            Записатись на консультацію
-          </a>
-
-          <a href="/services/index.html" class="hero-kiyo__secondary" data-i18n="hero_cta_services">
-            Переглянути послуги
-          </a>
+            <a href="/about.html" class="about-preview__link" data-i18n="about_preview_more">
+              Детальніше про нас →
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="hero-kiyo__caption">
-        <span data-i18n="hero_slide_3_title">Automation</span>
-        <small data-i18n="hero_slide_3_text">Less routine, cleaner processes, connected tools and faster decisions.</small>
-      </div>
-    </article>
+      <!-- CTA -->
+      <section id="contact-cta" class="contact-cta" aria-labelledby="contactCtaTitle">
+        <div class="contact-cta__inner">
+          <div class="contact-cta__card">
+            <div class="contact-cta__glow" aria-hidden="true"></div>
 
-    <!-- Slide 4 -->
-    <article class="hero-kiyo__slide" data-hero-slide data-slide-index="3">
-      <div class="hero-kiyo__image hero-kiyo__image--consulting" aria-hidden="true"></div>
-      <div class="hero-kiyo__overlay" aria-hidden="true"></div>
+            <div class="contact-cta__content">
+              <p class="contact-cta__label" data-i18n="cta_preview_label">
+                Start a conversation
+              </p>
 
-      <div class="hero-kiyo__content">
-        <p class="hero-kiyo__kicker" data-i18n="hero_kicker">
-          IT engineering / automation / security
-        </p>
+              <h2
+                id="contactCtaTitle"
+                class="contact-cta__title"
+                data-i18n="cta_preview_title"
+              >
+                Готові поговорити про ваш проект?
+              </h2>
 
-        <h2 class="hero-kiyo__title" data-i18n="hero_title">
-          Ваш партнер у цифровій трансформації
-        </h2>
+              <p class="contact-cta__text" data-i18n="cta_preview_text">
+                Усі звернення обробляє Aoi — персональний асистент. Жива людина
+                відповідає, якщо треба 😉
+              </p>
+            </div>
 
-        <p class="hero-kiyo__text" data-i18n="hero_sub">
-          Шукаємо прості рішення для складних проблем. Налаштування інфраструктури, безпека, автоматизація, MVP.
-        </p>
-
-        <div class="hero-kiyo__actions">
-          <a href="/contact.html" class="hero-kiyo__primary" data-i18n="cta_book">
-            Записатись на консультацію
-          </a>
-
-          <a href="/services/index.html" class="hero-kiyo__secondary" data-i18n="hero_cta_services">
-            Переглянути послуги
-          </a>
+            <div class="contact-cta__action">
+              <a href="/contact.html" class="contact-cta__button" data-i18n="cta_book">
+                Записатись на консультацію
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <div class="hero-kiyo__caption">
-        <span data-i18n="hero_slide_4_title">Consulting</span>
-        <small data-i18n="hero_slide_4_text">Technical audits, architecture planning and clear implementation roadmaps.</small>
-      </div>
-    </article>
-
-    <!-- Controls -->
-    <div class="hero-kiyo__controls" aria-label="Hero gallery controls">
-      <button type="button" class="hero-kiyo__arrow" data-hero-prev aria-label="Previous slide">‹</button>
-
-      <div class="hero-kiyo__dots" role="tablist" aria-label="Hero gallery slides">
-        <button type="button" class="hero-kiyo__dot is-active" data-hero-thumb data-slide-index="0" aria-label="Infrastructure"></button>
-        <button type="button" class="hero-kiyo__dot" data-hero-thumb data-slide-index="1" aria-label="Cybersecurity"></button>
-        <button type="button" class="hero-kiyo__dot" data-hero-thumb data-slide-index="2" aria-label="Automation"></button>
-        <button type="button" class="hero-kiyo__dot" data-hero-thumb data-slide-index="3" aria-label="Consulting"></button>
-      </div>
-
-      <button type="button" class="hero-kiyo__arrow" data-hero-next aria-label="Next slide">›</button>
-    </div>
-
-    <div class="hero-kiyo__counter" aria-hidden="true">
-      <span data-hero-current>01</span>
-      <span>/</span>
-      <span data-hero-total>04</span>
-    </div>
-
-    <a href="#services" class="hero-kiyo__scroll" aria-label="Scroll to services">
-      <span></span>
-    </a>
-
-  </div>
-</section>
-    <!-- SERVICES PREVIEW -->
-    <section class="relative z-10 max-w-6xl mx-auto px-6 py-12">
-      <h2
-        class="text-xl md:text-2xl font-semibold text-white mb-6 flex items-center gap-2">
-        <span class="text-neon">Послуги</span>
-        <span class="text-gray-500 text-sm font-normal">/ що ми робимо</span>
-      </h2>
-
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- IT Outsourcing -->
-        <a href="services/outsourcing.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">IT Аутсорсинг</h3>
-          <p class="text-gray-300 text-sm mt-2">Підтримка інфраструктури,
-            вирішення інцидентів, супровід бізнесу щодня.</p>
-        </a>
-
-        <!-- Consulting -->
-        <a href="services/consulting.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">IT Консалтинг та
-            аудит</h3>
-          <p class="text-gray-300 text-sm mt-2">Аналіз, аудит і рекомендації для
-            безпечної та ефективної ІТ-екосистеми.</p>
-        </a>
-
-        <!-- MVP -->
-        <a href="services/mvp.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">Розробка MVP</h3>
-          <p class="text-gray-300 text-sm mt-2">Запуск ідеї за кілька тижнів.
-            Мінімальний продукт → реальний ринок.</p>
-        </a>
-
-        <!-- Automation -->
-        <a href="services/automation.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">Автоматизація
-            бізнес-процесів</h3>
-          <p class="text-gray-300 text-sm mt-2">Скорочення рутини,
-            документообіг, CRM, інтеграції з поштою, ботами.</p>
-        </a>
-
-        <!-- WebDev -->
-        <a href="services/webdev.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">Розробка сайтів та
-            інтеграцій</h3>
-          <p class="text-gray-300 text-sm mt-2">Лендінги, сайти-візитки,
-            підключення форм, CRM, оплат.</p>
-        </a>
-
-        <!-- Security -->
-        <a href="services/security.html"
-          class="service-card">
-          <h3 class="text-white font-semibold text-lg">Кібербезпека / VPN /
-            Захист</h3>
-          <p class="text-gray-300 text-sm mt-2">VPN-команди, безпека пошти
-            (SPF/DKIM/DMARC), hardening серверів.</p>
-        </a>
-      </div>
-
-      <div class="text-center mt-10">
-        <a href="services/index.html"
-          class="text-neon text-sm hover:underline">
-          Дивитись усі послуги →
-        </a>
-      </div>
-    </section>
-
-    <!-- ABOUT PREVIEW -->
-    <section class="relative z-10 max-w-3xl mx-auto px-6 py-12 text-center">
-      <div
-        class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-2xl p-6 shadow-[0_0_30px_rgba(139,92,246,0.4)] animate-fadeInUpSmall">
-        <h2 class="text-white text-xl font-semibold mb-3">Хто ми</h2>
-        <p id="about_snip" class="text-gray-300 text-sm leading-relaxed">
-          Я – Дмитро. Незалежний ІТ-фахівець із багаторічним досвідом у
-          системній інфраструктурі, автоматизації та безпеці.
-          Поруч — Aoi, ваш цифровий асистент. Ми допомагаємо бізнесу
-          запускатися, виживати, масштабуватися.
-        </p>
-
-        <a href="about.html"
-          class="inline-block mt-5 text-neon text-sm hover:underline">
-          Детальніше про нас →
-        </a>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="relative z-10 text-center px-6 py-16">
-      <div
-        class="inline-block bg-spaceCard/50 backdrop-blur rounded-2xl border border-purple-500/30 px-6 py-6 shadow-[0_0_30px_rgba(139,92,246,0.5)]">
-        <div class="text-white text-lg font-semibold mb-2">
-          Готові поговорити про ваш проект?
-        </div>
-        <div class="text-gray-400 text-sm mb-4">
-          Усі звернення обробляє Aoi — персональний асистент. Жива людина
-          відповідає, якщо треба 😉
-        </div>
-        <a href="contact.html"
-          class="bg-neon text-black font-semibold rounded-xl px-5 py-2 text-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] hover:scale-[1.02] transition">
-          Записатись на консультацію
-        </a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <!-- Вставляємо footer -->
+    <!-- Footer partial -->
     <div id="footer"></div>
-    <!-- <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4">
-    <div class="mb-3">
-      <nav class="flex flex-wrap justify-center gap-4 text-[0.75rem]">
-        <a href="index.html" class="hover:text-neon">Головна</a>
-        <a href="services/index.html" class="hover:text-neon">Послуги</a>
-        <a href="blog.html" class="hover:text-neon">Блог</a>
-        <a href="about.html" class="hover:text-neon">Про нас</a>
-        <a href="contact.html" class="hover:text-neon">Контакти</a>
-      </nav>
-    </div>
-
-    <div class="mb-3 text-gray-500">
-      © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
-    </div>
-
-    <div class="text-[0.7rem] text-gray-600 italic">
-      If it doesn’t work — someone probably pressed the wrong button 😂
-    </div>
-  </footer> -->
 
     <!-- Scripts -->
-    <script src="assets/js/stars.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/stars.js"></script>
+    <script src="/assets/js/main.js"></script>
     <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch(console.error);
-    });
-  }
-</script>
-
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(console.error);
+        });
+      }
+    </script>
   </body>
 </html>
