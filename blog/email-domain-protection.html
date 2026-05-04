@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу | It World IT</title>
+  <meta name="description" content="Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="canonical" href="https://itworldit.com/blog/email-domain-protection.html" />
+  <meta property="og:title" content="SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу | It World IT" />
+  <meta property="og:description" content="Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/blog/email-domain-protection.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу | It World IT" />
+  <meta name="twitter:description" content="Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену." />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу","description":"Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену.","datePublished":"2026-05-04","dateModified":"2026-05-04","author":{"@type":"Organization","name":"It World IT"},"publisher":{"@type":"Organization","name":"It World IT","url":"https://itworldit.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://itworldit.com/blog/email-domain-protection.html"}}</script>
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas><div class="site-background-glow" aria-hidden="true"></div><div id="header"></div>
+  <main id="main-content"><article class="article-page"><div class="container container--sm"><a href="/blog.html" class="article-back">← Назад до блогу</a><header class="article-header"><div class="blog-card__meta"><span>#пошта</span><span>2026-05-04</span><span>6 хв</span></div><h1 class="section-title section-title--large">SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу</h1><p class="section-summary section-summary--hero">Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену.</p></header><div class="article-content">
+          <p>Бізнес часто ставиться до пошти як до чогось очевидного: домен підключили, листи надсилаються, значить усе добре. Але для доменної пошти “працює” і “захищено” — це різні речі.</p>
+          <p>Якщо SPF, DKIM і DMARC не налаштовані або налаштовані хаотично, зловмисникам простіше підробляти листи від імені вашого домену, а поштовим сервісам складніше зрозуміти, яким листам можна довіряти.</p>
+          <h2>Що таке SPF</h2><p>SPF відповідає на просте питання: які сервери мають право надсилати листи від імені вашого домену. Наприклад, якщо ви використовуєте Google Workspace, поштовий сервіс має бути зазначений у SPF-записі.</p>
+          <h2>Що таке DKIM</h2><p>DKIM додає до листа криптографічний підпис. Поштова система може перевірити, чи лист справді підписаний вашим доменом і чи його не змінили дорогою.</p>
+          <h2>Що таке DMARC</h2><p>DMARC задає політику: що робити з листами, які не пройшли перевірки. На старті часто використовують м’яку політику для збору інформації, а потім поступово посилюють правила.</p>
+          <h2>Типові помилки</h2><ul><li>кілька SPF-записів замість одного коректного;</li><li>DKIM не ввімкнений у поштовому сервісі;</li><li>DMARC відсутній або стоїть у режимі, який нічого не контролює;</li><li>старі сервіси залишилися в DNS після відключення;</li><li>ніхто не перевіряє, чи листи реально проходять автентифікацію.</li></ul>
+          <h2>Що дає правильне налаштування</h2><p>SPF/DKIM/DMARC не гарантують абсолютний захист від фішингу, але вони суттєво покращують базову безпеку доменної пошти. Це фундамент, без якого інші заходи виглядають як красивий замок на дверях без петель.</p>
+          <div class="article-note"><strong>Практичний висновок:</strong> якщо домен використовується для бізнес-листування, SPF, DKIM і DMARC мають бути не “коли-небудь”, а частиною базового запуску.</div>
+        </div><footer class="article-footer"><div class="cta-card"><div class="glow-line" aria-hidden="true"></div><div class="cta-content"><p class="eyebrow">Практичний наступний крок</p><h2 class="cta-title">Захистити пошту</h2><p class="cta-text">Можемо коротко розібрати вашу ситуацію і скласти план дій без зайвого шуму.</p></div><div class="cta-action"><a href="/contact.html" class="btn btn--primary">Замовити консультацію</a></div></div></footer></div></article></main>
+  <div id="footer"></div><script src="/assets/js/stars.js"></script><script src="/assets/js/main.js"></script><script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => { navigator.serviceWorker.register("/sw.js").catch(console.error); }); }</script>
+</body>
+</html>

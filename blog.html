@@ -1,84 +1,92 @@
 <!DOCTYPE html>
-<html lang="uk" class="scroll-smooth">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Блог – It World IT</title>
-
-  <meta name="description" content="Поради з безпеки, автоматизації, оптимізації IT для бізнесу. Ніякого маркетингового булшиту.">
+  <meta name="description" content="Практичний блог It World IT про кібербезпеку, VPN, захист пошти, автоматизацію, веб-розробку, інтеграції та запуск MVP без маркетингового шуму." />
+  <meta name="keywords" content="IT блог, кібербезпека, VPN, SPF DKIM DMARC, автоматизація бізнесу, веб-розробка, MVP, інтеграції" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="canonical" href="https://itworldit.com/blog.html" />
+  <link rel="alternate" hreflang="uk" href="https://itworldit.com/blog.html" />
+  <link rel="alternate" hreflang="en" href="https://itworldit.com/en/blog.html" />
+  <link rel="alternate" hreflang="x-default" href="https://itworldit.com/blog.html" />
+  <meta property="og:title" content="Блог – It World IT" />
+  <meta property="og:description" content="Практичні статті про безпеку, VPN, email protection, автоматизацію, веб-розробку, інтеграції та MVP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/blog.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+  <meta property="og:image:alt" content="It World IT blog visual" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Блог – It World IT" />
+  <meta name="twitter:description" content="Без маркетингового шуму: кібербезпека, автоматизація, веб-розробка, інтеграції та MVP людською мовою." />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","@id":"https://itworldit.com/blog.html#blog","name":"Блог It World IT","url":"https://itworldit.com/blog.html","description":"Практичний блог про кібербезпеку, автоматизацію, веб-розробку, інтеграції та MVP.","publisher":{"@type":"Organization","name":"It World IT","url":"https://itworldit.com/"}}</script>
   <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            spaceBg: "#0a0a1a",
-            spaceCard: "rgba(30,35,70,0.4)",
-            neon: "#8b5cf6"
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
 </head>
-<body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
-
-  <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
-
-  <!-- Вставляємо header -->
+<body>
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+  <div class="site-background-glow" aria-hidden="true"></div>
   <div id="header"></div>
-
-  <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 space-y-6">
-    <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-      <div class="text-gray-400 text-xs uppercase tracking-wide mb-2">#безпека</div>
-      <h2 class="text-white text-lg font-semibold">Ваш бізнес небезпечний рівно настільки, наскільки небезпечний найслабший ноутбук у команді 💻</h2>
-      <p class="text-gray-300 text-sm leading-relaxed mt-2">
-        Як не злити дані клієнтів через паролі типу 123456 і відкритий RDP.
-      </p>
-      <div class="text-neon text-xs mt-3 cursor-pointer hover:underline">читати скоро →</div>
+  <main id="main-content">
+    <section class="blog-hero section-glow" aria-labelledby="blogTitle">
+      <div class="container">
+        <div class="blog-hero__inner">
+          <div class="blog-hero__content">
+            <p class="eyebrow">It World IT Blog</p>
+            <h1 id="blogTitle" class="section-title section-title--large">Практичний IT-блог без маркетингового шуму</h1>
+            <p class="section-summary section-summary--hero">Кібербезпека, VPN, захист пошти, автоматизація, веб-розробка, інтеграції та MVP. Пояснюю людською мовою: що справді варто робити, а що тільки красиво виглядає у презентаціях.</p>
+            <div class="blog-filter" aria-label="Категорії блогу"><a href="#security">Безпека</a><a href="#automation">Автоматизація</a><a href="#webdev">Веб-розробка</a><a href="#mvp">MVP</a></div>
+          </div>
+          <div class="blog-hero__panel" aria-hidden="true"><div class="blog-hero__orb"></div><div class="blog-hero__line"></div><div class="blog-hero__mini-card blog-hero__mini-card--one">VPN</div><div class="blog-hero__mini-card blog-hero__mini-card--two">CRM</div><div class="blog-hero__mini-card blog-hero__mini-card--three">MVP</div><div class="blog-hero__mini-card blog-hero__mini-card--four">DMARC</div></div>
+        </div>
+      </div>
     </section>
-
-    <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-      <div class="text-gray-400 text-xs uppercase tracking-wide mb-2">#автоматизація</div>
-      <h2 class="text-white text-lg font-semibold">Як перестати руками робити рахунки і акти, якщо вам більше ніж 3 клієнти</h2>
-      <p class="text-gray-300 text-sm leading-relaxed mt-2">
-        Автоматизація документообігу — це не тільки для корпорацій.
-      </p>
-      <div class="text-neon text-xs mt-3 cursor-pointer hover:underline">читати скоро →</div>
-    </section>
-
+    <section class="section section--compact" aria-labelledby="featuredTitle"><div class="container"><div class="section-header has-line"><p class="eyebrow">Featured</p><h2 id="featuredTitle" class="section-title">Нові статті</h2><p class="section-summary">Стартовий набір матеріалів для бізнесу, який хоче менше хаосу, більше контролю і нормальну IT-основу.</p></div>
+      <div class="blog-featured"><article class="blog-featured__main" id="security"><div class="blog-card__meta"><span>#безпека</span><span>2026-05-04</span><span>7 хв</span></div><h3>Ваш бізнес небезпечний рівно настільки, наскільки небезпечний найслабший ноутбук у команді</h3><p>Як не втратити клієнтські дані через слабкі паролі, відкритий RDP, хаотичні доступи та відсутність базової гігієни.</p><a href="/blog/weakest-laptop-security.html" class="blog-card__link">Читати статтю →</a></article>
+      <div class="blog-featured__side"><article class="blog-mini-card" id="automation"><div class="blog-card__meta"><span>#автоматизація</span><span>6 хв</span></div><h3>Як перестати руками робити рахунки й акти, якщо у вас більше ніж 3 клієнти</h3><a href="/blog/automate-invoices-and-acts.html" class="blog-card__link">Читати →</a></article><article class="blog-mini-card"><div class="blog-card__meta"><span>#пошта</span><span>6 хв</span></div><h3>SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу</h3><a href="/blog/email-domain-protection.html" class="blog-card__link">Читати →</a></article></div></div></div></section>
+    <section class="section section--compact" aria-labelledby="allArticlesTitle"><div class="container"><div class="section-header has-line"><p class="eyebrow">All Articles</p><h2 id="allArticlesTitle" class="section-title">Усі матеріали</h2><p class="section-summary">Короткі практичні статті, які можна читати між задачами і одразу перетворювати на checklist.</p></div><div class="blog-grid"><article class="blog-card">
+            <div class="blog-card__meta"><span>#безпека</span><span>2026-05-04</span><span>7 хв</span></div>
+            <h3>Ваш бізнес небезпечний рівно настільки, наскільки небезпечний найслабший ноутбук у команді</h3>
+            <p>Як не втратити клієнтські дані через слабкі паролі, відкритий RDP, хаотичні доступи та відсутність базової гігієни.</p>
+            <a href="/blog/weakest-laptop-security.html" class="blog-card__link">Читати статтю →</a>
+          </article><article class="blog-card">
+            <div class="blog-card__meta"><span>#автоматизація</span><span>2026-05-04</span><span>6 хв</span></div>
+            <h3>Як перестати руками робити рахунки й акти, якщо у вас більше ніж 3 клієнти</h3>
+            <p>Автоматизація документообігу без корпоративного монстра: шаблони, таблиці, CRM, пошта й кілька розумних правил.</p>
+            <a href="/blog/automate-invoices-and-acts.html" class="blog-card__link">Читати статтю →</a>
+          </article><article class="blog-card">
+            <div class="blog-card__meta"><span>#пошта</span><span>2026-05-04</span><span>6 хв</span></div>
+            <h3>SPF, DKIM і DMARC: чому доменна пошта без захисту працює проти бізнесу</h3>
+            <p>Пояснення людською мовою: як базові DNS-записи допомагають зменшити підробку листів і підвищити довіру до домену.</p>
+            <a href="/blog/email-domain-protection.html" class="blog-card__link">Читати статтю →</a>
+          </article><article class="blog-card">
+            <div class="blog-card__meta"><span>#vpn</span><span>2026-05-04</span><span>5 хв</span></div>
+            <h3>VPN для віддаленої команди: коли він потрібен і що не варто відкривати в інтернет</h3>
+            <p>VPN як контрольований доступ до внутрішніх ресурсів: без відкритих адмін-панелей і випадкових портів.</p>
+            <a href="/blog/vpn-for-remote-team.html" class="blog-card__link">Читати статтю →</a>
+          </article><article class="blog-card" id="webdev">
+            <div class="blog-card__meta"><span>#webdev</span><span>2026-05-04</span><span>6 хв</span></div>
+            <h3>Сайт без інтеграцій — це красива вітрина без дверей у бізнес-процеси</h3>
+            <p>Чому форми, CRM, email, Google Sheets і Telegram-сповіщення часто важливіші за ще одну декоративну анімацію.</p>
+            <a href="/blog/website-integrations-business.html" class="blog-card__link">Читати статтю →</a>
+          </article><article class="blog-card" id="mvp">
+            <div class="blog-card__meta"><span>#mvp</span><span>2026-05-04</span><span>6 хв</span></div>
+            <h3>MVP без спалювання бюджету: як перевірити ідею до великої розробки</h3>
+            <p>Що залишити в першій версії продукту, що прибрати, і чому MVP має відповідати на бізнес-питання, а не демонструвати весь список мрій.</p>
+            <a href="/blog/mvp-without-wasting-budget.html" class="blog-card__link">Читати статтю →</a>
+          </article></div></div></section>
+    <section class="section" aria-labelledby="blogCtaTitle"><div class="container container--md"><article class="cta-card"><div class="glow-line" aria-hidden="true"></div><div class="cta-content"><p class="eyebrow">Need help?</p><h2 id="blogCtaTitle" class="cta-title">Хочете не просто читати про IT-порядок, а впровадити його у своєму бізнесі?</h2><p class="cta-text">Можемо почати з короткої консультації: подивитися на сайт, пошту, доступи, автоматизацію або MVP-ідею і скласти зрозумілий план дій.</p></div><div class="cta-action"><a href="/contact.html" class="btn btn--primary">Замовити консультацію</a></div></article></div></section>
   </main>
-
-<!-- Вставляємо footer -->
-<div id="footer"></div>
-
-  <script src="assets/js/stars.js"></script>
-  <script src="assets/js/main.js"></script>
-    <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch(console.error);
-    });
-  }
-</script>
-
-
-
-<script>
-  async function includeHTML(id, file) {
-    const res = await fetch(file);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
-  }
-  includeHTML("header", "/partials/header.html");
-  includeHTML("footer", "/partials/footer.html");
-</script>
-
+  <div id="footer"></div>
+  <script src="/assets/js/stars.js"></script><script src="/assets/js/main.js"></script><script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => { navigator.serviceWorker.register("/sw.js").catch(console.error); }); }</script>
 </body>
 </html>
