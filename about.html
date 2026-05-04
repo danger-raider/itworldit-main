@@ -1,96 +1,456 @@
 <!DOCTYPE html>
-<html lang="uk" class="scroll-smooth">
-
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Про нас – It World IT</title>
 
-  <meta name="description" content="Ми допомагаємо бізнесу працювати стабільно, безпечно і технологічно. Людина плюс ШІ-помічник.">
-  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="It World IT допомагає бізнесу працювати стабільно, безпечно і технологічно: інфраструктура, кібербезпека, VPN, захист пошти, автоматизація, сайти, інтеграції та MVP."
+  />
+  <meta
+    name="keywords"
+    content="It World IT, про нас, IT підтримка бізнесу, кібербезпека, автоматизація, VPN, захист пошти, веб-розробка, MVP"
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            spaceBg: "#0a0a1a",
-            spaceCard: "rgba(30,35,70,0.4)",
-            neon: "#8b5cf6"
+  <!-- Canonical -->
+  <link rel="canonical" href="https://itworldit.com/about.html" />
+
+  <!-- Language versions -->
+  <link rel="alternate" hreflang="uk" href="https://itworldit.com/about.html" />
+  <link rel="alternate" hreflang="en" href="https://itworldit.com/en/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://itworldit.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Про нас – It World IT" />
+  <meta
+    property="og:description"
+    content="Практична IT-допомога для бізнесу: інфраструктура, безпека, автоматизація, сайти, інтеграції та MVP."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/about.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/about/about-hero.webp" />
+  <meta property="og:image:alt" content="It World IT human and AI assistant working with secure digital infrastructure" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Про нас – It World IT" />
+  <meta
+    name="twitter:description"
+    content="Людина плюс цифровий асистент: стабільність, безпека, автоматизація та практичні IT-рішення для бізнесу."
+  />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/about/about-hero.webp" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="/assets/img/about/about-hero.webp" type="image/webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://itworldit.com/#organization",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "logo": "https://itworldit.com/favicon.ico",
+          "description": "Практична IT-допомога для бізнесу: інфраструктура, кібербезпека, автоматизація, веб-розробка, інтеграції та MVP."
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://itworldit.com/about.html#about",
+          "name": "Про нас – It World IT",
+          "url": "https://itworldit.com/about.html",
+          "description": "It World IT допомагає бізнесу працювати стабільно, безпечно і технологічно.",
+          "isPartOf": {
+            "@id": "https://itworldit.com/#organization"
+          },
+          "about": {
+            "@id": "https://itworldit.com/#organization"
           }
         }
-      }
+      ]
     }
   </script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="manifest" href="manifest.json" />
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
 </head>
 
-<body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
+<body>
+  <!-- Background -->
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+  <div class="site-background-glow" aria-hidden="true"></div>
 
-  <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
-  <!-- Вставляємо header -->
+  <!-- Header partial -->
   <div id="header"></div>
 
-  <main class="relative z-10 max-w-3xl mx-auto px-6 py-12 space-y-10">
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="about-hero section-glow" aria-labelledby="aboutTitle">
+      <div class="about-hero__inner">
+        <div class="about-hero__content">
+          <p class="eyebrow">
+            About It World IT
+          </p>
 
-    <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-      <h1 class="text-white text-2xl font-bold mb-2">Хто ми</h1>
-      <p class="text-gray-300 text-sm leading-relaxed">
-        Я – Дмитро. 15+ років у системній інфраструктурі, автоматизації, інформаційній безпеці.
-        Робив все: від розгортання VPN і безпеки пошти до побудови CI/CD і створення MVP продуктів.
-        <br><br>
-        Поруч зі мною – Aoi. Це ваш перший контакт і цифровий асистент.
-        Вона отримує звернення, задає уточнюючі питання, фільтрує спам і передає мені лише те, що справді важливо.
-      </p>
+          <h1 id="aboutTitle" class="section-title section-title--large">
+            Людина плюс цифровий асистент для практичних IT-рішень
+          </h1>
+
+          <p class="section-summary section-summary--hero">
+            It World IT допомагає бізнесу працювати стабільно, безпечно і технологічно:
+            від VPN, захисту пошти й серверної інфраструктури до автоматизації,
+            сайтів, інтеграцій і MVP-продуктів.
+          </p>
+
+          <p class="section-summary">
+            Тут немає магічного туману й “презентацій заради презентацій”.
+            Є аналіз задачі, зрозумілий план, впровадження і пояснення людською мовою.
+          </p>
+
+          <div class="actions">
+            <a href="/contact.html" class="btn btn--primary">
+              Звʼязатися з нами
+            </a>
+
+            <a href="/services.html" class="btn btn--secondary">
+              Переглянути послуги
+            </a>
+          </div>
+        </div>
+
+        <figure class="service-image service-image--hero">
+          <img
+            src="/assets/img/about/about-hero.webp"
+            alt="Абстрактна візуалізація людини та цифрового AI-асистента, які працюють із захищеною IT-інфраструктурою"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-white text-xl font-semibold mb-4">Наші принципи</h2>
-      <ul class="grid gap-4 text-sm text-gray-300">
-        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🎯 Рішення, а не відмазки. Ми не продаємо "ще одну систему", ми вирішуємо конкретний біль.</li>
-        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🔐 Безпека з першого дня. Нема сенсу будувати бізнес на дірявій інфраструктурі.</li>
-        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">⏱ Швидкий старт. Ми не малюємо презентації на 30 слайдів. Ми розгортаємо робоче рішення.</li>
-        <li class="bg-spaceCard/50 p-4 rounded border border-purple-900/40">🤝 Прозорість. Узгоджуємо, робимо, показуємо. Без «ой, воно дорожче стало».</li>
-      </ul>
+    <!-- INTRO -->
+    <section class="section section--compact" aria-labelledby="whoTitle">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-intro__content">
+            <p class="eyebrow">
+              Who we are
+            </p>
+
+            <h2 id="whoTitle" class="section-title">
+              Хто ми
+            </h2>
+
+            <p class="section-summary">
+              Я — Дмитро. Понад 15 років працюю з системною інфраструктурою,
+              автоматизацією, інформаційною безпекою та впровадженням IT-рішень.
+              У практиці були задачі від розгортання VPN і захисту пошти до CI/CD,
+              серверів, інтеграцій, сайтів і MVP-продуктів.
+            </p>
+
+            <p class="section-summary">
+              Поруч працює Aoi — цифровий асистент і перший контакт. Вона допомагає приймати звернення,
+              структурувати первинну інформацію, ставити уточнювальні питання, відсікати шум і передавати
+              до роботи тільки те, що справді важливо.
+            </p>
+          </div>
+
+          <div class="about-intro__stats" aria-label="Ключові напрями роботи">
+            <div>
+              <span>15+</span>
+              <strong>років практичного IT-досвіду</strong>
+            </div>
+
+            <div>
+              <span>4</span>
+              <strong>ключові напрями: інфраструктура, безпека, автоматизація, веб</strong>
+            </div>
+
+            <div>
+              <span>AI</span>
+              <strong>цифровий асистент для першого контакту й структурування задач</strong>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="text-center">
-      <a href="contact.html"
-         class="bg-neon text-black font-semibold rounded-xl px-5 py-2 text-sm hover:shadow-[0_0_20px_rgba(139,92,246,0.8)] hover:scale-[1.02] transition">
-        Звʼязатися з нами
-      </a>
+    <!-- WHAT WE DO -->
+    <section class="section section--compact" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-header section-header--center has-line">
+          <p class="eyebrow eyebrow--center">
+            What we do
+          </p>
+
+          <h2 id="workTitle" class="section-title section-title--center">
+            Що ми робимо
+          </h2>
+
+          <p class="section-summary section-summary--center">
+            Фокус не на “ще одному інструменті”, а на тому, щоб бізнес працював стабільніше,
+            швидше й безпечніше.
+          </p>
+        </div>
+
+        <div class="about-capabilities">
+          <article class="about-capability">
+            <span>01</span>
+            <h3>Кібербезпека та доступи</h3>
+            <p>
+              VPN для команд, hardening серверів, SPF/DKIM/DMARC, аудит безпеки,
+              контроль доступів і базова security-гігієна.
+            </p>
+          </article>
+
+          <article class="about-capability">
+            <span>02</span>
+            <h3>Автоматизація процесів</h3>
+            <p>
+              Документи, заявки, CRM, форми, Google Workspace, Telegram-сповіщення,
+              API та сценарії, які прибирають ручну рутину.
+            </p>
+          </article>
+
+          <article class="about-capability">
+            <span>03</span>
+            <h3>Сайти та інтеграції</h3>
+            <p>
+              Легкі сайти, landing pages, сайти-візитки, Web UI, форми,
+              аналітика, CRM, email і платіжні інтеграції.
+            </p>
+          </article>
+
+          <article class="about-capability">
+            <span>04</span>
+            <h3>MVP і технічний старт</h3>
+            <p>
+              Допомога з першою версією продукту: від ідеї та структури до запуску,
+              перевірки гіпотези й подальшого масштабування.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
+    <!-- HUMAN + AI -->
+    <section class="section section--compact" aria-labelledby="duoTitle">
+      <div class="container">
+        <div class="media-split">
+          <div class="media-split__content">
+            <p class="eyebrow">
+              Human + AI assistant
+            </p>
+
+            <h2 id="duoTitle" class="section-title">
+              Не замість людини, а як підсилення роботи
+            </h2>
+
+            <p class="section-summary">
+              Aoi допомагає швидше структурувати запити, не загубити деталі й підготувати нормальний старт задачі.
+              Але фінальні технічні рішення, відповідальність і якість впровадження залишаються за людиною.
+            </p>
+
+            <div class="about-duo">
+              <div>
+                <span>Дмитро</span>
+                <strong>аналіз, архітектура, впровадження, відповідальність</strong>
+              </div>
+
+              <div>
+                <span>Aoi</span>
+                <strong>первинний контакт, уточнення, структура, фільтрація шуму</strong>
+              </div>
+            </div>
+          </div>
+
+          <figure class="service-image">
+            <img
+              src="/assets/img/about/about-ai-assistant.webp"
+              alt="Цифровий AI-асистент, який структурує запити, повідомлення та IT-задачі для бізнесу"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section section--compact" aria-labelledby="principlesTitle">
+      <div class="container">
+        <div class="section-header has-line">
+          <p class="eyebrow">
+            Principles
+          </p>
+
+          <h2 id="principlesTitle" class="section-title">
+            Наші принципи
+          </h2>
+
+          <p class="section-summary">
+            Робота має бути зрозумілою: що робимо, навіщо, скільки це займає,
+            які ризики є і який результат очікується.
+          </p>
+        </div>
+
+        <div class="about-principles">
+          <article>
+            <span>01</span>
+            <h3>Рішення, а не відмазки</h3>
+            <p>
+              Ми не продаємо “ще одну систему”. Ми розбираємо конкретний біль і шукаємо рішення,
+              яке можна реально впровадити.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Безпека з першого дня</h3>
+            <p>
+              Немає сенсу будувати бізнес на дірявій інфраструктурі.
+              Базові доступи, пошта, сервери й резервування мають бути в порядку.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Швидкий старт</h3>
+            <p>
+              Не починаємо з 30 слайдів, якщо потрібне робоче рішення.
+              Спочатку визначаємо мінімальний корисний етап, потім масштабуємо.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Прозорість</h3>
+            <p>
+              Узгоджуємо, робимо, показуємо. Без прихованих сюрпризів,
+              розмитих обіцянок і “ой, воно раптом стало дорожче”.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section--compact" aria-labelledby="processTitle">
+      <div class="container">
+        <div class="about-process-panel">
+          <div class="about-process-panel__header">
+            <p class="eyebrow">
+              Work process
+            </p>
+
+            <h2 id="processTitle" class="section-title">
+              Як зазвичай проходить робота
+            </h2>
+
+            <p class="section-summary">
+              Мінімум хаосу, максимум ясності: коротко зібрали дані, визначили пріоритети,
+              зробили перший етап і зафіксували наступні кроки.
+            </p>
+          </div>
+
+          <div class="about-process">
+            <article>
+              <span>01</span>
+              <h3>Збір контексту</h3>
+              <p>Що болить, які системи вже є, що треба покращити і які обмеження важливі.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>План дій</h3>
+              <p>Пріоритети, ризики, інструменти, бюджетний діапазон і перший реальний етап.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Впровадження</h3>
+              <p>Налаштування, розробка, інтеграції, перевірка і коротка документація.</p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Підтримка</h3>
+              <p>Пояснення, супровід, покращення, масштабування або наступний етап розвитку.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="aboutCtaTitle">
+      <div class="container container--md">
+        <article class="cta-card">
+          <div class="glow-line" aria-hidden="true"></div>
+
+          <div class="cta-content">
+            <p class="eyebrow">
+              Ready to talk?
+            </p>
+
+            <h2 id="aboutCtaTitle" class="cta-title">
+              Маєте задачу, яку треба привести до порядку?
+            </h2>
+
+            <p class="cta-text">
+              Напишіть, що саме потрібно: безпека, VPN, пошта, автоматизація, сайт,
+              інтеграція або MVP. Ми допоможемо визначити перший адекватний крок.
+            </p>
+          </div>
+
+          <div class="cta-action">
+            <a href="/contact.html" class="btn btn--primary">
+              Звʼязатися з нами
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
-<!-- Вставляємо footer -->
-<div id="footer"></div>
+  <!-- Footer partial -->
+  <div id="footer"></div>
 
-  <script src="assets/js/stars.js"></script>
-  <script src="assets/js/main.js"></script>
-    <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch(console.error);
-    });
-  }
-</script>
-
-<script>
-  async function includeHTML(id, file) {
-    const res = await fetch(file);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
-  }
-  includeHTML("header", "/partials/header.html");
-  includeHTML("footer", "/partials/footer.html");
-</script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/partials.js"></script>
-
+  <!-- Scripts -->
+  <script src="/assets/js/stars.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch(console.error);
+      });
+    }
+  </script>
 </body>
 </html>
