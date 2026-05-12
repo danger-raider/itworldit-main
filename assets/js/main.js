@@ -7,10 +7,9 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadPartials();
-
+localStorage.removeItem("font");
   initHeaderDropdowns();
   initTheme();
-  initFontSwitcher();
   initLanguageSwitcher();
   initMobileMenu();
   markActiveNavLink();
@@ -537,69 +536,7 @@ function initTheme() {
   });
 }
 
-/**
- * Font switcher with smooth visual transition.
- */
-function initFontSwitcher() {
-  const body = document.body;
-  const fontCurrent = document.getElementById("fontCurrent");
-  const fontOptions = document.querySelectorAll("[data-font-value]");
 
-  const fontLabels = {
-    poppins: "Poppins",
-    noto: "Noto Sans",
-    roboto: "Roboto",
-  };
-
-  function applyFont(fontName) {
-    body.dataset.font = fontName;
-
-    if (fontCurrent) {
-      fontCurrent.textContent = fontLabels[fontName] || fontLabels.poppins;
-    }
-
-    fontOptions.forEach((option) => {
-      const isSelected = option.dataset.fontValue === fontName;
-
-      option.classList.toggle("is-selected", isSelected);
-      option.setAttribute("aria-selected", String(isSelected));
-    });
-  }
-
-  const savedFont = localStorage.getItem("font") || "poppins";
-  applyFont(savedFont);
-
-  fontOptions.forEach((option) => {
-    option.addEventListener("click", (event) => {
-      event.stopPropagation();
-
-      const selectedFont = option.dataset.fontValue || "poppins";
-      const currentFont =
-        body.dataset.font || localStorage.getItem("font") || "poppins";
-
-      if (selectedFont === currentFont) {
-        if (window.closeHeaderDropdowns) {
-          window.closeHeaderDropdowns();
-        }
-
-        return;
-      }
-
-      runSoftTransition(
-        "is-font-changing",
-        () => {
-          localStorage.setItem("font", selectedFont);
-          applyFont(selectedFont);
-        },
-        100,
-      );
-
-      if (window.closeHeaderDropdowns) {
-        window.closeHeaderDropdowns();
-      }
-    });
-  });
-}
 
 /**
  * Language switcher with smooth visual transition.
@@ -794,7 +731,7 @@ function initHeroGallery() {
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  let currentIndex = 0;
+ let currentIndex = -1;
   let autoplayTimer = null;
   const autoplayDelay = 7600;
 
@@ -802,26 +739,30 @@ function initHeroGallery() {
     return String(number).padStart(2, "0");
   }
 
-  function setSlide(index) {
-    const nextIndex = (index + slides.length) % slides.length;
+function setSlide(index) {
+  const nextIndex = (index + slides.length) % slides.length;
 
-    currentIndex = nextIndex;
-
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle("is-active", slideIndex === currentIndex);
-    });
-
-    thumbs.forEach((thumb, thumbIndex) => {
-      const isActive = thumbIndex === currentIndex;
-
-      thumb.classList.toggle("is-active", isActive);
-      thumb.setAttribute("aria-selected", String(isActive));
-    });
-
-    if (currentCounter) {
-      currentCounter.textContent = formatNumber(currentIndex + 1);
-    }
+  if (nextIndex === currentIndex) {
+    return;
   }
+
+  currentIndex = nextIndex;
+
+  slides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("is-active", slideIndex === currentIndex);
+  });
+
+  thumbs.forEach((thumb, thumbIndex) => {
+    const isActive = thumbIndex === currentIndex;
+
+    thumb.classList.toggle("is-active", isActive);
+    thumb.setAttribute("aria-selected", String(isActive));
+  });
+
+  if (currentCounter) {
+    currentCounter.textContent = formatNumber(currentIndex + 1);
+  }
+}
 
   function nextSlide() {
     setSlide(currentIndex + 1);
