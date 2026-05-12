@@ -91,7 +91,6 @@ body {
 }
 
 
-
 body[data-theme="light"] {
   background:
     radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.14), transparent 32%),
@@ -196,7 +195,6 @@ body.is-lang-changing [data-i18n] {
   opacity: 0.35;
   transform: translateY(2px);
 }
-
 
 
 body.is-theme-changing #header,
@@ -1189,7 +1187,6 @@ body[data-theme="light"] .feature-card__icon {
 }
 
 
-
 .site-dropdown.is-open .site-dropdown__menu {
   opacity: 1;
   pointer-events: auto;
@@ -1323,19 +1320,11 @@ body[data-theme="light"] .site-dropdown__option-sub {
 .hero-kiyo {
   position: relative;
   z-index: 10;
-  height: calc(100vh - var(--site-header-height-mobile));
-  height: calc(100svh - var(--site-header-height-mobile));
-  min-height: 500px;
-  max-height: calc(100svh - var(--site-header-height-mobile));
-  overflow: hidden;
-  isolation: isolate;
-}
-/* HERO FULL VIEWPORT HEIGHT FIX */
-
-.hero-kiyo {
   height: calc(100dvh - var(--site-header-height-mobile));
   min-height: calc(100dvh - var(--site-header-height-mobile));
   max-height: none;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 @supports not (height: 100dvh) {
@@ -1349,7 +1338,6 @@ body[data-theme="light"] .site-dropdown__option-sub {
   .hero-kiyo {
     height: calc(100dvh - var(--site-header-height-tablet));
     min-height: calc(100dvh - var(--site-header-height-tablet));
-    max-height: none;
   }
 
   @supports not (height: 100dvh) {
@@ -1364,7 +1352,6 @@ body[data-theme="light"] .site-dropdown__option-sub {
   .hero-kiyo {
     height: calc(100dvh - var(--site-header-height-desktop));
     min-height: calc(100dvh - var(--site-header-height-desktop));
-    max-height: none;
   }
 
   @supports not (height: 100dvh) {
@@ -1374,6 +1361,7 @@ body[data-theme="light"] .site-dropdown__option-sub {
     }
   }
 }
+
 .hero-kiyo__gallery {
   position: relative;
   height: 100%;
@@ -1388,40 +1376,29 @@ body[data-theme="light"] .site-dropdown__option-sub {
   margin: 0;
   opacity: 0;
   pointer-events: none;
-  transform: scale(1.025);
-  transition:
-    opacity 900ms var(--motion-ease-soft),
-    transform 1600ms var(--motion-ease-soft);
-}
-/* =========================================================
-   HERO GALLERY SOFT FADE v0.1
-   Replaces zoom/jump effect with smoother cinematic crossfade.
-   Add at the end of style.css.
-   ========================================================= */
-
-.hero-kiyo__slide {
-  opacity: 0;
-  pointer-events: none;
   transform: none;
   filter: brightness(0.92) saturate(0.94);
   transition:
-    opacity 1400ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 1800ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1400ms var(--motion-ease),
+    filter 1800ms var(--motion-ease);
   will-change: opacity, filter;
 }
 
 .hero-kiyo__slide.is-active {
   opacity: 1;
   pointer-events: auto;
-  transform: none;
   filter: brightness(1) saturate(1);
 }
 
 .hero-kiyo__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
   transform: scale(1.012);
   transition:
-    transform 11000ms cubic-bezier(0.16, 1, 0.3, 1),
-    filter 1800ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform 11000ms var(--motion-ease-soft),
+    filter 1800ms var(--motion-ease);
   will-change: transform;
 }
 
@@ -1429,12 +1406,11 @@ body[data-theme="light"] .site-dropdown__option-sub {
   transform: scale(1.018);
 }
 
-/* Make content feel calmer during slide changes */
 .hero-kiyo__content,
 .hero-kiyo__caption {
   transition:
-    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 900ms var(--motion-ease),
+    transform 900ms var(--motion-ease);
 }
 
 .hero-kiyo__slide:not(.is-active) .hero-kiyo__content,
@@ -1449,13 +1425,12 @@ body[data-theme="light"] .site-dropdown__option-sub {
   transform: translateY(0);
 }
 
-/* Softer dots animation */
 .hero-kiyo__dot {
   transition:
-    width 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 420ms cubic-bezier(0.22, 1, 0.36, 1);
+    width 420ms var(--motion-ease),
+    background-color 420ms var(--motion-ease),
+    box-shadow 420ms var(--motion-ease),
+    opacity 420ms var(--motion-ease);
 }
 
 .hero-kiyo__dot:not(.is-active) {
@@ -1464,24 +1439,6 @@ body[data-theme="light"] .site-dropdown__option-sub {
 
 .hero-kiyo__dot.is-active {
   opacity: 1;
-}
-.hero-kiyo__slide.is-active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
-}
-
-.hero-kiyo__image {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.04);
-  transition: transform 7000ms var(--motion-ease-soft);
-}
-
-.hero-kiyo__slide.is-active .hero-kiyo__image {
-  transform: scale(1);
 }
 
 .hero-kiyo__image--infrastructure {
@@ -4560,13 +4517,10 @@ body[data-theme="light"] .webdev-pricing p {
   }
 
 
-
   .webdev-studio__browser--mobile,
   .webdev-studio__chip--forms {
     display: none;
   }
-
-
 
 
 }
@@ -5834,7 +5788,6 @@ body[data-theme="light"] .contact-form__field textarea::placeholder {
 @media (max-width: 520px) {
 
 
-
   .contact-options,
   .contact-form-card,
   .contact-side-panel,
@@ -5845,5 +5798,464 @@ body[data-theme="light"] .contact-form__field textarea::placeholder {
 
   .contact-process article {
     min-height: 190px;
+  }
+}
+
+/* =========================================================
+   REFACTORED ICON CARDS / ABOUT PATCHES v0.3
+   Consolidates the duplicated styles added for services, about stats,
+   capabilities and principles.
+   ========================================================= */
+
+/* ---------- Shared inline SVG icon skin ---------- */
+.service-card__icon,
+.about-stat-card__icon,
+.about-capability__icon,
+.about-principle-card__icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(139, 92, 246, 0.25), transparent 62%),
+    linear-gradient(145deg, rgba(139, 92, 246, 0.14), transparent 48%),
+    rgba(10, 10, 26, 0.34);
+  color: var(--color-neon);
+  box-shadow:
+    0 0 0 5px rgba(139, 92, 246, 0.04),
+    0 0 22px rgba(139, 92, 246, 0.16);
+}
+
+.service-card__icon svg,
+.about-stat-card__icon svg,
+.about-capability__icon svg,
+.about-principle-card__icon svg {
+  width: 26px;
+  height: 26px;
+  overflow: visible;
+}
+
+.service-card__icon svg path,
+.service-card__icon svg circle,
+.about-stat-card__icon svg path,
+.about-stat-card__icon svg circle,
+.about-capability__icon svg path,
+.about-capability__icon svg circle,
+.about-principle-card__icon svg path,
+.about-principle-card__icon svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card__icon svg circle,
+.about-stat-card__icon svg circle,
+.about-capability__icon svg circle,
+.about-principle-card__icon svg circle {
+  fill: rgba(139, 92, 246, 0.15);
+}
+
+.service-card--with-icon:hover .service-card__icon,
+.service-card--with-icon:focus-visible .service-card__icon,
+.about-capability:hover .about-capability__icon,
+.about-capability:focus-within .about-capability__icon,
+.about-principle-card:hover .about-principle-card__icon,
+.about-principle-card:focus-within .about-principle-card__icon {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(139, 92, 246, 0.62);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(139, 92, 246, 0.34), transparent 64%),
+    linear-gradient(145deg, rgba(139, 92, 246, 0.20), transparent 48%),
+    rgba(10, 10, 26, 0.46);
+  color: #ffffff;
+  box-shadow:
+    0 0 0 6px rgba(139, 92, 246, 0.07),
+    0 0 28px rgba(139, 92, 246, 0.24);
+}
+
+body[data-theme="light"] .service-card__icon,
+body[data-theme="light"] .about-stat-card__icon,
+body[data-theme="light"] .about-capability__icon,
+body[data-theme="light"] .about-principle-card__icon {
+  border-color: rgba(139, 92, 246, 0.20);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(139, 92, 246, 0.16), transparent 62%),
+    rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 0 0 5px rgba(139, 92, 246, 0.035),
+    0 16px 34px rgba(17, 24, 39, 0.08);
+}
+
+body[data-theme="light"] .service-card--with-icon:hover .service-card__icon,
+body[data-theme="light"] .service-card--with-icon:focus-visible .service-card__icon,
+body[data-theme="light"] .about-capability:hover .about-capability__icon,
+body[data-theme="light"] .about-capability:focus-within .about-capability__icon,
+body[data-theme="light"] .about-principle-card:hover .about-principle-card__icon,
+body[data-theme="light"] .about-principle-card:focus-within .about-principle-card__icon {
+  color: #7c3aed;
+  border-color: rgba(139, 92, 246, 0.46);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(139, 92, 246, 0.20), transparent 62%),
+    rgba(255, 255, 255, 0.84);
+}
+
+/* ---------- Service cards with icons: homepage + services page ---------- */
+#services .service-card--with-icon,
+#services-list .service-card--with-icon {
+  justify-content: flex-start;
+  gap: 14px;
+  min-height: 236px;
+}
+
+#services .service-card__icon {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+#services-list .service-card--with-icon {
+  min-height: 250px;
+  padding-top: clamp(24px, 3vw, 30px);
+  padding-right: clamp(24px, 3vw, 30px);
+}
+
+#services-list .service-card--with-icon::after {
+  display: none;
+}
+
+#services-list .service-card__icon {
+  position: absolute;
+  z-index: 2;
+  top: clamp(22px, 3vw, 30px);
+  right: clamp(22px, 3vw, 30px);
+}
+
+#services-list .service-card--with-icon .card-number {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: fit-content;
+  max-width: calc(100% - 72px);
+  margin: 0 0 2px;
+}
+
+#services .service-card--with-icon h3,
+#services .service-card--with-icon p,
+#services-list .service-card--with-icon h3 {
+  max-width: calc(100% - 72px);
+}
+
+#services-list .service-card--with-icon h3 {
+  margin-top: 0;
+}
+
+#services-list .service-card--with-icon p {
+  max-width: 96%;
+}
+
+.service-card__icon--outsourcing,
+.service-card__icon--automation,
+.about-capability--automation .about-capability__icon,
+.about-principle-card--speed .about-principle-card__icon {
+  color: #a78bfa;
+}
+
+.service-card__icon--consulting,
+.service-card__icon--webdev,
+.about-capability--web .about-capability__icon,
+.about-principle-card--solutions .about-principle-card__icon,
+.about-principle-card--transparency .about-principle-card__icon {
+  color: #c4b5fd;
+}
+
+.service-card__icon--mvp,
+.service-card__icon--security,
+.about-capability--security .about-capability__icon,
+.about-capability--mvp .about-capability__icon,
+.about-principle-card--security .about-principle-card__icon {
+  color: #8b5cf6;
+}
+
+@media (max-width: 520px) {
+
+  #services .service-card--with-icon,
+  #services-list .service-card--with-icon {
+    min-height: 230px;
+  }
+
+  #services .service-card__icon,
+  #services-list .service-card__icon {
+    position: relative;
+    top: auto;
+    right: auto;
+    order: -1;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 2px;
+    border-radius: 16px;
+  }
+
+  #services .service-card__icon svg,
+  #services-list .service-card__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #services .service-card--with-icon h3,
+  #services .service-card--with-icon p,
+  #services-list .service-card--with-icon .card-number,
+  #services-list .service-card--with-icon h3 {
+    max-width: 100%;
+  }
+}
+
+/* ---------- About intro stat cards ---------- */
+.about-intro {
+  align-items: stretch;
+}
+
+.about-intro__content {
+  align-self: center;
+}
+
+.about-intro__stats {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-intro__stats .about-stat-card {
+  min-height: 132px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 54px;
+  grid-template-areas:
+    "value icon"
+    "text icon";
+  column-gap: 18px;
+  row-gap: 8px;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  border-radius: 20px;
+  background: rgba(10, 10, 26, 0.24);
+}
+
+.about-intro__stats .about-stat-card__icon {
+  grid-area: icon;
+  justify-self: end;
+  align-self: center;
+  width: 46px;
+  height: 46px;
+  margin: 0;
+  font-size: 0;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.about-intro__stats .about-stat-card__value,
+.about-intro__stats .about-stat-card>span:not(.about-stat-card__icon) {
+  grid-area: value;
+  display: block;
+  width: 100%;
+  margin: 0;
+  color: var(--color-neon);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  text-align: left;
+}
+
+.about-intro__stats .about-stat-card:nth-child(4)>span:not(.about-stat-card__icon),
+.about-intro__stats .about-stat-card__value--word {
+  font-size: clamp(1.08rem, 1.85vw, 1.38rem);
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.about-intro__stats .about-stat-card strong,
+.about-intro__stats .about-stat-card__text {
+  grid-area: text;
+  display: block;
+  margin: 0;
+  color: var(--text-muted-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.42;
+  text-align: left;
+}
+
+.about-intro__stats .about-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.34);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.18),
+    0 0 26px rgba(139, 92, 246, 0.13);
+}
+
+body[data-theme="light"] .about-intro__stats .about-stat-card {
+  border-color: rgba(139, 92, 246, 0.18);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+body[data-theme="light"] .about-intro__stats .about-stat-card strong,
+body[data-theme="light"] .about-intro__stats .about-stat-card__text {
+  color: #4b5563;
+}
+
+@media (min-width: 860px) {
+  .about-intro {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .about-intro__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro__stats .about-stat-card {
+    min-height: 112px;
+    grid-template-columns: minmax(0, 1fr) 50px;
+    column-gap: 14px;
+    padding: 18px;
+  }
+
+  .about-intro__stats .about-stat-card__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 15px;
+  }
+
+  .about-intro__stats .about-stat-card__icon svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+/* ---------- About capability + principle cards ---------- */
+.about-capabilities,
+.about-principles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.about-capability,
+.about-capability:nth-child(even),
+.about-principles .about-principle-card {
+  transform: none;
+}
+
+.about-capability,
+.about-principles .about-principle-card {
+  min-height: 236px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 54px;
+  grid-template-areas:
+    "number icon"
+    "title title"
+    "text text";
+  align-content: start;
+  gap: 0;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.about-capability__number,
+.about-principle-card__number {
+  grid-area: number;
+  position: relative;
+  display: block;
+  margin: 0;
+  color: rgba(139, 92, 246, 0.72);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.about-capability__icon,
+.about-principle-card__icon {
+  grid-area: icon;
+  justify-self: end;
+  align-self: start;
+  margin: 0;
+}
+
+.about-capability h3,
+.about-principle-card h3 {
+  grid-area: title;
+  min-height: 2.6em;
+  margin-top: 28px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-capability p,
+.about-principle-card p {
+  grid-area: text;
+  max-width: 100%;
+  margin-top: 12px;
+}
+
+@media (min-width: 760px) {
+
+  .about-capabilities,
+  .about-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-capability,
+  .about-principles .about-principle-card {
+    height: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .about-capability,
+  .about-principles .about-principle-card {
+    min-height: 220px;
+    grid-template-columns: minmax(0, 1fr) 50px;
+  }
+
+  .about-capability__icon,
+  .about-principle-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+  }
+
+  .about-capability__icon svg,
+  .about-principle-card__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-capability h3,
+  .about-principle-card h3 {
+    min-height: auto;
+    margin-top: 22px;
+  }
+}
+/* =========================================================
+   MOBILE HEADER MENU ALIGN FIX v0.1
+   Keeps language/theme on the left and menu button on the right.
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  .site-header__controls {
+    width: 100%;
+  }
+
+  .site-header__menu-button {
+    margin-left: auto;
   }
 }
