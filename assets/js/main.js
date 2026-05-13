@@ -88,7 +88,7 @@ function runSoftTransition(className, callback, delay = 100) {
  * Premium custom dropdowns for header controls.
  */
 function initHeaderDropdowns() {
-  const dropdowns = document.querySelectorAll(".site-dropdown");
+  const dropdowns = document.querySelectorAll("[data-dropdown]");
 
   function closeAllDropdowns(exceptDropdown = null) {
     dropdowns.forEach((dropdown) => {
@@ -96,7 +96,9 @@ function initHeaderDropdowns() {
         return;
       }
 
-      const button = dropdown.querySelector(".site-dropdown__button");
+      const button = dropdown.querySelector(
+        "[data-dropdown-button], .site-dropdown__button",
+      );
 
       dropdown.classList.remove("is-open");
 
@@ -107,13 +109,16 @@ function initHeaderDropdowns() {
   }
 
   dropdowns.forEach((dropdown) => {
-    const button = dropdown.querySelector(".site-dropdown__button");
+    const button = dropdown.querySelector(
+      "[data-dropdown-button], .site-dropdown__button",
+    );
 
     if (!button) {
       return;
     }
 
     button.addEventListener("click", (event) => {
+      event.preventDefault();
       event.stopPropagation();
 
       const isOpen = dropdown.classList.contains("is-open");
@@ -122,6 +127,31 @@ function initHeaderDropdowns() {
 
       dropdown.classList.toggle("is-open", !isOpen);
       button.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    dropdown.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        closeAllDropdowns();
+
+        if (window.innerWidth < 1024) {
+          const nav = document.getElementById("mainNav");
+          const menuToggle = document.getElementById("menuToggle");
+          const menuIcon = document.getElementById("menuIcon");
+
+          if (nav) {
+            nav.classList.remove("is-open");
+          }
+
+          if (menuToggle) {
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open menu");
+          }
+
+          if (menuIcon) {
+            menuIcon.textContent = "☰";
+          }
+        }
+      });
     });
   });
 
@@ -147,10 +177,25 @@ const DICT = {
 
     nav_home: "Головна",
     nav_services: "Послуги",
+    nav_services_all: "Усі послуги",
+    nav_service_outsourcing: "IT Аутсорсинг",
+    nav_service_consulting: "IT Консалтинг та аудит",
+    nav_service_mvp: "Розробка MVP",
+    nav_service_automation: "Автоматизація бізнес-процесів",
+    nav_service_webdev: "Розробка сайтів та інтеграцій",
+    nav_service_security: "Кібербезпека / VPN / Захист пошти",
     nav_blog: "Блог",
     nav_about: "Про нас",
     nav_contact: "Контакти",
-
+    footer_service_mvp: "Розробка MVP",
+    footer_service_webdev: "Розробка сайтів та інтеграцій",
+    nav_services_all: "Усі послуги",
+    nav_service_outsourcing: "IT Аутсорсинг",
+    nav_service_consulting: "IT Консалтинг та аудит",
+    nav_service_mvp: "Розробка MVP",
+    nav_service_automation: "Автоматизація бізнес-процесів",
+    nav_service_webdev: "Розробка сайтів та інтеграцій",
+    nav_service_security: "Кібербезпека / VPN / Захист пошти",
     theme_dark: "Темна",
     theme_light: "Світла",
 
@@ -170,6 +215,8 @@ const DICT = {
     footer_cta_title: "Потрібна надійна IT-підтримка?",
     footer_cta_text:
       "Розкажіть, що має працювати краще, безпечніше або швидше. Ми допоможемо перетворити це на зрозумілий технічний план.",
+    footer_service_mvp: "Розробка MVP",
+    footer_service_webdev: "Розробка сайтів та інтеграцій",
     footer_cta_button: "Записатись на консультацію",
     footer_rights: "Всі права захищені.",
     hero_kicker: "IT-інженерія / автоматизація / безпека",
@@ -233,9 +280,22 @@ const DICT = {
     nav_blog: "Blog",
     nav_about: "About",
     nav_contact: "Contact",
-
+    nav_services_all: "All services",
+    nav_service_outsourcing: "IT Outsourcing",
+    nav_service_consulting: "IT Consulting & Audit",
+    nav_service_mvp: "MVP Development",
+    nav_service_automation: "Business Process Automation",
+    nav_service_webdev: "Website Development & Integrations",
+    nav_service_security: "Cybersecurity / VPN / Email Protection",
     theme_dark: "Dark",
     theme_light: "Light",
+    nav_services_all: "All services",
+    nav_service_outsourcing: "IT Outsourcing",
+    nav_service_consulting: "IT Consulting & Audit",
+    nav_service_mvp: "MVP Development",
+    nav_service_automation: "Business Process Automation",
+    nav_service_webdev: "Website Development & Integrations",
+    nav_service_security: "Cybersecurity / VPN / Email Protection",
 
     hero_title: "Your partner in digital transformation",
     hero_sub:
@@ -253,6 +313,8 @@ const DICT = {
     footer_cta_title: "Need reliable IT support?",
     footer_cta_text:
       "Tell us what needs to work better, safer or faster. We will help turn it into a clear technical plan.",
+    footer_service_mvp: "MVP Development",
+    footer_service_webdev: "Website Development & Integrations",
     footer_cta_button: "Book a consultation",
     footer_rights: "All rights reserved.",
     hero_kicker: "IT engineering / automation / security",
@@ -829,8 +891,17 @@ function setSlide(index) {
  * Marks active navigation link.
  */
 function markActiveNavLink() {
-  const currentPath = normalizePath(window.location.pathname);
-  const links = document.querySelectorAll(".site-header__nav-link[href]");
+  const currentPath = normalizePath(
+    getBaseLanguagePath(window.location.pathname),
+  );
+
+  const links = document.querySelectorAll(
+    ".site-header__nav-link[href], .site-header__submenu-link[href]",
+  );
+
+  document
+    .querySelectorAll(".site-header__nav-item--has-dropdown")
+    .forEach((item) => item.classList.remove("is-active"));
 
   links.forEach((link) => {
     const href = link.getAttribute("href");
@@ -839,16 +910,38 @@ function markActiveNavLink() {
       return;
     }
 
-    const linkPath = normalizePath(href);
+    const url = new URL(href, window.location.origin);
+    const linkPath = normalizePath(getBaseLanguagePath(url.pathname));
 
-    if (linkPath === currentPath) {
-      link.classList.add("is-active");
+    const isExactActive = linkPath === currentPath;
+
+    link.classList.toggle("is-active", isExactActive);
+
+    if (isExactActive) {
       link.setAttribute("aria-current", "page");
+
+      const dropdown = link.closest(".site-header__nav-item--has-dropdown");
+
+      if (dropdown) {
+        dropdown.classList.add("is-active");
+      }
     } else {
-      link.classList.remove("is-active");
       link.removeAttribute("aria-current");
     }
   });
+
+  if (
+    currentPath === "/services.html" ||
+    currentPath.startsWith("/services/")
+  ) {
+    const servicesDropdown = document.querySelector(
+      ".site-header__nav-item--has-dropdown",
+    );
+
+    if (servicesDropdown) {
+      servicesDropdown.classList.add("is-active");
+    }
+  }
 }
 
 /**

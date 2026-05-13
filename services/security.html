@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Кібербезпека / VPN / Захист пошти | It World IT</title>
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Кібербезпека для малого та середнього бізнесу: VPN для команд, hardening серверів, SPF/DKIM/DMARC, захист пошти, аудит безпеки, базовий моніторинг і рекомендації."
+  />
+  <meta
+    name="keywords"
+    content="кібербезпека, VPN для команди, hardening серверів, SPF DKIM DMARC, захист пошти, аудит безпеки, серверна безпека, IT security"
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://itworldit.com/security.html" />
+
+  <!-- Language versions -->
+  <link rel="alternate" hreflang="uk" href="https://itworldit.com/security.html" />
+  <link rel="alternate" hreflang="en" href="https://itworldit.com/en/security.html" />
+  <link rel="alternate" hreflang="x-default" href="https://itworldit.com/security.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Кібербезпека / VPN / Захист пошти | It World IT" />
+  <meta
+    property="og:description"
+    content="VPN для команд, hardening серверів, SPF/DKIM/DMARC, аудит безпеки й практичні рекомендації для стабільного цифрового захисту."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/security.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+  <meta property="og:image:alt" content="It World IT cybersecurity VPN and email protection visual" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Кібербезпека / VPN / Захист пошти | It World IT" />
+  <meta
+    name="twitter:description"
+    content="Практичний захист бізнесу: VPN, hardening, SPF/DKIM/DMARC, аудит безпеки, контроль доступів і базовий моніторинг."
+  />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="/assets/img/services/security-hero.webp" type="image/webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://itworldit.com/#organization",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "logo": "https://itworldit.com/favicon.ico"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://itworldit.com/security.html#service",
+          "name": "Кібербезпека / VPN / Захист пошти",
+          "url": "https://itworldit.com/security.html",
+          "description": "Кібербезпека для малого та середнього бізнесу: VPN для команд, hardening серверів, SPF/DKIM/DMARC, захист пошти, аудит безпеки, контроль доступів і базовий моніторинг.",
+          "provider": {
+            "@id": "https://itworldit.com/#organization"
+          },
+          "serviceType": "Cybersecurity, VPN and Email Protection",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ukraine"
+          },
+          "offers": {
+            "@type": "OfferCatalog",
+            "name": "Орієнтовна вартість послуг кібербезпеки",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Початковий аудит безпеки",
+                "description": "Огляд поточного стану, ризиків, доступів, пошти, серверів і базових рекомендацій.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 150,
+                  "maxPrice": 400
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "VPN для команди",
+                "description": "Налаштування захищеного доступу для команди з базовою політикою доступів.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 300,
+                  "maxPrice": 900
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Захист пошти SPF/DKIM/DMARC",
+                "description": "Налаштування базового захисту доменної пошти та зменшення ризику підробки листів.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 150,
+                  "maxPrice": 500
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Hardening серверів",
+                "description": "Базове зміцнення серверів, доступів, оновлень, служб і журналювання.",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "priceCurrency": "USD",
+                  "minPrice": 400,
+                  "maxPrice": 1200
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body>
+  <!-- Background -->
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+  <div class="site-background-glow" aria-hidden="true"></div>
+
+  <!-- Header partial -->
+  <div id="header"></div>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="security-hero section-glow" aria-labelledby="serviceTitle">
+      <div class="security-hero__inner">
+        <div class="security-hero__content">
+          <p class="eyebrow">
+            Cybersecurity / VPN / Email Protection
+          </p>
+
+          <h1 id="serviceTitle" class="section-title section-title--large">
+            Кібербезпека / VPN / Захист пошти
+          </h1>
+
+          <p class="section-summary section-summary--hero">
+            Безпека - це не разова “галочка”, а система звичок, налаштувань і контролю.
+            Я допомагаю бізнесу зменшити ризики: налаштувати VPN для команди, зміцнити сервери,
+            захистити доменну пошту та знайти слабкі місця до того, як вони стануть проблемою.
+          </p>
+
+          <p class="section-summary">
+            Фокус на практичних рішеннях: зрозуміло, надійно, без зайвої складності.
+          </p>
+
+          <div class="actions">
+            <a href="/contact.html" class="btn btn--primary">
+              Замовити консультацію
+            </a>
+
+            <a href="#securityAreasTitle" class="btn btn--secondary">
+              Що захищаємо
+            </a>
+          </div>
+        </div>
+
+        <figure class="service-image service-image--hero">
+          <img
+            src="/assets/img/services/security-hero.webp"
+            alt="Абстрактна візуалізація кібербезпеки, VPN, захисту пошти та серверної інфраструктури"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECURITY POSTURE -->
+    <section class="section section--compact" aria-labelledby="postureTitle">
+      <div class="container">
+        <div class="security-posture">
+          <div class="security-posture__content">
+            <p class="eyebrow">
+              Security Posture
+            </p>
+
+            <h2 id="postureTitle" class="section-title">
+              Захист має бути не страшним, а керованим
+            </h2>
+
+            <p class="section-summary">
+              Малому та середньому бізнесу не завжди потрібна складна enterprise-система.
+              Але й “потім якось налаштуємо” - небезпечна стратегія. Починаємо з бази:
+              доступи, пошта, сервери, VPN, резервування, журналювання і зрозумілі правила.
+            </p>
+          </div>
+
+          <div class="security-posture__items">
+            <div>
+              <span>01</span>
+              <strong>Контроль доступів</strong>
+              <p>Хто, куди і з яких пристроїв має доступ.</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>Захищена пошта</strong>
+              <p>Менше ризику підробки домену й фішингових листів.</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Серверна гігієна</strong>
+              <p>Оновлення, служби, firewall, журнали й мінімізація зайвого.</p>
+            </div>
+
+            <div>
+              <span>04</span>
+              <strong>Прозорі рекомендації</strong>
+              <p>Що критично зараз, а що можна впроваджувати поступово.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY AREAS -->
+    <section class="section section--compact" aria-labelledby="securityAreasTitle">
+      <div class="container">
+        <div class="section-header section-header--center has-line">
+          <p class="eyebrow eyebrow--center">
+            Protection Areas
+          </p>
+
+          <h2 id="securityAreasTitle" class="section-title section-title--center">
+            Що входить у послугу
+          </h2>
+
+          <p class="section-summary section-summary--center">
+            Захист будується шарами: безпечний доступ, зміцнення серверів,
+            захист пошти, аудит і базовий контроль стану системи.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <article class="security-card security-card--vpn">
+            <span class="security-card__number">01</span>
+            <h3>VPN для команд</h3>
+            <p>
+              Безпечний доступ до внутрішніх ресурсів без відкривання зайвих сервісів назовні.
+            </p>
+
+            <ul>
+              <li>VPN для співробітників і підрядників</li>
+              <li>Обмеження доступу за ролями</li>
+              <li>Документація для підключення</li>
+              <li>Базові правила використання</li>
+            </ul>
+          </article>
+
+          <article class="security-card security-card--hardening">
+            <span class="security-card__number">02</span>
+            <h3>Hardening серверів</h3>
+            <p>
+              Зміцнення серверів без магії: менше зайвого, більше контролю і передбачуваності.
+            </p>
+
+            <ul>
+              <li>Перевірка служб і відкритих портів</li>
+              <li>Firewall і базові правила доступу</li>
+              <li>Оновлення, користувачі, ключі, журнали</li>
+              <li>Рекомендації щодо резервування</li>
+            </ul>
+          </article>
+
+          <article class="security-card security-card--mail">
+            <span class="security-card__number">03</span>
+            <h3>Захист пошти SPF/DKIM/DMARC</h3>
+            <p>
+              Пошта часто стає першим входом для атак. Захист домену зменшує ризик підробки листів.
+            </p>
+
+            <ul>
+              <li>Перевірка DNS-записів</li>
+              <li>Налаштування SPF, DKIM, DMARC</li>
+              <li>Рекомендації щодо політик домену</li>
+              <li>Пояснення результатів людською мовою</li>
+            </ul>
+          </article>
+
+          <article class="security-card security-card--audit">
+            <span class="security-card__number">04</span>
+            <h3>Аудит безпеки</h3>
+            <p>
+              Огляд поточного стану без зайвої паніки: що вже добре, що ризиковано, що треба виправити першим.
+            </p>
+
+            <ul>
+              <li>Перевірка доступів і базових налаштувань</li>
+              <li>Огляд серверів, пошти, доменів і VPN</li>
+              <li>Список пріоритетів і ризиків</li>
+              <li>План покращень по етапах</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VPN VISUAL SECTION -->
+    <section class="section section--compact" aria-labelledby="vpnTitle">
+      <div class="container">
+        <div class="media-split media-split--reverse">
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/security-vpn.webp"
+              alt="Захищена VPN-мережа для команди, доступів і внутрішньої інфраструктури"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="media-split__content">
+            <p class="eyebrow">
+              Secure Access
+            </p>
+
+            <h2 id="vpnTitle" class="section-title">
+              VPN - це контрольований вхід у вашу інфраструктуру
+            </h2>
+
+            <p class="section-summary">
+              Замість відкритих адмін-панелей, випадкових портів і доступів “як вийшло”,
+              команда отримує зрозумілий і контрольований шлях до потрібних ресурсів.
+            </p>
+
+            <div class="security-chip-map" aria-label="VPN security components">
+              <span>VPN</span>
+              <span>Access rules</span>
+              <span>Firewall</span>
+              <span>Users</span>
+              <span>Logs</span>
+              <span>Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMAIL PROTECTION VISUAL SECTION -->
+    <section class="section section--compact" aria-labelledby="mailTitle">
+      <div class="container">
+        <div class="media-split">
+          <div class="media-split__content">
+            <p class="eyebrow">
+              Email Protection
+            </p>
+
+            <h2 id="mailTitle" class="section-title">
+              Захист пошти починається з домену
+            </h2>
+
+            <p class="section-summary">
+              SPF, DKIM і DMARC допомагають поштовим сервісам зрозуміти,
+              які листи справді мають право надсилатися від імені вашого домену.
+              Це не замінює здоровий глузд, але сильно підсилює базовий захист.
+            </p>
+
+            <div class="security-mail-flow">
+              <div>
+                <span>SPF</span>
+                <strong>хто може надсилати</strong>
+              </div>
+
+              <div>
+                <span>DKIM</span>
+                <strong>чи лист не підмінено</strong>
+              </div>
+
+              <div>
+                <span>DMARC</span>
+                <strong>що робити з підозрілими листами</strong>
+              </div>
+            </div>
+          </div>
+
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/security-mail.webp"
+              alt="Захист корпоративної пошти через SPF DKIM DMARC та безпечні DNS-записи"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section--compact" aria-labelledby="processTitle">
+      <div class="container">
+        <div class="section-header has-line">
+          <p class="eyebrow">
+            Security Workflow
+          </p>
+
+          <h2 id="processTitle" class="section-title">
+            Як проходить робота
+          </h2>
+
+          <p class="section-summary">
+            Безпека не має перетворюватися на туман із страшних термінів.
+            Я пояснюю стан системи зрозуміло й розкладаю дії за пріоритетами.
+          </p>
+        </div>
+
+        <div class="security-process">
+          <article>
+            <span>01</span>
+            <h3>Збір інформації</h3>
+            <p>Уточнюю інфраструктуру, сервіси, доступи, пошту, домени та поточні болі.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Огляд ризиків</h3>
+            <p>Виявляю слабкі місця, зайві доступи, відкриті сервіси та нестачу базових налаштувань.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>План захисту</h3>
+            <p>Готую список дій: що критично зараз, що бажано, що можна відкласти.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Впровадження</h3>
+            <p>Налаштовую VPN, пошту, hardening, правила доступів, журнали й базові перевірки.</p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <h3>Пояснення й підтримка</h3>
+            <p>Передаю рекомендації, коротку документацію та пояснюю, як підтримувати порядок.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIT VISUAL SECTION -->
+    <section class="section section--compact" aria-labelledby="auditTitle">
+      <div class="container">
+        <div class="media-split media-split--reverse">
+          <figure class="service-image">
+            <img
+              src="/assets/img/services/security-audit.webp"
+              alt="Аудит кібербезпеки з dashboard панелями, ризиками, доступами та інфраструктурою"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="media-split__content">
+            <p class="eyebrow">
+              Audit Result
+            </p>
+
+            <h2 id="auditTitle" class="section-title">
+              Результат - не “страшний звіт”, а практичний план дій
+            </h2>
+
+            <p class="section-summary">
+              Після аудиту ви отримуєте зрозумілий список знахідок, пріоритети,
+              пояснення ризиків і рекомендації без зайвого драматизму. Мета - не налякати,
+              а зробити систему стабільнішою.
+            </p>
+
+            <ul class="security-result-list">
+              <li>Критичні ризики, які варто виправити першими</li>
+              <li>Налаштування, які можна покращити без великого бюджету</li>
+              <li>Рекомендації для команди й майбутньої підтримки</li>
+              <li>Окремий список “можна пізніше”, щоб не роздувати старт</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--compact" aria-labelledby="pricingTitle">
+      <div class="container">
+        <div class="section-header has-line">
+          <p class="eyebrow">
+            Pricing
+          </p>
+
+          <h2 id="pricingTitle" class="section-title">
+            Орієнтовна вартість
+          </h2>
+
+          <p class="section-summary">
+            Точна вартість залежить від кількості серверів, доменів, користувачів,
+            доступів, поштових сервісів і складності інфраструктури.
+          </p>
+        </div>
+
+        <div class="security-pricing">
+          <article>
+            <div class="security-pricing__price">$150 - $400</div>
+            <h3>Початковий аудит безпеки</h3>
+            <p>Огляд поточного стану, ризиків, доступів, пошти, серверів і базових рекомендацій.</p>
+          </article>
+
+          <article>
+            <div class="security-pricing__price">$300 - $900</div>
+            <h3>VPN для команди</h3>
+            <p>Налаштування захищеного доступу для команди з базовою політикою доступів.</p>
+          </article>
+
+          <article>
+            <div class="security-pricing__price">$150 - $500</div>
+            <h3>Захист пошти SPF/DKIM/DMARC</h3>
+            <p>Налаштування DNS-записів і базової політики доменної пошти.</p>
+          </article>
+
+          <article class="security-pricing__featured">
+            <div class="security-pricing__price">$400 - $1200</div>
+            <h3>Hardening серверів</h3>
+            <p>Зміцнення серверів, служб, firewall, доступів, журналювання й базових правил.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="serviceCtaTitle">
+      <div class="container container--md">
+        <article class="cta-card">
+          <div class="glow-line" aria-hidden="true"></div>
+
+          <div class="cta-content">
+            <p class="eyebrow">
+              Хочете зробити систему безпечнішою?
+            </p>
+
+            <h2 id="serviceCtaTitle" class="cta-title">
+              Почнемо з короткого аудиту й зрозумілого плану дій.
+            </h2>
+
+            <p class="cta-text">
+              Розкажіть, які сервіси, пошта, сервери або доступи треба перевірити.
+              Я підкажу, з чого краще почати без зайвих витрат.
+            </p>
+          </div>
+
+          <div class="cta-action">
+            <a href="/contact.html" class="btn btn--primary">
+              Замовити консультацію
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer partial -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/stars.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>
