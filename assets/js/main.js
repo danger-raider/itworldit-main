@@ -244,6 +244,13 @@ const DICT = {
       "Розкажіть, що має працювати краще, безпечніше або швидше. Ми допоможемо перетворити це на зрозумілий технічний план.",
     footer_cta_button: "Записатись на консультацію",
     footer_rights: "Всі права захищені.",
+    aria_choose_language: "Обрати мову",
+    aria_switch_to_light: "Увімкнути світлу тему",
+    aria_switch_to_dark: "Увімкнути темну тему",
+    aria_open_menu: "Відкрити меню",
+    aria_close_menu: "Закрити меню",
+    aria_previous_slide: "Попередній слайд",
+    aria_next_slide: "Наступний слайд",
   },
 
   en: {
@@ -334,6 +341,13 @@ const DICT = {
       "Tell us what needs to work better, safer or faster. We will help turn it into a clear technical plan.",
     footer_cta_button: "Book a consultation",
     footer_rights: "All rights reserved.",
+    aria_choose_language: "Choose language",
+    aria_switch_to_light: "Switch to light theme",
+    aria_switch_to_dark: "Switch to dark theme",
+    aria_open_menu: "Open menu",
+    aria_close_menu: "Close menu",
+    aria_previous_slide: "Previous slide",
+    aria_next_slide: "Next slide",
   },
 };
 
@@ -463,7 +477,7 @@ function initTheme() {
     if (themeToggle) {
       themeToggle.setAttribute(
         "aria-label",
-        isDark ? "Switch to light theme" : "Switch to dark theme",
+        isDark ? dict.aria_switch_to_light : dict.aria_switch_to_dark,
       );
     }
   }
@@ -504,40 +518,78 @@ function initLanguageSwitcher() {
   const langCurrent = document.getElementById("langCurrent");
   const langOptions = document.querySelectorAll("[data-lang-value]");
 
-  function applyLang(code) {
-    const dict = DICT[code];
+ function applyLang(code) {
+   const dict = DICT[code];
 
-    if (!dict) {
-      return;
-    }
+   if (!dict) {
+     return;
+   }
 
-    document.documentElement.lang = code === "ua" ? "uk" : "en";
-    document.body.dataset.lang = code;
+   document.documentElement.lang = code === "ua" ? "uk" : "en";
+   document.body.dataset.lang = code;
 
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.getAttribute("data-i18n");
+   document.querySelectorAll("[data-i18n]").forEach((element) => {
+     const key = element.getAttribute("data-i18n");
 
-      if (dict[key]) {
-        element.textContent = dict[key];
-      }
-    });
+     if (dict[key]) {
+       element.textContent = dict[key];
+     }
+   });
 
-    if (langCurrent) {
-      langCurrent.textContent = code.toUpperCase();
-    }
+   if (langCurrent) {
+     langCurrent.textContent = code.toUpperCase();
+   }
 
-    langOptions.forEach((option) => {
-      const isSelected = option.dataset.langValue === code;
+   langOptions.forEach((option) => {
+     const isSelected = option.dataset.langValue === code;
 
-      option.classList.toggle("is-selected", isSelected);
-      option.setAttribute("aria-selected", String(isSelected));
-    });
+     option.classList.toggle("is-selected", isSelected);
+     option.setAttribute("aria-selected", String(isSelected));
+   });
 
-    localStorage.setItem("lang", code);
-    updateLocalizedLinks(code);
-    updateThemeLabelOnly();
-    markActiveNavLink();
-  }
+   const langButton = document.getElementById("langDropdownButton");
+   const themeToggle = document.getElementById("themeToggle");
+   const menuToggle = document.getElementById("menuToggle");
+   const prevButton = document.querySelector("[data-hero-prev]");
+   const nextButton = document.querySelector("[data-hero-next]");
+
+   if (langButton) {
+     langButton.setAttribute("aria-label", dict.aria_choose_language);
+   }
+
+   if (themeToggle) {
+     const currentTheme = getCurrentTheme();
+
+     themeToggle.setAttribute(
+       "aria-label",
+       currentTheme === "dark"
+         ? dict.aria_switch_to_light
+         : dict.aria_switch_to_dark,
+     );
+   }
+
+   if (menuToggle) {
+     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+     menuToggle.setAttribute(
+       "aria-label",
+       isOpen ? dict.aria_close_menu : dict.aria_open_menu,
+     );
+   }
+
+   if (prevButton) {
+     prevButton.setAttribute("aria-label", dict.aria_previous_slide);
+   }
+
+   if (nextButton) {
+     nextButton.setAttribute("aria-label", dict.aria_next_slide);
+   }
+
+   localStorage.setItem("lang", code);
+   updateLocalizedLinks(code);
+   updateThemeLabelOnly();
+   markActiveNavLink();
+ }
 
   const currentLang = getCurrentLang();
   applyLang(currentLang);
@@ -618,7 +670,14 @@ function openMobileMenu() {
   nav.classList.add("is-open");
   menuToggle.setAttribute("aria-expanded", "true");
   menuToggle.setAttribute("aria-label", "Close menu");
+  const firstMenuLink = nav.querySelector("a, button");
 
+  if (firstMenuLink) {
+    window.setTimeout(() => {
+      firstMenuLink.focus();
+    }, 0);
+  }
+setMobileServicesExpanded(true);
   if (menuIcon) {
     menuIcon.textContent = "×";
   }
@@ -639,12 +698,36 @@ function closeMobileMenu() {
   nav.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open menu");
-
+setMobileServicesExpanded(false);
   if (menuIcon) {
     menuIcon.textContent = "☰";
   }
+  if (document.activeElement && nav.contains(document.activeElement)) {
+    menuToggle.focus();
+  }
 }
+function setMobileServicesExpanded(isExpanded) {
+  const servicesDropdown = document.querySelector(
+    ".site-header__nav-item--has-dropdown",
+  );
 
+  if (!servicesDropdown) {
+    return;
+  }
+
+  const servicesButton = servicesDropdown.querySelector(
+    "[data-dropdown-button]",
+  );
+
+  if (!servicesButton) {
+    return;
+  }
+
+  if (window.innerWidth < 1024) {
+    servicesDropdown.classList.toggle("is-open", isExpanded);
+    servicesButton.setAttribute("aria-expanded", String(isExpanded));
+  }
+}
 /**
  * Responsive mobile menu.
  */
@@ -731,16 +814,30 @@ function initHeroGallery() {
 
     currentIndex = nextIndex;
 
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle("is-active", slideIndex === currentIndex);
-    });
+   slides.forEach((slide, slideIndex) => {
+     const isActive = slideIndex === currentIndex;
 
-    thumbs.forEach((thumb, thumbIndex) => {
-      const isActive = thumbIndex === currentIndex;
+     slide.classList.toggle("is-active", isActive);
+     slide.setAttribute("aria-hidden", String(!isActive));
 
-      thumb.classList.toggle("is-active", isActive);
-      thumb.setAttribute("aria-selected", String(isActive));
-    });
+     if (isActive) {
+       slide.removeAttribute("inert");
+     } else {
+       slide.setAttribute("inert", "");
+     }
+   });
+
+thumbs.forEach((thumb, thumbIndex) => {
+  const isActive = thumbIndex === currentIndex;
+
+  thumb.classList.toggle("is-active", isActive);
+
+  if (isActive) {
+    thumb.setAttribute("aria-current", "true");
+  } else {
+    thumb.removeAttribute("aria-current");
+  }
+});
 
     if (currentCounter) {
       currentCounter.textContent = formatNumber(currentIndex + 1);
@@ -807,6 +904,14 @@ function initHeroGallery() {
 
   setSlide(0);
   startAutoplay();
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoplay();
+      return;
+    }
+
+    startAutoplay();
+  });
 }
 
 /**

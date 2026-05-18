@@ -23,7 +23,7 @@
           type="button"
           class="site-header__nav-link site-header__nav-button"
           data-dropdown-button
-          aria-haspopup="menu"
+          aria-haspopup="true"
           aria-expanded="false"
           aria-controls="servicesSubmenu"
         >
@@ -36,13 +36,13 @@
           </span>
         </button>
 
-        <div id="servicesSubmenu" class="site-header__submenu" role="menu">
+        <div id="servicesSubmenu" class="site-header__submenu">
           <a
             href="/services.html"
             data-page-path="/services.html"
             class="site-header__submenu-link"
             data-i18n="nav_services_all"
-            role="menuitem"
+            
           >
             Усі послуги
           </a>
@@ -52,7 +52,7 @@
             data-page-path="/services/outsourcing.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_outsourcing"
-            role="menuitem"
+            
           >
             IT Аутсорсинг
           </a>
@@ -62,7 +62,7 @@
             data-page-path="/services/consulting.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_consulting"
-            role="menuitem"
+            
           >
             IT Консалтинг та аудит
           </a>
@@ -72,7 +72,7 @@
             data-page-path="/services/mvp.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_mvp"
-            role="menuitem"
+            
           >
             Розробка MVP
           </a>
@@ -82,7 +82,7 @@
             data-page-path="/services/automation.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_automation"
-            role="menuitem"
+            
           >
             Автоматизація бізнес-процесів
           </a>
@@ -92,7 +92,7 @@
             data-page-path="/services/webdev.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_webdev"
-            role="menuitem"
+            
           >
             Розробка сайтів та інтеграцій
           </a>
@@ -102,7 +102,7 @@
             data-page-path="/services/security.html"
             class="site-header__submenu-link"
             data-i18n="nav_service_security"
-            role="menuitem"
+            
           >
             Кібербезпека / VPN / Захист пошти
           </a>
@@ -126,7 +126,7 @@
 
       <!-- Language dropdown -->
       <div class="site-dropdown" data-dropdown>
-        <button
+       <button
           id="langDropdownButton"
           type="button"
           class="site-dropdown__button"
@@ -136,7 +136,7 @@
         >
           <span id="langCurrent" class="site-dropdown__current">UA</span>
           <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
-        </button>
+        </button> 
 
         <div
           class="site-dropdown__menu"
