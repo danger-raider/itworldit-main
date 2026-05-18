@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Про It World IT: Дмитро, Aoi та практичні IT-рішення для бізнесу</title>
+  <title>Про нас – It World IT</title>
 
-<meta
-  name="description"
-  content="Про It World IT: практична IT-допомога для бізнесу від Дмитра та цифрового асистента Aoi. Інфраструктура, кібербезпека, VPN, захист пошти, автоматизація, сайти, інтеграції та MVP."
-/>
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="It World IT допомагає бізнесу працювати стабільно, безпечно і технологічно: інфраструктура, кібербезпека, VPN, захист пошти, автоматизація, сайти, інтеграції та MVP."
+  />
   <meta
     name="keywords"
     content="It World IT, про нас, IT підтримка бізнесу, кібербезпека, автоматизація, VPN, захист пошти, веб-розробка, MVP"
@@ -31,7 +32,7 @@
   <link rel="alternate" hreflang="x-default" href="https://itworldit.com/about.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Про нас - It World IT" />
+  <meta property="og:title" content="Про нас – It World IT" />
   <meta
     property="og:description"
     content="Практична IT-допомога для бізнесу: інфраструктура, безпека, автоматизація, сайти, інтеграції та MVP."
@@ -44,19 +45,29 @@
   <meta property="og:locale" content="uk_UA" />
   <meta property="og:locale:alternate" content="en_US" />
 
-<meta property="og:title" content="Про It World IT: Дмитро, Aoi та практичні IT-рішення" />
-<meta
-  property="og:description"
-  content="Людина плюс цифровий асистент: стабільність, безпека, автоматизація, сайти, інтеграції та MVP для бізнесу."
-/>
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Про нас – It World IT" />
+  <meta
+    name="twitter:description"
+    content="Людина плюс цифровий асистент: стабільність, безпека, автоматизація та практичні IT-рішення для бізнесу."
+  />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/about/about-hero.webp" />
 
-<meta name="twitter:title" content="Про It World IT: Дмитро, Aoi та практичні IT-рішення" />
-<meta
-  name="twitter:description"
-  content="Людина плюс цифровий асистент: стабільність, безпека, автоматизація, сайти, інтеграції та MVP для бізнесу."
-/>
   <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/about/about-hero.webp" type="image/webp" />
+  <link
+  rel="preload"
+  as="image"
+  href="/assets/img/about/about-hero-1600.webp"
+  imagesrcset="
+    /assets/img/about/about-hero-768.webp 768w,
+    /assets/img/about/about-hero-1200.webp 1200w,
+    /assets/img/about/about-hero-1600.webp 1600w,
+    /assets/img/about/about-hero.webp 1920w
+  "
+  imagesizes="(max-width: 979px) 100vw, 50vw"
+  type="image/webp"
+/>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -74,7 +85,7 @@
         {
           "@type": "AboutPage",
           "@id": "https://itworldit.com/about.html#about",
-          "name": "Про нас - It World IT",
+          "name": "Про нас – It World IT",
           "url": "https://itworldit.com/about.html",
           "description": "It World IT допомагає бізнесу працювати стабільно, безпечно і технологічно.",
           "isPartOf": {
@@ -141,15 +152,22 @@
         </div>
 
         <figure class="service-image service-image--hero">
-          <img
-            src="/assets/img/about/about-hero.webp"
-            alt="Абстрактна візуалізація людини та цифрового AI-асистента, які працюють із захищеною IT-інфраструктурою"
-            width="1920"
-            height="1080"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+    <img
+  src="/assets/img/about/about-hero-1600.webp"
+  srcset="
+    /assets/img/about/about-hero-768.webp 768w,
+    /assets/img/about/about-hero-1200.webp 1200w,
+    /assets/img/about/about-hero-1600.webp 1600w,
+    /assets/img/about/about-hero.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Абстрактна візуалізація людини та цифрового AI-асистента, які працюють із захищеною IT-інфраструктурою"
+  width="1920"
+  height="1080"
+  loading="eager"
+  decoding="async"
+  fetchpriority="high"
+/>
         </figure>
       </div>
     </section>
@@ -257,7 +275,7 @@
         Що ми робимо
       </h2>
 
-      <p class="section-summary--center">
+      <p class="section-text text-center">
         Фокус не на “ще одному інструменті”, а на тому, щоб бізнес працював стабільніше,
         швидше й безпечніше.
       </p>
@@ -379,14 +397,21 @@
           </div>
 
           <figure class="service-image">
-            <img
-              src="/assets/img/about/about-ai-assistant.webp"
-              alt="Цифровий AI-асистент, який структурує запити, повідомлення та IT-задачі для бізнесу"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
+         <img
+  src="/assets/img/about/about-ai-assistant-1600.webp"
+  srcset="
+    /assets/img/about/about-ai-assistant-768.webp 768w,
+    /assets/img/about/about-ai-assistant-1200.webp 1200w,
+    /assets/img/about/about-ai-assistant-1600.webp 1600w,
+    /assets/img/about/about-ai-assistant.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Цифровий AI-асистент, який структурує запити, повідомлення та IT-задачі для бізнесу"
+  width="1920"
+  height="1080"
+  loading="lazy"
+  decoding="async"
+/>
           </figure>
         </div>
       </div>
@@ -404,7 +429,7 @@
         Наші принципи
       </h2>
 
-      <p>
+      <p class="section-text">
         Робота має бути зрозумілою: що робимо, навіщо, скільки це займає,
         які ризики є і який результат очікується.
       </p>

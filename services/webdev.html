@@ -23,7 +23,7 @@
   <meta name="color-scheme" content="dark light" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://itworldit.com/services/webdev.html" />
+ <link rel="canonical" href="https://itworldit.com/services/webdev.html" />
 
   <!-- Language versions -->
   <link rel="alternate" hreflang="uk" href="https://itworldit.com/services/webdev.html" />
@@ -56,7 +56,19 @@
   content="Landing pages, сайти-візитки, портфоліо та інтеграції з CRM, формами, email, оплатами, Google Sheets, Notion і Telegram."
 />
   <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/services/webdev-hero.webp" type="image/webp" />
+  <link
+  rel="preload"
+  as="image"
+  href="/assets/img/services/webdev-hero-1600.webp"
+  imagesrcset="
+    /assets/img/services/webdev-hero-768.webp 768w,
+    /assets/img/services/webdev-hero-1200.webp 1200w,
+    /assets/img/services/webdev-hero-1600.webp 1600w,
+    /assets/img/services/webdev-hero.webp 1920w
+  "
+  imagesizes="(max-width: 979px) 100vw, 50vw"
+  type="image/webp"
+/><link rel="preload" as="image" href="/assets/img/services/webdev-hero.webp" type="image/webp" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -72,9 +84,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://itworldit.com/webdev.html#service",
+          "@id": "https://itworldit.com/services/webdev.html#service",
           "name": "Розробка простих веб-сайтів та інтеграцій",
-          "url": "https://itworldit.com/webdev.html",
+          "url": "https://itworldit.com/services/webdev.html",
           "description": "Розробка легких, стильних і швидких веб-сайтів: landing pages, сайти-візитки, портфоліо та інтеграції з CRM, email, формами, оплатами, месенджерами, Google Sheets і Notion.",
           "provider": {
             "@id": "https://itworldit.com/#organization"
@@ -182,15 +194,22 @@
         </div>
 
         <figure class="service-image service-image--hero">
-          <img
-            src="/assets/img/services/webdev-hero.webp"
-            alt="Абстрактна візуалізація розробки веб-сайту з responsive UI, інтеграціями та glass panels"
-            width="1920"
-            height="1080"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+     <img
+  src="/assets/img/services/webdev-hero-1600.webp"
+  srcset="
+    /assets/img/services/webdev-hero-768.webp 768w,
+    /assets/img/services/webdev-hero-1200.webp 1200w,
+    /assets/img/services/webdev-hero-1600.webp 1600w,
+    /assets/img/services/webdev-hero.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Абстрактна візуалізація розробки веб-сайту з responsive UI, інтеграціями та glass panels"
+  width="1920"
+  height="1080"
+  loading="eager"
+  decoding="async"
+  fetchpriority="high"
+/>
         </figure>
       </div>
     </section>
@@ -303,14 +322,21 @@
       <div class="container">
         <div class="media-split media-split--reverse">
           <figure class="service-image">
-            <img
-              src="/assets/img/services/webdev-integrations.webp"
-              alt="Веб-сайт, підключений до CRM, email, оплат, Telegram, Google Sheets та аналітики"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
+          <img
+  src="/assets/img/services/webdev-integrations-1600.webp"
+  srcset="
+    /assets/img/services/webdev-integrations-768.webp 768w,
+    /assets/img/services/webdev-integrations-1200.webp 1200w,
+    /assets/img/services/webdev-integrations-1600.webp 1600w,
+    /assets/img/services/webdev-integrations.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Веб-сайт, підключений до CRM, email, оплат, Telegram, Google Sheets та аналітики"
+  width="1920"
+  height="1080"
+  loading="lazy"
+  decoding="async"
+/>
           </figure>
 
           <div class="media-split__content">
@@ -371,14 +397,21 @@
       </div>
 
       <figure class="webdev-delivery__visual">
-        <img
-          src="/assets/img/services/webdev-workflow.webp"
-          alt="Абстрактний процес веб-розробки: бриф, прототип, розробка, тестування та запуск"
-          width="1920"
-          height="1080"
-          loading="lazy"
-          decoding="async"
-        />
+<img
+  src="/assets/img/services/webdev-workflow-1600.webp"
+  srcset="
+    /assets/img/services/webdev-workflow-768.webp 768w,
+    /assets/img/services/webdev-workflow-1200.webp 1200w,
+    /assets/img/services/webdev-workflow-1600.webp 1600w,
+    /assets/img/services/webdev-workflow.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Абстрактний процес веб-розробки: бриф, прототип, розробка, тестування та запуск"
+  width="1920"
+  height="1080"
+  loading="lazy"
+  decoding="async"
+/>
 
         <div class="webdev-delivery__screen" aria-hidden="true"></div>
         <span class="webdev-delivery__badge webdev-delivery__badge--brief" aria-hidden="true">Brief</span>
@@ -490,14 +523,21 @@
       </div>
 
       <figure class="webdev-delivery__visual">
-        <img
-          src="/assets/img/services/webdev-examples.webp"
-          alt="Приклади різних сайтів: сайт-візитка, landing page, інтеграція з таблицею та формами"
-          width="1920"
-          height="1080"
-          loading="lazy"
-          decoding="async"
-        />
+      <img
+  src="/assets/img/services/webdev-examples-1600.webp"
+  srcset="
+    /assets/img/services/webdev-examples-768.webp 768w,
+    /assets/img/services/webdev-examples-1200.webp 1200w,
+    /assets/img/services/webdev-examples-1600.webp 1600w,
+    /assets/img/services/webdev-examples.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Приклади різних сайтів: сайт-візитка, landing page, інтеграція з таблицею та формами"
+  width="1920"
+  height="1080"
+  loading="lazy"
+  decoding="async"
+/>
 
         <div class="webdev-delivery__screen" aria-hidden="true"></div>
         <span class="webdev-delivery__badge webdev-delivery__badge--brief" aria-hidden="true">Landing</span>

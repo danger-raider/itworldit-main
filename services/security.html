@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Кібербезпека, VPN і захист пошти для бізнесу | It World IT</title>
+  <title>Кібербезпека / VPN / Захист пошти | It World IT</title>
 
   <!-- SEO -->
   <meta
@@ -55,7 +55,19 @@
   <meta name="twitter:image" content="https://itworldit.com/assets/img/services/security-hero.webp" />
 
   <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/services/security-hero.webp" type="image/webp" />
+<link
+  rel="preload"
+  as="image"
+  href="/assets/img/services/security-hero-1600.webp"
+  imagesrcset="
+    /assets/img/services/security-hero-768.webp 768w,
+    /assets/img/services/security-hero-1200.webp 1200w,
+    /assets/img/services/security-hero-1600.webp 1600w,
+    /assets/img/services/security-hero.webp 1920w
+  "
+  imagesizes="(max-width: 979px) 100vw, 50vw"
+  type="image/webp"
+/>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -71,9 +83,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://itworldit.com/security.html#service",
+          "@id": "https://itworldit.com/services/security.html#service",
           "name": "Кібербезпека / VPN / Захист пошти",
-          "url": "https://itworldit.com/security.html",
+          "url": "https://itworldit.com/services/security.html",
           "description": "Кібербезпека для малого та середнього бізнесу: VPN для команд, hardening серверів, SPF/DKIM/DMARC, захист пошти, аудит безпеки, контроль доступів і базовий моніторинг.",
           "provider": {
             "@id": "https://itworldit.com/#organization"
@@ -193,15 +205,22 @@
         </div>
 
         <figure class="service-image service-image--hero">
-          <img
-            src="/assets/img/services/security-hero.webp"
-            alt="Абстрактна візуалізація кібербезпеки, VPN, захисту пошти та серверної інфраструктури"
-            width="1920"
-            height="1080"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+       <img
+  src="/assets/img/services/security-hero-1600.webp"
+  srcset="
+    /assets/img/services/security-hero-768.webp 768w,
+    /assets/img/services/security-hero-1200.webp 1200w,
+    /assets/img/services/security-hero-1600.webp 1600w,
+    /assets/img/services/security-hero.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Абстрактна візуалізація кібербезпеки, VPN, захисту пошти та серверної інфраструктури"
+  width="1920"
+  height="1080"
+  loading="eager"
+  decoding="async"
+  fetchpriority="high"
+/>
         </figure>
       </div>
     </section>
@@ -267,7 +286,7 @@
             Що входить у послугу
           </h2>
 
-          <p class="section-summary section-summary--center">
+          <p class="section-text text-center">
             Захист будується шарами: безпечний доступ, зміцнення серверів,
             захист пошти, аудит і базовий контроль стану системи.
           </p>
@@ -342,14 +361,21 @@
       <div class="container">
         <div class="media-split media-split--reverse">
           <figure class="service-image">
-            <img
-              src="/assets/img/services/security-vpn.webp"
-              alt="Захищена VPN-мережа для команди, доступів і внутрішньої інфраструктури"
-              width="1920"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-            />
+           <img
+  src="/assets/img/services/security-vpn-1600.webp"
+  srcset="
+    /assets/img/services/security-vpn-768.webp 768w,
+    /assets/img/services/security-vpn-1200.webp 1200w,
+    /assets/img/services/security-vpn-1600.webp 1600w,
+    /assets/img/services/security-vpn.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Захищена VPN-мережа для команди, доступів і внутрішньої інфраструктури"
+  width="1920"
+  height="1080"
+  loading="lazy"
+  decoding="async"
+/>
           </figure>
 
           <div class="media-split__content">
@@ -442,7 +468,7 @@
             Як проходить робота
           </h2>
 
-          <p class="section-summary">
+          <p class="section-text">
             Безпека не має перетворюватися на туман із страшних термінів.
             Я пояснюю стан системи зрозуміло й розкладаю дії за пріоритетами.
           </p>
@@ -535,7 +561,7 @@
             Орієнтовна вартість
           </h2>
 
-          <p class="section-summary">
+          <p class="section-text">
             Точна вартість залежить від кількості серверів, доменів, користувачів,
             доступів, поштових сервісів і складності інфраструктури.
           </p>
@@ -543,25 +569,25 @@
 
         <div class="security-pricing">
           <article>
-            <div class="security-pricing__price">$150 - $400</div>
+            <div class="security-pricing__price">$150 – $400</div>
             <h3>Початковий аудит безпеки</h3>
             <p>Огляд поточного стану, ризиків, доступів, пошти, серверів і базових рекомендацій.</p>
           </article>
 
           <article>
-            <div class="security-pricing__price">$300 - $900</div>
+            <div class="security-pricing__price">$300 – $900</div>
             <h3>VPN для команди</h3>
             <p>Налаштування захищеного доступу для команди з базовою політикою доступів.</p>
           </article>
 
           <article>
-            <div class="security-pricing__price">$150 - $500</div>
+            <div class="security-pricing__price">$150 – $500</div>
             <h3>Захист пошти SPF/DKIM/DMARC</h3>
             <p>Налаштування DNS-записів і базової політики доменної пошти.</p>
           </article>
 
           <article class="security-pricing__featured">
-            <div class="security-pricing__price">$400 - $1200</div>
+            <div class="security-pricing__price">$400 – $1200</div>
             <h3>Hardening серверів</h3>
             <p>Зміцнення серверів, служб, firewall, доступів, журналювання й базових правил.</p>
           </article>

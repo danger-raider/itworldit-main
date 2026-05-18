@@ -40,7 +40,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="It World IT" />
   <meta property="og:url" content="https://itworldit.com/services/automation.html" />
-  <meta property="og:image" content="https://itworldit.com/assets/img/services/hero-automation.webp" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/hero/hero-automation.webp" />
   <meta property="og:image:alt" content="It World IT business automation visual" />
   <meta property="og:locale" content="uk_UA" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -54,8 +54,20 @@
   />
   <meta name="twitter:image" content="https://itworldit.com/assets/img/hero/hero-automation.webp" />
 
-  <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/hero/hero-automation.webp" type="image/webp" />
+   <!-- Performance -->
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/img/services/consulting-hero-1600.webp"
+    imagesrcset="
+      /assets/img/services/consulting-hero-768.webp 768w,
+      /assets/img/services/consulting-hero-1200.webp 1200w,
+      /assets/img/services/consulting-hero-1600.webp 1600w,
+      /assets/img/services/consulting-hero.webp 1920w
+    "
+    imagesizes="(max-width: 979px) 100vw, 50vw"
+    type="image/webp"
+  />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -71,9 +83,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://itworldit.com/automation.html#service",
+          "@id": "https://itworldit.com/services/automation.html#service",
           "name": "Автоматизація бізнес-процесів на замовлення",
-          "url": "https://itworldit.com/automation.html",
+          "url": "https://itworldit.com/services/automation.html",
           "description": "Індивідуальна автоматизація бізнес-процесів: документообіг, CRM, продажі, логістика, облік, інтеграції, аналітика та Web UI.",
           "provider": {
             "@id": "https://itworldit.com/#organization"
@@ -278,7 +290,7 @@
             Що я автоматизую
           </h2>
 
-          <p class="automation-section-subtitle automation-section-subtitle--center">
+          <p class="section-text text-center">
             Автоматизація збирає окремі інструменти в єдину робочу систему:
             документи, клієнти, замовлення, сповіщення, звіти й контроль.
           </p>
@@ -412,10 +424,10 @@
             Використовувані інструменти
           </h2>
 
-         <p class="automation-section-subtitle automation-section-subtitle--center">
-  Я підбираю інструменти під задачу. Десь достатньо no-code інтеграції, а десь потрібен
-  окремий модуль, API або Web UI для управління та звітності.
-</p>
+          <p class="section-text text-center">
+            Я підбираю інструменти під задачу. Десь достатньо no-code інтеграції, а десь потрібен
+            окремий модуль, API або Web UI для управління та звітності.
+          </p>
         </div>
 
         <div class="tool-cloud" aria-label="Automation tools">
@@ -439,87 +451,48 @@
     </section>
 
     <!-- BENEFITS PANEL -->
-<!-- BENEFITS PANEL -->
-<section class="section section--compact" aria-labelledby="benefitsTitle">
-  <div class="container">
-    <div class="automation-benefits automation-benefits--aligned">
-      <div class="automation-benefits__content">
-        <p class="eyebrow">
-          Cooperation
-        </p>
+    <section class="section section--compact" aria-labelledby="benefitsTitle">
+      <div class="container">
+        <div class="automation-benefits">
+          <div class="automation-benefits__content">
+            <p class="eyebrow">
+              Cooperation
+            </p>
 
-        <h2 id="benefitsTitle" class="section-title">
-          Переваги роботи зі мною
-        </h2>
+            <h2 id="benefitsTitle" class="section-title">
+              Переваги роботи зі мною
+            </h2>
 
-        <p class="automation-section-subtitle">
-          Автоматизація має бути не просто технічною, а зрозумілою для людей,
-          які будуть нею користуватися щодня.
-        </p>
+            <p class="section-text">
+              Автоматизація має бути не просто технічною, а зрозумілою для людей, які будуть нею користуватися щодня.
+            </p>
+          </div>
+
+          <div class="automation-benefits__grid">
+            <div>
+              <span>01</span>
+              <strong>Індивідуальні рішення, а не шаблони</strong>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>Захист даних та безпека - у пріоритеті</strong>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Я пояснюю людською мовою, не “айтішною”</strong>
+            </div>
+
+            <div>
+              <span>04</span>
+              <strong>Прозора комунікація на кожному етапі</strong>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="automation-benefits__grid">
-        <article class="automation-benefit-card">
-          <span class="automation-benefit-card__number">01</span>
-
-          <span class="automation-benefit-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" focusable="false">
-              <path d="M10 24c4-8 10-12 18-12 4 0 7.5 1.2 10 3.5" />
-              <path d="M38 15.5V9h-6.5" />
-              <path d="M38 24c-4 8-10 12-18 12-4 0-7.5-1.2-10-3.5" />
-              <path d="M10 32.5V39h6.5" />
-              <path d="M20 24h8" />
-              <path d="M24 20v8" />
-            </svg>
-          </span>
-
-          <strong>Індивідуальні рішення, а не шаблони</strong>
-        </article>
-
-        <article class="automation-benefit-card">
-          <span class="automation-benefit-card__number">02</span>
-
-          <span class="automation-benefit-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" focusable="false">
-              <path d="M24 7.5 37 13v11.5c0 8.4-5.2 14.2-13 17-7.8-2.8-13-8.6-13-17V13l13-5.5Z" />
-              <path d="M18.5 25.5 22.5 29.5 30.5 20.5" />
-            </svg>
-          </span>
-
-          <strong>Захист даних та безпека - у пріоритеті</strong>
-        </article>
-
-        <article class="automation-benefit-card">
-          <span class="automation-benefit-card__number">03</span>
-
-          <span class="automation-benefit-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" focusable="false">
-              <path d="M10 15h28a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H22l-8 6v-6h-4a3 3 0 0 1-3-3V18a3 3 0 0 1 3-3Z" />
-              <path d="M16 23h16" />
-              <path d="M16 29h10" />
-            </svg>
-          </span>
-
-          <strong>Я пояснюю людською мовою, не “айтішною”</strong>
-        </article>
-
-        <article class="automation-benefit-card">
-          <span class="automation-benefit-card__number">04</span>
-
-          <span class="automation-benefit-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" focusable="false">
-              <path d="M8 24s5.5-10 16-10 16 10 16 10-5.5 10-16 10S8 24 8 24Z" />
-              <circle cx="24" cy="24" r="4.5" />
-              <path d="M14 39h20" />
-            </svg>
-          </span>
-
-          <strong>Прозора комунікація на кожному етапі</strong>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
     <!-- PRICING LADDER -->
     <section class="section section--compact" aria-labelledby="pricingTitle">
       <div class="container">
@@ -542,7 +515,7 @@
           <article class="pricing-ladder__item">
             <div class="pricing-ladder__meta">
               <span>Level 01</span>
-              <strong>$100 - $300</strong>
+              <strong>$100 – $300</strong>
             </div>
 
             <div class="pricing-ladder__body">
@@ -556,7 +529,7 @@
           <article class="pricing-ladder__item pricing-ladder__item--featured">
             <div class="pricing-ladder__meta">
               <span>Level 02</span>
-              <strong>$400 - $1000</strong>
+              <strong>$400 – $1000</strong>
             </div>
 
             <div class="pricing-ladder__body">
@@ -570,7 +543,7 @@
           <article class="pricing-ladder__item">
             <div class="pricing-ladder__meta">
               <span>Level 03</span>
-              <strong>$2000 - $5000+</strong>
+              <strong>$2000 – $5000+</strong>
             </div>
 
             <div class="pricing-ladder__body">
@@ -595,13 +568,13 @@
               Готові оптимізувати ваш бізнес?
             </p>
 
-            <h3 id="serviceCtaTitle">
+            <h2 id="serviceCtaTitle" class="cta-title">
               Скоротимо рутину. Покращимо контроль. Зробимо все красиво й надійно.
-            </h3>
+            </h2>
 
-            <h3>
+            <p class="cta-text">
               Запишіться на безкоштовну консультацію, і я підкажу, з чого почати.
-            </h3>
+            </p>
           </div>
 
           <div class="cta-action">
