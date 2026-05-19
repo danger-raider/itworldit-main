@@ -176,9 +176,7 @@
       <div class="container">
         <div class="about-intro">
           <div class="about-intro__content">
-            <p class="eyebrow">
-              Who we are
-            </p>
+            <p class="eyebrow">Who we are</p>
 
             <h2 id="whoTitle" class="section-title">
               Who we are
@@ -198,20 +196,66 @@
             </p>
           </div>
 
-          <div class="about-intro__stats" aria-label="Key work areas">
-            <div>
-              <span>20+</span>
-              <strong>years of practical IT experience</strong>
+          <div class="about-intro__stats" aria-label="Key work advantages">
+            <div class="about-stat-card">
+              <span class="about-stat-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M24 8a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z" />
+                  <path d="M24 15v10l7 4" />
+                  <path d="M10 38l-3 3" />
+                  <path d="M38 38l3 3" />
+                </svg>
+              </span>
+              <span class="about-stat-card__value">20+</span>
+              <strong class="about-stat-card__text">years of practical IT experience</strong>
             </div>
 
-            <div>
-              <span>4</span>
-              <strong>core areas: infrastructure, security, automation and web</strong>
+            <div class="about-stat-card">
+              <span class="about-stat-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M12 12h10v10H12z" />
+                  <path d="M26 12h10v10H26z" />
+                  <path d="M12 26h10v10H12z" />
+                  <path d="M26 26h10v10H26z" />
+                  <path d="M22 17h4" />
+                  <path d="M17 22v4" />
+                  <path d="M31 22v4" />
+                  <path d="M22 31h4" />
+                </svg>
+              </span>
+              <span class="about-stat-card__value">4</span>
+              <strong class="about-stat-card__text">core areas: infrastructure, security, automation and web</strong>
             </div>
 
-            <div>
-              <span>AI</span>
-              <strong>digital assistant for first contact and task structuring</strong>
+            <div class="about-stat-card">
+              <span class="about-stat-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M14 28c0-7 4.5-12 10-12s10 5 10 12" />
+                  <path d="M18 34h12" />
+                  <path d="M24 16v-5" />
+                  <circle cx="24" cy="9" r="3" />
+                  <circle cx="14" cy="28" r="3" />
+                  <circle cx="34" cy="28" r="3" />
+                  <path d="M24 22v7" />
+                  <path d="M20.5 26h7" />
+                </svg>
+              </span>
+              <span class="about-stat-card__value">AI</span>
+              <strong class="about-stat-card__text">digital assistant for first contact and task structuring</strong>
+            </div>
+
+            <div class="about-stat-card">
+              <span class="about-stat-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" focusable="false">
+                  <path d="M24 8a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z" />
+                  <path d="M24 14a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z" />
+                  <circle cx="24" cy="24" r="3" />
+                  <path d="M36 12l4-4" />
+                  <path d="M38 8h2v2" />
+                </svg>
+              </span>
+              <span class="about-stat-card__value about-stat-card__value--word">Custom</span>
+              <strong class="about-stat-card__text">solutions selected for your goals, processes and real tasks</strong>
             </div>
           </div>
         </div>
@@ -230,15 +274,21 @@
             What we do
           </h2>
 
-          <p class="section-summary section-summary--center">
+          <p class="section-text text-center">
             The focus is not on “one more tool”, but on making business operations more stable,
             faster and safer.
           </p>
         </div>
 
         <div class="about-capabilities">
-          <article class="about-capability">
-            <span>01</span>
+          <article class="about-capability about-capability--security">
+            <span class="about-capability__number">01</span>
+            <span class="about-capability__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M24 7.5 37 13v11.5c0 8.4-5.2 14.2-13 17-7.8-2.8-13-8.6-13-17V13l13-5.5Z" />
+                <path d="M18.5 25.5 22.5 29.5 30.5 20.5" />
+              </svg>
+            </span>
             <h3>Cybersecurity and access</h3>
             <p>
               VPN for teams, server hardening, SPF/DKIM/DMARC, security audits,
@@ -246,8 +296,19 @@
             </p>
           </article>
 
-          <article class="about-capability">
-            <span>02</span>
+          <article class="about-capability about-capability--automation">
+            <span class="about-capability__number">02</span>
+            <span class="about-capability__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M17 16h14" />
+                <path d="M17 32h14" />
+                <path d="M24 16v16" />
+                <circle cx="17" cy="16" r="4" />
+                <circle cx="31" cy="16" r="4" />
+                <circle cx="17" cy="32" r="4" />
+                <circle cx="31" cy="32" r="4" />
+              </svg>
+            </span>
             <h3>Process automation</h3>
             <p>
               Documents, requests, CRM, forms, Google Workspace, Telegram notifications,
@@ -255,8 +316,17 @@
             </p>
           </article>
 
-          <article class="about-capability">
-            <span>03</span>
+          <article class="about-capability about-capability--web">
+            <span class="about-capability__number">03</span>
+            <span class="about-capability__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M10 14h28a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V17a3 3 0 0 1 3-3Z" />
+                <path d="M7 21h34" />
+                <path d="m19 28-4 4 4 4" />
+                <path d="m29 28 4 4-4 4" />
+                <path d="M25.5 27 22.5 37" />
+              </svg>
+            </span>
             <h3>Websites and integrations</h3>
             <p>
               Lightweight websites, landing pages, business websites, Web UI, forms,
@@ -264,8 +334,18 @@
             </p>
           </article>
 
-          <article class="about-capability">
-            <span>04</span>
+          <article class="about-capability about-capability--mvp">
+            <span class="about-capability__number">04</span>
+            <span class="about-capability__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M24 8c6 4.2 9.8 10.2 9.8 17.2 0 7.2-4.3 12.8-9.8 15.8-5.5-3-9.8-8.6-9.8-15.8C14.2 18.2 18 12.2 24 8Z" />
+                <path d="M24 22v10" />
+                <path d="M19 32h10" />
+                <circle cx="24" cy="19" r="3" />
+                <path d="M13 37l-4 4" />
+                <path d="M35 37l4 4" />
+              </svg>
+            </span>
             <h3>MVP and technical launch</h3>
             <p>
               Support with the first product version: from idea and structure to launch,
@@ -310,8 +390,15 @@
 
           <figure class="service-image">
             <img
-              src="/assets/img/about/about-ai-assistant.webp"
-              alt="Digital AI assistant structuring client requests, messages and IT tasks for business"
+              src="/assets/img/about/about-ai-assistant-1600.webp"
+              srcset="
+                /assets/img/about/about-ai-assistant-768.webp 768w,
+                /assets/img/about/about-ai-assistant-1200.webp 1200w,
+                /assets/img/about/about-ai-assistant-1600.webp 1600w,
+                /assets/img/about/about-ai-assistant.webp 1920w
+              "
+              sizes="(max-width: 979px) 100vw, 50vw"
+              alt="Digital AI assistant structuring requests, messages and IT tasks for business"
               width="1920"
               height="1080"
               loading="lazy"
@@ -334,15 +421,23 @@
             Our principles
           </h2>
 
-          <p class="section-summary">
+          <p class="section-text">
             Work should be clear: what we are doing, why it matters, how long it takes,
             what risks exist and what result is expected.
           </p>
         </div>
 
         <div class="about-principles">
-          <article>
-            <span>01</span>
+          <article class="about-principle-card about-principle-card--solutions">
+            <span class="about-principle-card__number">01</span>
+            <span class="about-principle-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M14 34.5 21.5 27l5.5 5.5L37 22.5" />
+                <path d="M13 13h22a3 3 0 0 1 3 3v19a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3V16a3 3 0 0 1 3-3Z" />
+                <path d="M16 20h10" />
+                <path d="M16 25h6" />
+              </svg>
+            </span>
             <h3>Solutions, not excuses</h3>
             <p>
               We do not sell “one more system”. We analyze a specific pain point and look for a solution
@@ -350,8 +445,14 @@
             </p>
           </article>
 
-          <article>
-            <span>02</span>
+          <article class="about-principle-card about-principle-card--security">
+            <span class="about-principle-card__number">02</span>
+            <span class="about-principle-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M24 7.5 37 13v11.5c0 8.4-5.2 14.2-13 17-7.8-2.8-13-8.6-13-17V13l13-5.5Z" />
+                <path d="M18.5 25.5 22.5 29.5 30.5 20.5" />
+              </svg>
+            </span>
             <h3>Security from day one</h3>
             <p>
               There is no sense in building a business on leaky infrastructure.
@@ -359,8 +460,15 @@
             </p>
           </article>
 
-          <article>
-            <span>03</span>
+          <article class="about-principle-card about-principle-card--speed">
+            <span class="about-principle-card__number">03</span>
+            <span class="about-principle-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M27 6 12 27h11l-2 15 15-22H25l2-14Z" />
+                <path d="M10 39h9" />
+                <path d="M29 39h9" />
+              </svg>
+            </span>
             <h3>Fast start</h3>
             <p>
               We do not begin with 30 slides when a working solution is needed.
@@ -368,8 +476,16 @@
             </p>
           </article>
 
-          <article>
-            <span>04</span>
+          <article class="about-principle-card about-principle-card--transparency">
+            <span class="about-principle-card__number">04</span>
+            <span class="about-principle-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M8 24s5.5-10 16-10 16 10 16 10-5.5 10-16 10S8 24 8 24Z" />
+                <circle cx="24" cy="24" r="4.5" />
+                <path d="M14 39h20" />
+                <path d="M18 43h12" />
+              </svg>
+            </span>
             <h3>Transparency</h3>
             <p>
               We agree, implement and show the result. No hidden surprises,
