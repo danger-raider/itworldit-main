@@ -1,53 +1,108 @@
-const CACHE_NAME = "itworldit-cache-v1";
+const CACHE_NAME = "itworldit-cache-v3";
+
 const OFFLINE_URLS = [
-  "./",
-  "./index.html",
-  "./manifest.json",
-  "./assets/css/style.css",
-  "./assets/js/main.js",
-  "./assets/js/stars.js",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "/",
+  "/index.html",
+  "/manifest.json",
+  "/assets/css/style.css",
+  "/assets/js/main.js",
+  "/assets/js/stars.js",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
 ];
 
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
+
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(OFFLINE_URLS))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(OFFLINE_URLS)),
   );
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((k) => k !== CACHE_NAME)
-          .map((k) => caches.delete(k))
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(
+          keys
+            .filter((key) => key !== CACHE_NAME)
+            .map((key) => caches.delete(key)),
+        ),
       )
-    )
+      .then(() => self.clients.claim()),
   );
 });
 
 self.addEventListener("fetch", (event) => {
   const req = event.request;
-  const isHTML = req.headers.get("accept")?.includes("text/html");
 
-  if (isHTML) {
-    event.respondWith(
-      fetch(req)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((c) => c.put(req, copy));
-          return res;
-        })
-        .catch(() =>
-          caches.match(req).then((r) => r || caches.match("./index.html"))
-        )
-    );
+  if (req.method !== "GET") {
     return;
   }
 
-  event.respondWith(
-    caches.match(req).then((cached) => cached || fetch(req))
-  );
+  const acceptHeader = req.headers.get("accept") || "";
+  const isHTML = req.mode === "navigate" || acceptHeader.includes("text/html");
+
+  if (isHTML) {
+    event.respondWith(networkFirst(req));
+    return;
+  }
+
+  if (isStaticAsset(req)) {
+    event.respondWith(staleWhileRevalidate(req));
+    return;
+  }
+
+  event.respondWith(networkFirst(req));
 });
+
+async function networkFirst(req) {
+  try {
+    const fresh = await fetch(req);
+
+    const cache = await caches.open(CACHE_NAME);
+    cache.put(req, fresh.clone());
+
+    return fresh;
+  } catch (error) {
+    const cached = await caches.match(req);
+
+    if (cached) {
+      return cached;
+    }
+
+    return caches.match("/index.html");
+  }
+}
+
+async function staleWhileRevalidate(req) {
+  const cache = await caches.open(CACHE_NAME);
+  const cached = await cache.match(req);
+
+  const freshPromise = fetch(req)
+    .then((fresh) => {
+      cache.put(req, fresh.clone());
+      return fresh;
+    })
+    .catch(() => null);
+
+  return cached || freshPromise;
+}
+
+function isStaticAsset(req) {
+  const url = new URL(req.url);
+
+  return (
+    url.pathname.startsWith("/assets/") ||
+    url.pathname.startsWith("/icons/") ||
+    url.pathname.endsWith(".css") ||
+    url.pathname.endsWith(".js") ||
+    url.pathname.endsWith(".webp") ||
+    url.pathname.endsWith(".png") ||
+    url.pathname.endsWith(".jpg") ||
+    url.pathname.endsWith(".jpeg") ||
+    url.pathname.endsWith(".svg") ||
+    url.pathname.endsWith(".ico")
+  );
+}

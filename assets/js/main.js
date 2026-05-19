@@ -228,7 +228,12 @@ const DICT = {
     cta_preview_title: "Готові поговорити про ваш проект?",
     cta_preview_text:
       "Усі звернення обробляє Aoi — персональний асистент. Жива людина відповідає, якщо треба 😉",
-
+    contact_form_success:
+      "✅ Дякуємо! Запит надіслано. Ми відповімо, як тільки зможемо.",
+    contact_form_server_error:
+      "⚠️ Сталася помилка на боці сервера. Спробуй ще раз пізніше.",
+    contact_form_network_error:
+      "⚠️ Не вдалося надіслати запит. Перевір інтернет або спробуй інший браузер.",
     footer_navigation: "Навігація",
     footer_services: "Послуги",
     footer_description:
@@ -251,6 +256,10 @@ const DICT = {
     aria_close_menu: "Закрити меню",
     aria_previous_slide: "Попередній слайд",
     aria_next_slide: "Наступний слайд",
+    aria_brand_home: "It World IT: головна сторінка",
+    aria_main_navigation: "Основна навігація",
+    aria_footer_navigation: "Навігація у футері",
+    aria_footer_services_navigation: "Навігація послугами у футері",
   },
 
   en: {
@@ -325,7 +334,12 @@ const DICT = {
     cta_preview_title: "Ready to talk about your project?",
     cta_preview_text:
       "All requests are handled by Aoi, a personal assistant. A real person replies when needed 😉",
-
+    contact_form_success:
+      "✅ Thank you! Your request has been sent. We will reply as soon as we can.",
+    contact_form_server_error:
+      "⚠️ A server error occurred. Please try again later.",
+    contact_form_network_error:
+      "⚠️ Could not send the request. Check your internet connection or try another browser.",
     footer_navigation: "Navigation",
     footer_services: "Services",
     footer_description:
@@ -348,6 +362,10 @@ const DICT = {
     aria_close_menu: "Close menu",
     aria_previous_slide: "Previous slide",
     aria_next_slide: "Next slide",
+    aria_brand_home: "It World IT: home page",
+    aria_main_navigation: "Main navigation",
+    aria_footer_navigation: "Footer navigation",
+    aria_footer_services_navigation: "Footer services navigation",
   },
 };
 
@@ -535,7 +553,13 @@ function initLanguageSwitcher() {
        element.textContent = dict[key];
      }
    });
+document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+  const key = element.getAttribute("data-i18n-aria-label");
 
+  if (dict[key]) {
+    element.setAttribute("aria-label", dict[key]);
+  }
+});
    if (langCurrent) {
      langCurrent.textContent = code.toUpperCase();
    }
@@ -669,7 +693,9 @@ function openMobileMenu() {
 
   nav.classList.add("is-open");
   menuToggle.setAttribute("aria-expanded", "true");
-  menuToggle.setAttribute("aria-label", "Close menu");
+  const lang = getCurrentLang();
+  const dict = DICT[lang] || DICT.ua;
+  menuToggle.setAttribute("aria-label", dict.aria_close_menu);
   const firstMenuLink = nav.querySelector("a, button");
 
   if (firstMenuLink) {
@@ -697,7 +723,9 @@ function closeMobileMenu() {
 
   nav.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open menu");
+  const lang = getCurrentLang();
+const dict = DICT[lang] || DICT.ua;
+menuToggle.setAttribute("aria-label", dict.aria_open_menu);
 setMobileServicesExpanded(false);
   if (menuIcon) {
     menuIcon.textContent = "☰";
@@ -1028,6 +1056,11 @@ function initContactForm() {
     return;
   }
 
+  function getFormDict() {
+    const lang = getCurrentLang();
+    return DICT[lang] || DICT.ua;
+  }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -1035,6 +1068,7 @@ function initContactForm() {
       return;
     }
 
+    const dict = getFormDict();
     const data = new FormData(form);
 
     try {
@@ -1049,23 +1083,20 @@ function initContactForm() {
       if (response.ok) {
         if (formStatus) {
           formStatus.className = "success-box";
-          formStatus.textContent =
-            "✅ Дякуємо! Запит надіслано. Ми відповімо, як тільки зможемо.";
+          formStatus.textContent = dict.contact_form_success;
         }
 
         form.reset();
       } else if (formStatus) {
         formStatus.className = "error-box";
-        formStatus.textContent =
-          "⚠️ Сталася помилка на боці сервера. Спробуй ще раз пізніше.";
+        formStatus.textContent = dict.contact_form_server_error;
       }
     } catch (error) {
       console.error(error);
 
       if (formStatus) {
         formStatus.className = "error-box";
-        formStatus.textContent =
-          "⚠️ Не вдалося надіслати запит. Перевір інтернет або спробуй інший браузер.";
+        formStatus.textContent = dict.contact_form_network_error;
       }
     }
   });
