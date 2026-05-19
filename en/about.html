@@ -55,7 +55,19 @@
   <meta name="twitter:image" content="https://itworldit.com/assets/img/about/about-hero.webp" />
 
   <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/about/about-hero.webp" type="image/webp" />
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/img/about/about-hero-1600.webp"
+    imagesrcset="
+      /assets/img/about/about-hero-768.webp 768w,
+      /assets/img/about/about-hero-1200.webp 1200w,
+      /assets/img/about/about-hero-1600.webp 1600w,
+      /assets/img/about/about-hero.webp 1920w
+    "
+    imagesizes="(max-width: 979px) 100vw, 50vw"
+    type="image/webp"
+  />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -113,7 +125,7 @@
           </p>
 
           <h1 id="aboutTitle" class="section-title section-title--large">
-            Human expertise plus a digital assistant for practical IT solutions
+            Human + AI assistant
           </h1>
 
           <p class="section-summary section-summary--hero">
@@ -140,7 +152,14 @@
 
         <figure class="service-image service-image--hero">
           <img
-            src="/assets/img/about/about-hero.webp"
+            src="/assets/img/about/about-hero-1600.webp"
+            srcset="
+              /assets/img/about/about-hero-768.webp 768w,
+              /assets/img/about/about-hero-1200.webp 1200w,
+              /assets/img/about/about-hero-1600.webp 1600w,
+              /assets/img/about/about-hero.webp 1920w
+            "
+            sizes="(max-width: 979px) 100vw, 50vw"
             alt="Abstract visualization of a human expert and a digital AI assistant working with secure IT infrastructure"
             width="1920"
             height="1080"
@@ -166,7 +185,7 @@
             </h2>
 
             <p class="section-summary">
-              I am Dmytro. I have more than 15 years of hands-on experience with system infrastructure,
+              I am Dmytro. I have more than 20 years of hands-on experience with system infrastructure,
               automation, information security and IT solution implementation.
               My practical work includes tasks from VPN deployment and email protection to CI/CD,
               servers, integrations, websites and MVP products.
@@ -181,7 +200,7 @@
 
           <div class="about-intro__stats" aria-label="Key work areas">
             <div>
-              <span>15+</span>
+              <span>20+</span>
               <strong>years of practical IT experience</strong>
             </div>
 
