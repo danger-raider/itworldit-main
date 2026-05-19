@@ -55,7 +55,19 @@
   <meta name="twitter:image" content="https://itworldit.com/assets/img/contact/contact-hero.webp" />
 
   <!-- Performance -->
-  <link rel="preload" as="image" href="/assets/img/contact/contact-hero.webp" type="image/webp" />
+  <link
+  rel="preload"
+  as="image"
+  href="/assets/img/contact/contact-hero-1600.webp"
+  imagesrcset="
+    /assets/img/contact/contact-hero-768.webp 768w,
+    /assets/img/contact/contact-hero-1200.webp 1200w,
+    /assets/img/contact/contact-hero-1600.webp 1600w,
+    /assets/img/contact/contact-hero.webp 1920w
+  "
+  imagesizes="(max-width: 979px) 100vw, 50vw"
+  type="image/webp"
+/>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -147,15 +159,22 @@
         </div>
 
         <figure class="contact-visual contact-visual--hero">
-          <img
-            src="/assets/img/contact/contact-hero.webp"
-            alt="Abstract contact visual with IT team, Aoi digital assistant and secure message flow"
-            width="1920"
-            height="1080"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+     <img
+  src="/assets/img/contact/contact-hero-1600.webp"
+  srcset="
+    /assets/img/contact/contact-hero-768.webp 768w,
+    /assets/img/contact/contact-hero-1200.webp 1200w,
+    /assets/img/contact/contact-hero-1600.webp 1600w,
+    /assets/img/contact/contact-hero.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Abstract contact visual with IT team, Aoi digital assistant and secure message flow"
+  width="1920"
+  height="1080"
+  loading="eager"
+  decoding="async"
+  fetchpriority="high"
+/>
         </figure>
       </div>
     </section>
