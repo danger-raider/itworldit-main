@@ -7527,14 +7527,51 @@ body[data-theme="light"] .site-header__submenu-link {
     display: none !important;
   }
 
-  .site-header__submenu-link:hover,
-  .site-header__submenu-link:focus-visible,
-  .site-header__submenu-link.is-active {
-    color: #ffffff !important;
-    background: rgba(139, 92, 246, 0.18) !important;
-    transform: translateX(3px) !important;
-  }
-}
+    .site-header__submenu-link:hover,
+    .site-header__submenu-link:focus-visible,
+    .site-header__submenu-link.is-active {
+      color: #ffffff !important;
+      background: rgba(139, 92, 246, 0.18) !important;
+      transform: translateX(3px) !important;
+    }
+  
+    /* Світла тема: desktop-меню послуг */
+    body[data-theme="light"] .site-header__nav-item--has-dropdown>.site-header__nav-button {
+      color: #4b5563 !important;
+    }
+  
+    body[data-theme="light"] .site-header__nav-item--has-dropdown:hover>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown:focus-within>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown.is-open>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown.is-active>.site-header__nav-button {
+      border-color: rgba(139, 92, 246, 0.22) !important;
+      background: rgba(139, 92, 246, 0.12) !important;
+      color: #7c3aed !important;
+    }
+  
+    body[data-theme="light"] .site-header__submenu {
+      border-color: rgba(139, 92, 246, 0.22) !important;
+      background:
+        linear-gradient(135deg,
+          rgba(139, 92, 246, 0.09),
+          transparent 42%),
+        rgba(255, 255, 255, 0.98) !important;
+      box-shadow:
+        0 18px 42px rgba(17, 24, 39, 0.12),
+        0 0 24px rgba(139, 92, 246, 0.08) !important;
+    }
+  
+    body[data-theme="light"] .site-header__submenu-link {
+      color: #4b5563 !important;
+    }
+  
+    body[data-theme="light"] .site-header__submenu-link:hover,
+    body[data-theme="light"] .site-header__submenu-link:focus-visible,
+    body[data-theme="light"] .site-header__submenu-link.is-active {
+      background: rgba(139, 92, 246, 0.10) !important;
+      color: #7c3aed !important;
+    }
+    }
 
 /* ---------- Mobile header: services as always-open nested list ---------- */
 @media (max-width: 1023px) {
@@ -7634,17 +7671,41 @@ body[data-theme="light"] .site-header__submenu-link {
     transform: none !important;
   }
 
-  .site-header__submenu-link::before {
-    content: "" !important;
-    width: 6px !important;
-    height: 6px !important;
-    flex: 0 0 auto !important;
-    margin-right: 10px !important;
-    border-radius: 999px !important;
-    background: rgba(139, 92, 246, 0.75) !important;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.35) !important;
-  }
-}
+    .site-header__submenu-link::before {
+      content: "" !important;
+      width: 6px !important;
+      height: 6px !important;
+      flex: 0 0 auto !important;
+      margin-right: 10px !important;
+      border-radius: 999px !important;
+      background: rgba(139, 92, 246, 0.75) !important;
+      box-shadow: 0 0 10px rgba(139, 92, 246, 0.35) !important;
+    }
+  
+    /* Світла тема: мобільне меню послуг */
+    body[data-theme="light"] .site-header__nav-item--has-dropdown>.site-header__nav-button {
+      color: #111827 !important;
+    }
+  
+    body[data-theme="light"] .site-header__nav-item--has-dropdown:hover>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown:focus-within>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown.is-open>.site-header__nav-button,
+    body[data-theme="light"] .site-header__nav-item--has-dropdown.is-active>.site-header__nav-button {
+      background: transparent !important;
+      color: #7c3aed !important;
+    }
+  
+    body[data-theme="light"] .site-header__submenu-link {
+      color: #4b5563 !important;
+    }
+  
+    body[data-theme="light"] .site-header__submenu-link:hover,
+    body[data-theme="light"] .site-header__submenu-link:focus-visible,
+    body[data-theme="light"] .site-header__submenu-link.is-active {
+      background: rgba(139, 92, 246, 0.10) !important;
+      color: #7c3aed !important;
+    }
+    }
 
 /* ---------- Centered lines: only centered when header is centered ---------- */
 .section-header--center.has-line .section-title::after,
