@@ -1,82 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://itworldit.com/</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/outsourcing.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/consulting.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/mvp.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/automation.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/webdev.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/services/security.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/about.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/contact.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/outsourcing.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/consulting.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/mvp.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/automation.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/webdev.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/services/security.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/about.html</loc>
   </url>
-
   <url>
     <loc>https://itworldit.com/en/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/outsourcing.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/consulting.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/mvp.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/automation.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/webdev.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/services/security.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/about.html</loc>
+  </url>
+  <url>
+    <loc>https://itworldit.com/ja/contact.html</loc>
   </url>
 </urlset>

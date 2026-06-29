@@ -367,11 +367,120 @@ const DICT = {
     aria_footer_navigation: "Footer navigation",
     aria_footer_services_navigation: "Footer services navigation",
   },
+
+  ja: {
+    brand_tagline: "複雑さをシンプルに",
+
+    nav_home: "ホーム",
+    nav_services: "サービス",
+    nav_services_all: "すべてのサービス",
+    nav_service_outsourcing: "ITアウトソーシング",
+    nav_service_consulting: "ITコンサルティング・監査",
+    nav_service_mvp: "MVP開発",
+    nav_service_automation: "業務プロセス自動化",
+    nav_service_webdev: "Webサイト制作・連携",
+    nav_service_security: "サイバーセキュリティ / VPN / メール保護",
+    nav_blog: "ブログ",
+    nav_about: "私たちについて",
+    nav_contact: "お問い合わせ",
+
+    theme_dark: "ダーク",
+    theme_light: "ライト",
+
+    hero_title: "ビジネスのデジタル化を支えるITパートナー",
+    hero_sub:
+      "インフラ構築、セキュリティ、業務自動化、MVP開発まで。複雑な課題を、わかりやすい技術支援へ変えていきます。",
+    hero_kicker: "ITエンジニアリング / 自動化 / セキュリティ",
+    hero_cta_services: "サービスを見る",
+    cta_book: "相談を予約する",
+
+    hero_slide_1_title: "インフラ",
+    hero_slide_1_text:
+      "サーバー、ネットワーク、VPN、監視環境を整え、日々の業務を安定して支えます。",
+    hero_slide_2_title: "サイバーセキュリティ",
+    hero_slide_2_text:
+      "アクセス管理、メール保護、VPN、サーバーのハードニングにより、リスクを減らします。",
+    hero_slide_3_title: "自動化",
+    hero_slide_3_text:
+      "繰り返し作業を減らし、ツールを連携させ、より速く判断できる業務環境を整えます。",
+    hero_slide_4_title: "コンサルティング",
+    hero_slide_4_text:
+      "技術監査、設計方針、導入ロードマップをわかりやすく整理します。",
+
+    services_preview_title: "サービス",
+    services_preview_subtitle: "/ 私たちができること",
+    services_preview_more: "すべてのサービスを見る →",
+
+    service_outsourcing_title: "ITアウトソーシング",
+    service_outsourcing_text:
+      "インフラ運用、障害対応、日常的なITサポートを外部パートナーとして支援します。",
+    service_consulting_title: "ITコンサルティング・監査",
+    service_consulting_text:
+      "安全で効率的なIT環境のために、現状分析、監査、改善提案を行います。",
+    service_mvp_title: "MVP開発",
+    service_mvp_text:
+      "アイデアを数週間で形にし、実際の市場で検証できる最小限のプロダクトを作ります。",
+    service_automation_title: "業務プロセス自動化",
+    service_automation_text:
+      "書類作成、CRM、メール、ボット、各種ツール連携により、手作業を減らします。",
+    service_webdev_title: "Webサイト制作・連携",
+    service_webdev_text:
+      "ランディングページ、企業サイト、フォーム、CRM、決済連携などを構築します。",
+    service_security_title: "サイバーセキュリティ / VPN / 保護",
+    service_security_text:
+      "VPN、メールセキュリティ、SPF/DKIM/DMARC、サーバーハードニングを支援します。",
+
+    about_preview_label: "About IT World IT",
+    about_preview_title: "私たちについて",
+    about_preview_text:
+      "Dmytroは、システムインフラ、自動化、セキュリティに長年携わってきた独立ITスペシャリストです。デジタルアシスタントAoiとともに、ビジネスの立ち上げ、安定運用、成長を技術面から支援します。",
+    about_preview_more: "詳しく見る →",
+
+    cta_preview_label: "Start a conversation",
+    cta_preview_title: "プロジェクトについて相談しますか？",
+    cta_preview_text:
+      "お問い合わせはAoiが受け付けます。技術的な確認が必要な内容はDmytroへ引き継ぎます。",
+    contact_form_success:
+      "✅ ありがとうございます。お問い合わせを送信しました。できるだけ早く返信いたします。",
+    contact_form_server_error:
+      "⚠️ サーバー側でエラーが発生しました。時間をおいてもう一度お試しください。",
+    contact_form_network_error:
+      "⚠️ 送信できませんでした。インターネット接続を確認するか、別のブラウザでお試しください。",
+
+    footer_navigation: "ナビゲーション",
+    footer_services: "サービス",
+    footer_description:
+      "安定したインフラ、業務自動化、サイバーセキュリティ、明確な技術判断を必要とするビジネスのための実践的なIT支援です。",
+    footer_service_outsourcing: "ITアウトソーシング",
+    footer_service_consulting: "ITコンサルティング・監査",
+    footer_service_mvp: "MVP開発",
+    footer_service_automation: "業務自動化",
+    footer_service_webdev: "Webサイト制作・連携",
+    footer_service_security: "サイバーセキュリティ",
+    footer_cta_title: "信頼できるITサポートが必要ですか？",
+    footer_cta_text:
+      "より安定して、より安全に、より速く動かしたいことをお聞かせください。明確な技術プランに整理します。",
+    footer_cta_button: "相談を予約する",
+    footer_rights: "All rights reserved.",
+
+    aria_choose_language: "言語を選択",
+    aria_switch_to_light: "ライトテーマに切り替える",
+    aria_switch_to_dark: "ダークテーマに切り替える",
+    aria_open_menu: "メニューを開く",
+    aria_close_menu: "メニューを閉じる",
+    aria_previous_slide: "前のスライド",
+    aria_next_slide: "次のスライド",
+    aria_brand_home: "It World IT: ホームページ",
+    aria_main_navigation: "メインナビゲーション",
+    aria_footer_navigation: "フッターナビゲーション",
+    aria_footer_services_navigation: "フッターのサービスナビゲーション",
+  },
 };
 
 /**
  * Detects page language by URL.
  * /en/ and /en/... are English.
+ * /ja/ and /ja/... are Japanese.
  * Everything else is Ukrainian.
  */
 function getCurrentLang() {
@@ -379,6 +488,10 @@ function getCurrentLang() {
 
   if (path === "/en" || path === "/en/" || path.startsWith("/en/")) {
     return "en";
+  }
+
+  if (path === "/ja" || path === "/ja/" || path.startsWith("/ja/")) {
+    return "ja";
   }
 
   return "ua";
@@ -394,10 +507,18 @@ function getBaseLanguagePath(path = window.location.pathname) {
     cleanPath = "/en/";
   }
 
-  const isEnglishPath = cleanPath === "/en/" || cleanPath.startsWith("/en/");
+  if (cleanPath === "/ja") {
+    cleanPath = "/ja/";
+  }
 
-  if (isEnglishPath) {
-    cleanPath = cleanPath.replace(/^\/en(?=\/|$)/, "");
+  const isLocalizedPath =
+    cleanPath === "/en/" ||
+    cleanPath.startsWith("/en/") ||
+    cleanPath === "/ja/" ||
+    cleanPath.startsWith("/ja/");
+
+  if (isLocalizedPath) {
+    cleanPath = cleanPath.replace(/^\/(en|ja)(?=\/|$)/, "");
   }
 
   if (!cleanPath) {
@@ -421,6 +542,10 @@ function getLocalizedUrl(targetLang) {
     return basePath === "/" ? "/en/" : `/en${basePath}`;
   }
 
+  if (targetLang === "ja") {
+    return basePath === "/" ? "/ja/" : `/ja${basePath}`;
+  }
+
   return basePath;
 }
 
@@ -438,6 +563,10 @@ function localizePath(path, lang) {
 
   if (lang === "en") {
     return cleanPath === "/" ? "/en/" : `/en${cleanPath}`;
+  }
+
+  if (lang === "ja") {
+    return cleanPath === "/" ? "/ja/" : `/ja${cleanPath}`;
   }
 
   return cleanPath;
@@ -543,7 +672,13 @@ function initLanguageSwitcher() {
      return;
    }
 
-   document.documentElement.lang = code === "ua" ? "uk" : "en";
+const htmlLangMap = {
+  ua: "uk",
+  en: "en",
+  ja: "ja",
+};
+
+document.documentElement.lang = htmlLangMap[code] || "uk";
    document.body.dataset.lang = code;
 
    document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -661,18 +796,24 @@ document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
  * Updates only the visible theme label after language switching.
  */
 function updateThemeLabelOnly() {
+  const themeToggle = document.getElementById("themeToggle");
   const themeLabel = document.getElementById("themeLabel");
 
-  if (!themeLabel) {
-    return;
-  }
-
-  const lang = getCurrentLang();
+  const lang = document.body.dataset.lang || getCurrentLang();
   const dict = DICT[lang] || DICT.ua;
   const currentTheme = getCurrentTheme();
+  const isDark = currentTheme === "dark";
 
-  themeLabel.textContent =
-    currentTheme === "dark" ? dict.theme_dark : dict.theme_light;
+  if (themeLabel) {
+    themeLabel.textContent = isDark ? dict.theme_dark : dict.theme_light;
+  }
+
+  if (themeToggle) {
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? dict.aria_switch_to_light : dict.aria_switch_to_dark,
+    );
+  }
 }
 
 /**

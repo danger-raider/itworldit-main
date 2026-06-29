@@ -5,12 +5,11 @@
 
     <!-- Brand -->
     <a
-  href="/"
-  data-page-path="/"
-  class="site-header__brand"
-  aria-label="It World IT: головна сторінка"
-  data-i18n-aria-label="aria_brand_home"
->
+      href="/"
+      data-page-path="/"
+      class="site-header__brand"
+      aria-label="It World IT: головна сторінка"
+      data-i18n-aria-label="aria_brand_home">
       <span class="site-header__logo">It World IT</span>
       <span class="site-header__tagline" data-i18n="brand_tagline">
         Turning complexity into simplicity
@@ -19,25 +18,25 @@
 
     <!-- Navigation -->
     <nav
-  id="mainNav"
-  class="site-header__nav"
-  aria-label="Основна навігація"
-  data-i18n-aria-label="aria_main_navigation"
->
-      <a href="/" data-page-path="/" class="site-header__nav-link" data-i18n="nav_home">
+      id="mainNav"
+      class="site-header__nav"
+      aria-label="Основна навігація"
+      data-i18n-aria-label="aria_main_navigation">
+      <a href="/" data-page-path="/" class="site-header__nav-link"
+        data-i18n="nav_home">
         Головна
       </a>
 
       <!-- Services dropdown -->
-      <div class="site-header__nav-item site-header__nav-item--has-dropdown" data-dropdown>
+      <div class="site-header__nav-item site-header__nav-item--has-dropdown"
+        data-dropdown>
         <button
           type="button"
           class="site-header__nav-link site-header__nav-button"
           data-dropdown-button
           aria-haspopup="true"
           aria-expanded="false"
-          aria-controls="servicesSubmenu"
-        >
+          aria-controls="servicesSubmenu">
           <span data-i18n="nav_services">Послуги</span>
 
           <span class="site-header__nav-chevron" aria-hidden="true">
@@ -48,31 +47,45 @@
         </button>
 
         <div id="servicesSubmenu" class="site-header__submenu">
-          <a href="/services.html" data-page-path="/services.html" class="site-header__submenu-link" data-i18n="nav_services_all">
+          <a href="/services.html" data-page-path="/services.html"
+            class="site-header__submenu-link" data-i18n="nav_services_all">
             Усі послуги
           </a>
 
-          <a href="/services/outsourcing.html" data-page-path="/services/outsourcing.html" class="site-header__submenu-link" data-i18n="nav_service_outsourcing">
+          <a href="/services/outsourcing.html"
+            data-page-path="/services/outsourcing.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_outsourcing">
             IT Аутсорсинг
           </a>
 
-          <a href="/services/consulting.html" data-page-path="/services/consulting.html" class="site-header__submenu-link" data-i18n="nav_service_consulting">
+          <a href="/services/consulting.html"
+            data-page-path="/services/consulting.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_consulting">
             IT Консалтинг та аудит
           </a>
 
-          <a href="/services/mvp.html" data-page-path="/services/mvp.html" class="site-header__submenu-link" data-i18n="nav_service_mvp">
+          <a href="/services/mvp.html" data-page-path="/services/mvp.html"
+            class="site-header__submenu-link" data-i18n="nav_service_mvp">
             Розробка MVP
           </a>
 
-          <a href="/services/automation.html" data-page-path="/services/automation.html" class="site-header__submenu-link" data-i18n="nav_service_automation">
+          <a href="/services/automation.html"
+            data-page-path="/services/automation.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_automation">
             Автоматизація бізнес-процесів
           </a>
 
-          <a href="/services/webdev.html" data-page-path="/services/webdev.html" class="site-header__submenu-link" data-i18n="nav_service_webdev">
+          <a href="/services/webdev.html" data-page-path="/services/webdev.html"
+            class="site-header__submenu-link" data-i18n="nav_service_webdev">
             Розробка сайтів та інтеграцій
           </a>
 
-          <a href="/services/security.html" data-page-path="/services/security.html" class="site-header__submenu-link" data-i18n="nav_service_security">
+          <a href="/services/security.html"
+            data-page-path="/services/security.html"
+            class="site-header__submenu-link" data-i18n="nav_service_security">
             Кібербезпека / VPN / Захист пошти
           </a>
         </div>
@@ -81,11 +94,13 @@
       <!-- Blog is intentionally hidden for now. -->
       <!-- <a href="/blog.html" data-page-path="/blog.html" class="site-header__nav-link" data-i18n="nav_blog">Блог</a> -->
 
-      <a href="/about.html" data-page-path="/about.html" class="site-header__nav-link" data-i18n="nav_about">
+      <a href="/about.html" data-page-path="/about.html"
+        class="site-header__nav-link" data-i18n="nav_about">
         Про нас
       </a>
 
-      <a href="/contact.html" data-page-path="/contact.html" class="site-header__nav-link" data-i18n="nav_contact">
+      <a href="/contact.html" data-page-path="/contact.html"
+        class="site-header__nav-link" data-i18n="nav_contact">
         Контакти
       </a>
     </nav>
@@ -95,15 +110,14 @@
 
       <!-- Language dropdown -->
       <div class="site-dropdown" data-dropdown>
-       <button
+        <button
           id="langDropdownButton"
           type="button"
           class="site-dropdown__button"
           aria-haspopup="listbox"
           aria-expanded="false"
           aria-label="Обрати мову"
-data-i18n-aria-label="aria_choose_language"
-        >
+          data-i18n-aria-label="aria_choose_language">
           <span id="langCurrent" class="site-dropdown__current">UA</span>
           <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
         </button>
@@ -111,14 +125,12 @@ data-i18n-aria-label="aria_choose_language"
         <div
           class="site-dropdown__menu"
           role="listbox"
-          aria-labelledby="langDropdownButton"
-        >
+          aria-labelledby="langDropdownButton">
           <button
             type="button"
             class="site-dropdown__option"
             role="option"
-            data-lang-value="ua"
-          >
+            data-lang-value="ua">
             <span class="site-dropdown__option-main">UA</span>
             <span class="site-dropdown__option-sub">Українська</span>
           </button>
@@ -127,10 +139,17 @@ data-i18n-aria-label="aria_choose_language"
             type="button"
             class="site-dropdown__option"
             role="option"
-            data-lang-value="en"
-          >
+            data-lang-value="en">
             <span class="site-dropdown__option-main">EN</span>
             <span class="site-dropdown__option-sub">English</span>
+          </button>
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="ja">
+            <span class="site-dropdown__option-main">JA</span>
+            <span class="site-dropdown__option-sub">日本語</span>
           </button>
         </div>
       </div>
@@ -140,9 +159,9 @@ data-i18n-aria-label="aria_choose_language"
         id="themeToggle"
         type="button"
         class="site-header__button"
-        aria-label="Перемкнути тему"
-      >
-        <span id="themeIcon" class="site-header__icon" aria-hidden="true">🌙</span>
+        aria-label="Перемкнути тему">
+        <span id="themeIcon" class="site-header__icon"
+          aria-hidden="true">🌙</span>
         <span id="themeLabel" class="site-header__button-label">Dark</span>
       </button>
 
@@ -153,8 +172,7 @@ data-i18n-aria-label="aria_choose_language"
         class="site-header__menu-button"
         aria-label="Відкрити меню"
         aria-controls="mainNav"
-        aria-expanded="false"
-      >
+        aria-expanded="false">
         <span id="menuIcon" aria-hidden="true">☰</span>
       </button>
 
