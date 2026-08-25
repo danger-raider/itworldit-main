@@ -322,18 +322,18 @@ const DICT = {
       "Landing pages, business websites, form connections, CRM and payment integrations.",
     service_security_title: "Cybersecurity / VPN / Protection",
     service_security_text:
-      "VPN teams, email security (SPF/DKIM/DMARC) and server hardening.",
+      "VPN for teams, email security (SPF/DKIM/DMARC) and server hardening.",
 
     about_preview_label: "About IT World IT",
     about_preview_title: "Who we are",
     about_preview_text:
-      "I’m Dmytro, an independent IT specialist with many years of experience in system infrastructure, automation and security. Alongside me is Aoi, your digital assistant. We help businesses launch, survive and scale.",
+      "I’m Dmytro, an independent IT specialist with many years of experience in system infrastructure, automation and security. Alongside me is Aoi, your digital assistant. We help businesses launch, stabilize and scale.",
     about_preview_more: "More about us →",
 
     cta_preview_label: "Start a conversation",
     cta_preview_title: "Ready to talk about your project?",
     cta_preview_text:
-      "All requests are handled by Aoi, a personal assistant. A real person replies when needed 😉",
+      "Aoi helps collect and structure your request. Dmytro reviews technical details when specialist input is needed.",
     contact_form_success:
       "✅ Thank you! Your request has been sent. We will reply as soon as we can.",
     contact_form_server_error:
