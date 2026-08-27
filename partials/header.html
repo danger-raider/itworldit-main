@@ -1,77 +1,182 @@
-<!-- header.html -->
- <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!-- partials/header.html -->
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<header id="siteHeader" class="site-header">
+  <div class="site-header__inner">
 
-<header class="sticky flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 relative z-10">
+    <!-- Brand -->
+    <a
+      href="/"
+      data-page-path="/"
+      class="site-header__brand"
+      aria-label="It World IT: головна сторінка"
+      data-i18n-aria-label="aria_brand_home">
+      <span class="site-header__logo">It World IT</span>
+      <span class="site-header__tagline" data-i18n="brand_tagline">
+        Turning complexity into simplicity
+      </span>
+    </a>
 
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBQ2L0CB5Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Navigation -->
+    <nav
+      id="mainNav"
+      class="site-header__nav"
+      aria-label="Основна навігація"
+      data-i18n-aria-label="aria_main_navigation">
+      <a href="/" data-page-path="/" class="site-header__nav-link"
+        data-i18n="nav_home">
+        Головна
+      </a>
 
-    gtag('config', 'G-BBQ2L0CB5Y');
-  </script>
+      <!-- Services dropdown -->
+      <div class="site-header__nav-item site-header__nav-item--has-dropdown"
+        data-dropdown>
+        <button
+          type="button"
+          class="site-header__nav-link site-header__nav-button"
+          data-dropdown-button
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="servicesSubmenu">
+          <span data-i18n="nav_services">Послуги</span>
 
-  <div class="flex items-center gap-2">
-    <div class="text-neon font-bold text-xl font-poppins">It World IT</div>
-    <div class="text-xs text-gray-400 italic">Turning complexity into simplicity</div>
-  </div>
-  
-  <!-- Перемикач мови -->
-  <div class="flex items-center gap-3 mt-4 sm:mt-0">
-    <select id="langSwitcher"
-      class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon/50">
-      <option value="ua">UA</option>
-      <option value="en" selected>EN</option>
-    </select>
+          <span class="site-header__nav-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M7 9.5 12 14.5 17 9.5" />
+            </svg>
+          </span>
+        </button>
 
-    <!-- Перемикач теми -->
-    <button id="theme-toggle"
-      class="flex items-center gap-2 text-sm bg-spaceCard/50 border border-gray-600 rounded px-3 py-1 text-gray-100 hover:border-neon hover:text-neon transition">
-      <span id="themeIcon" class="text-lg">🌙</span>
-      <span id="themeLabel" class="ml-1 text-sm hidden sm:inline">Dark</span>
-    </button>
-    
-    <!-- Мобільне меню -->
-    <button id="menuToggle" aria-label="Menu"
-      class="text-gray-200 border border-gray-600 rounded px-3 py-1 hover:text-neon hover:border-neon">☰</button>
-    <!-- мобільні лінки -->
-    <nav id="mobileMenu" class="hidden opacity-0 transition-all text-sm text-gray-300 hidden sm:flex gap-4">
-      <a href="index.html" class="hover:text-neon">Головна</a>
-      <a href="services/index.html" class="hover:text-neon">Послуги</a>
-      <a href="blog.html" class="hover:text-neon">Блог</a>
-      <a href="about.html" class="hover:text-neon">Про нас</a>
-      <a href="contact.html" class="hover:text-neon">Контакти</a>
-    </nav>     
+        <div id="servicesSubmenu" class="site-header__submenu">
+          <a href="/services.html" data-page-path="/services.html"
+            class="site-header__submenu-link" data-i18n="nav_services_all">
+            Усі послуги
+          </a>
 
-    <nav id="desktopNav" class="text-sm text-gray-300 hidden sm:flex gap-4">
-      <a href="index.html" class="hover:text-neon">Головна</a>
-      <a href="services/index.html" class="hover:text-neon">Послуги</a>
-      <a href="blog.html" class="hover:text-neon">Блог</a>
-      <a href="about.html" class="hover:text-neon">Про нас</a>
-      <a href="contact.html" class="hover:text-neon">Контакти</a>
+          <a href="/services/outsourcing.html"
+            data-page-path="/services/outsourcing.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_outsourcing">
+            IT Аутсорсинг
+          </a>
+
+          <a href="/services/consulting.html"
+            data-page-path="/services/consulting.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_consulting">
+            IT Консалтинг та аудит
+          </a>
+
+          <a href="/services/mvp.html" data-page-path="/services/mvp.html"
+            class="site-header__submenu-link" data-i18n="nav_service_mvp">
+            Розробка MVP
+          </a>
+
+          <a href="/services/automation.html"
+            data-page-path="/services/automation.html"
+            class="site-header__submenu-link"
+            data-i18n="nav_service_automation">
+            Автоматизація бізнес-процесів
+          </a>
+
+          <a href="/services/webdev.html" data-page-path="/services/webdev.html"
+            class="site-header__submenu-link" data-i18n="nav_service_webdev">
+            Розробка сайтів та інтеграцій
+          </a>
+
+          <a href="/services/security.html"
+            data-page-path="/services/security.html"
+            class="site-header__submenu-link" data-i18n="nav_service_security">
+            Кібербезпека / VPN / Захист пошти
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog is intentionally hidden for now. -->
+      <!-- <a href="/blog.html" data-page-path="/blog.html" class="site-header__nav-link" data-i18n="nav_blog">Блог</a> -->
+
+      <a href="/about.html" data-page-path="/about.html"
+        class="site-header__nav-link" data-i18n="nav_about">
+        Про нас
+      </a>
+
+      <a href="/contact.html" data-page-path="/contact.html"
+        class="site-header__nav-link" data-i18n="nav_contact">
+        Контакти
+      </a>
     </nav>
 
-    <!-- у правому блоці поруч із мовою й темою -->
-    <!-- Перемикач шрифтів -->
-    <select id="font-toggle"
-      class="bg-spaceCard/50 border border-gray-600 text-sm rounded px-2 py-1 text-gray-100">
-      <option value="poppins">Poppins</option>
-      <option value="noto">Noto Sans</option>
-      <option value="roboto">Roboto</option>
-    </select>
+    <!-- Controls -->
+    <div class="site-header__controls">
+
+      <!-- Language dropdown -->
+      <div class="site-dropdown" data-dropdown>
+        <button
+          id="langDropdownButton"
+          type="button"
+          class="site-dropdown__button"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-label="Обрати мову"
+          data-i18n-aria-label="aria_choose_language">
+          <span id="langCurrent" class="site-dropdown__current">UA</span>
+          <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
+        </button>
+
+        <div
+          class="site-dropdown__menu"
+          role="listbox"
+          aria-labelledby="langDropdownButton">
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="ua">
+            <span class="site-dropdown__option-main">UA</span>
+            <span class="site-dropdown__option-sub">Українська</span>
+          </button>
+
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="en">
+            <span class="site-dropdown__option-main">EN</span>
+            <span class="site-dropdown__option-sub">English</span>
+          </button>
+          <button
+            type="button"
+            class="site-dropdown__option"
+            role="option"
+            data-lang-value="ja">
+            <span class="site-dropdown__option-main">JA</span>
+            <span class="site-dropdown__option-sub">日本語</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Theme switcher -->
+      <button
+        id="themeToggle"
+        type="button"
+        class="site-header__button"
+        aria-label="Перемкнути тему">
+        <span id="themeIcon" class="site-header__icon"
+          aria-hidden="true">🌙</span>
+        <span id="themeLabel" class="site-header__button-label">Dark</span>
+      </button>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menuToggle"
+        type="button"
+        class="site-header__menu-button"
+        aria-label="Відкрити меню"
+        aria-controls="mainNav"
+        aria-expanded="false">
+        <span id="menuIcon" aria-hidden="true">☰</span>
+      </button>
+
+    </div>
 
   </div>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYP125Y815"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XYP125Y815');
-  </script>
 </header>

@@ -1,131 +1,408 @@
 <!DOCTYPE html>
-<html lang="uk" class="scroll-smooth">
-
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Контакти – It World IT</title>
 
-  <meta name="description" content="Залиште запит, і Aoi (цифровий асистент) звʼяжеться з вами першою.">
-  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Зв’яжіться з It World IT: консультація щодо кібербезпеки, VPN, захисту пошти, автоматизації, веб-розробки, інтеграцій або MVP. Aoi допоможе структурувати запит."
+  />
+  <meta
+    name="keywords"
+    content="контакти It World IT, консультація IT, кібербезпека, VPN, автоматизація, веб-розробка, інтеграції, MVP, Aoi"
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <meta name="author" content="It World IT" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <meta name="color-scheme" content="dark light" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            spaceBg: "#0a0a1a",
-            spaceCard: "rgba(30,35,70,0.4)",
-            neon: "#8b5cf6"
+  <!-- Canonical -->
+  <link rel="canonical" href="https://itworldit.com/contact.html" />
+
+  <!-- Language versions -->
+  <link rel="alternate" hreflang="uk" href="https://itworldit.com/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://itworldit.com/en/contact.html" />
+  <link rel="alternate" hreflang="ja" href="https://itworldit.com/ja/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://itworldit.com/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Контакти – It World IT" />
+  <meta
+    property="og:description"
+    content="Напишіть про задачу: безпека, VPN, пошта, автоматизація, сайт, інтеграція або MVP. Aoi допоможе структурувати запит."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="It World IT" />
+  <meta property="og:url" content="https://itworldit.com/contact.html" />
+  <meta property="og:image" content="https://itworldit.com/assets/img/contact/contact-hero.webp" />
+  <meta property="og:image:alt" content="It World IT contact page visual with AI assistant and secure communication flow" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Контакти – It World IT" />
+  <meta
+    name="twitter:description"
+    content="Залиште запит щодо IT-задачі: Aoi структурує звернення, а Дмитро підключиться там, де потрібне технічне заглиблення."
+  />
+  <meta name="twitter:image" content="https://itworldit.com/assets/img/contact/contact-hero.webp" />
+
+  <!-- Performance -->
+ <link
+  rel="preload"
+  as="image"
+  href="/assets/img/contact/contact-hero-1600.webp"
+  imagesrcset="
+    /assets/img/contact/contact-hero-768.webp 768w,
+    /assets/img/contact/contact-hero-1200.webp 1200w,
+    /assets/img/contact/contact-hero-1600.webp 1600w,
+    /assets/img/contact/contact-hero.webp 1920w
+  "
+  imagesizes="(max-width: 979px) 100vw, 50vw"
+  type="image/webp"
+/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://itworldit.com/#organization",
+          "name": "It World IT",
+          "url": "https://itworldit.com/",
+          "logo": "https://itworldit.com/favicon.ico",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "availableLanguage": ["uk", "en"],
+              "url": "https://itworldit.com/contact.html"
+            }
+          ]
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://itworldit.com/contact.html#contact",
+          "name": "Контакти – It World IT",
+          "url": "https://itworldit.com/contact.html",
+          "description": "Сторінка контактів It World IT для консультацій щодо кібербезпеки, VPN, пошти, автоматизації, веб-розробки, інтеграцій і MVP.",
+          "isPartOf": {
+            "@id": "https://itworldit.com/#organization"
+          },
+          "about": {
+            "@id": "https://itworldit.com/#organization"
           }
         }
-      }
+      ]
     }
   </script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="manifest" href="manifest.json" />
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="itworldit.com" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
 </head>
 
-<body class="bg-spaceBg text-gray-100 relative overflow-x-hidden">
+<body>
+  <!-- Background -->
+  <canvas id="starsCanvas" class="site-stars" aria-hidden="true"></canvas>
+  <div class="site-background-glow" aria-hidden="true"></div>
 
-  <canvas id="starsCanvas" class="fixed inset-0 -z-10"></canvas>
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.25)_0%,rgba(10,10,26,0)_60%)] pointer-events-none"></div>
-  <!-- Вставляємо header -->
+  <!-- Header partial -->
   <div id="header"></div>
 
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="contact-hero section-glow" aria-labelledby="contactTitle">
+      <div class="contact-hero__inner">
+        <div class="contact-hero__content">
+          <p class="eyebrow">
+            Contact It World IT
+          </p>
 
-  <main class="relative z-10 max-w-xl mx-auto px-6 py-12 space-y-10">
-    <section class="bg-spaceCard/50 backdrop-blur border border-purple-600/30 rounded-xl p-6 shadow-[0_0_25px_rgba(139,92,246,0.4)]">
-      <h1 class="text-white text-2xl font-bold mb-2">Зв’язатися з нами</h1>
-      <p class="text-gray-300 text-sm leading-relaxed mb-4">
-        Усі звернення обробляє Aoi — персональний асистент. Ви отримаєте відповідь максимально швидко.
-        Якщо питання потребує технічного заглиблення — до справи підключається Дмитро.
-      </p>
+          <h1 id="contactTitle" class="section-title section-title--large">
+             Контакти
 
-      <div class="text-sm text-gray-300 space-y-2 mb-6">
-        <div>📧 Email: <span class="font-mono">aoihaponiuk [at] gmail [dot] com</span></div>
-        <div>✈️ Telegram: <a class="text-neon hover:underline" href="https://t.me/official_aoi">@official_aoi</a></div>
+          </h1>
+   <p class="section-summary section-summary--hero">
+       Розкажіть нам про своє завдання, і ми допоможемо визначити правильний перший крок
+          </p>
+
+          <p class="section-summary">
+            Усі звернення спочатку проходять через Aoi - цифрового асистента.
+            Вона допомагає структурувати запит, уточнити важливі деталі та передати Дмитру
+            те, що потребує технічного аналізу.
+          </p>
+
+          <p class="section-summary">
+            Можете написати про кібербезпеку, VPN, захист пошти, автоматизацію,
+            веб-сайт, інтеграції або MVP. Не треба ідеального технічного завдання:
+            достатньо описати, що болить.
+          </p>
+
+          <div class="actions">
+            <a href="#contactFormTitle" class="btn btn--primary">
+              Заповнити форму
+            </a>
+
+            <a href="https://t.me/official_aoi" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+              Написати в Telegram
+            </a>
+          </div>
+        </div>
+
+        <figure class="contact-visual contact-visual--hero">
+        <img
+  src="/assets/img/contact/contact-hero-1600.webp"
+  srcset="
+    /assets/img/contact/contact-hero-768.webp 768w,
+    /assets/img/contact/contact-hero-1200.webp 1200w,
+    /assets/img/contact/contact-hero-1600.webp 1600w,
+    /assets/img/contact/contact-hero.webp 1920w
+  "
+  sizes="(max-width: 979px) 100vw, 50vw"
+  alt="Абстрактна візуалізація контакту з IT-командою, цифровим асистентом Aoi та захищеним потоком повідомлень"
+  width="1920"
+  height="1080"
+  loading="eager"
+  decoding="async"
+  fetchpriority="high"
+/>
+        </figure>
       </div>
+    </section>
 
-      <!-- Форма -->
-        <form id="contactForm">
-          <input type="text" name="_honey" style="display:none">
+    <!-- CONTACT OPTIONS -->
+    <section class="section section--compact" aria-labelledby="contactOptionsTitle">
+      <div class="container">
+        <div class="contact-options">
+          <div class="contact-options__content">
+            <p class="eyebrow">
+              Communication
+            </p>
 
-          <label>Name:</label>
-          <input type="name" name="name" required placeholder="Ім’я / Компанія">
+            <h2 id="contactOptionsTitle" class="section-title">
+              Як з нами зв’язатися
+            </h2>
 
-          <label>Email:</label>
-          <input type="email" name="email" required placeholder="name@example.com">
+            <p class="section-summary">
+              Найзручніше - через форму або Telegram. Якщо потрібно, після первинного опису задачі
+              узгодимо короткий дзвінок або список технічних питань.
+            </p>
+          </div>
 
-          <label>Чим ми можемо допомогти?</label>
-          <textarea name="message" required placeholder="Опишіть вашу задачу"></textarea>
+          <div class="contact-methods" aria-label="Контактні канали">
+            <a href="https://t.me/official_aoi" class="contact-method" target="_blank" rel="noopener noreferrer">
+              <span>Telegram</span>
+              <strong>@official_aoi</strong>
+              <small>Швидкий перший контакт</small>
+            </a>
 
-          <button type="submit">Відправити</button>
+            <div class="contact-method">
+              <span>Email</span>
+              <strong>aoihaponiuk [at] gmail [dot] com</strong>
+              <small>Для структурованих запитів і матеріалів</small>
+            </div>
 
-          <div id="formStatus" class="status-msg"></div>
-        </form>
-
-        <!-- <form class="space-y-4 text-sm" id="contactForm">
-        <div class="flex flex-col">
-          <label class="text-gray-200 mb-1">Ваше ім’я</label>
-          <input name="name" required class="..." placeholder="Ім’я / Компанія" />
+            <div class="contact-method">
+              <span>Response</span>
+              <strong>Aoi → Дмитро</strong>
+              <small>Асистент структурує, технічні задачі переходять до спеціаліста</small>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="flex flex-col">
-          <label class="text-gray-200 mb-1">Ваш email</label>
-          <input name="email" type="email" required class="..." placeholder="name@example.com" />
+    <!-- FORM -->
+    <section class="section section--compact" aria-labelledby="contactFormTitle">
+      <div class="container">
+        <div class="contact-layout">
+          <section class="contact-form-card" aria-labelledby="contactFormTitle">
+            <p class="eyebrow">
+              Request Form
+            </p>
+
+            <h2 id="contactFormTitle" class="section-title">
+              Опишіть задачу
+            </h2>
+
+            <p class="section-summary">
+              Чим конкретніше ви опишете ситуацію, тим швидше ми зрозуміємо,
+              який формат допомоги підходить: консультація, аудит, налаштування, розробка або інтеграція.
+            </p>
+
+            <form id="contactForm" class="contact-form">
+              <input
+                type="text"
+                name="_honey"
+                class="contact-form__honeypot"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
+              <div class="contact-form__grid">
+                <div class="contact-form__field">
+                  <label for="contactName">Ім’я / компанія</label>
+                  <input
+                    id="contactName"
+                    type="text"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="Ім’я або назва компанії"
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label for="contactEmail">Email</label>
+                  <input
+                    id="contactEmail"
+                    type="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="name@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form__field">
+                <label for="contactTopic">Тема звернення</label>
+                <select id="contactTopic" name="topic">
+                  <option value="consultation">Консультація</option>
+                  <option value="security">Кібербезпека / VPN / пошта</option>
+                  <option value="automation">Автоматизація бізнес-процесів</option>
+                  <option value="webdev">Веб-сайт / інтеграції</option>
+                  <option value="mvp">MVP / запуск ідеї</option>
+                  <option value="other">Інше</option>
+                </select>
+              </div>
+
+              <div class="contact-form__field">
+                <label for="contactMessage">Чим ми можемо допомогти?</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="7"
+                  required
+                  placeholder="Опишіть задачу, поточну ситуацію, посилання на сайт або сервіс, якщо є"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary contact-form__submit">
+                Відправити запит
+              </button>
+
+              <div id="formStatus" class="contact-form__status" role="status" aria-live="polite"></div>
+            </form>
+
+            <p class="contact-form__privacy">
+              Надсилаючи форму, ви погоджуєтесь на обробку даних для зворотного зв’язку.
+              Дані не продаються третім сторонам і використовуються лише для відповіді на запит.
+            </p>
+          </section>
+
+          <aside class="contact-side-panel" aria-label="Що бажано вказати у зверненні">
+            <p class="eyebrow">
+              Helpful details
+            </p>
+
+            <h2 class="section-title">
+              Що краще вказати одразу
+            </h2>
+
+            <ul class="contact-checklist">
+              <li>Який напрям: безпека, автоматизація, сайт, MVP або інше</li>
+              <li>Що вже є зараз: сайт, сервер, CRM, пошта, таблиці, домен</li>
+              <li>Що не працює або забирає багато часу</li>
+              <li>Який бажаний результат</li>
+              <li>Чи є терміновість або дедлайн</li>
+            </ul>
+
+            <div class="contact-note">
+              <strong>Не хвилюйтесь, якщо немає ТЗ.</strong>
+              Для старту достатньо простого опису задачі. Далі Aoi допоможе уточнити деталі.
+            </div>
+          </aside>
         </div>
+      </div>
+    </section>
 
-        <div class="flex flex-col">
-          <label class="text-gray-200 mb-1">Чим ми можемо допомогти?</label>
-          <textarea name="message" rows="4" required class="..." placeholder="Коротко опишіть задачу"></textarea>
+    <!-- PROCESS -->
+    <section class="section section--compact" aria-labelledby="contactProcessTitle">
+      <div class="container">
+        <div class="contact-process-panel">
+          <div class="contact-process-panel__header">
+            <p class="eyebrow">
+              What happens next
+            </p>
+
+            <h2 id="contactProcessTitle" class="section-title">
+              Що відбувається після відправки
+            </h2>
+
+            <p class="section-summary">
+              Звернення не падає у чорну діру. Воно проходить короткий шлях:
+              первинна структура, уточнення, технічний аналіз і пропозиція наступного кроку.
+            </p>
+          </div>
+
+          <div class="contact-process">
+            <article>
+              <span>01</span>
+              <h3>Aoi отримує запит</h3>
+              <p>Перевіряє базовий контекст і допомагає не загубити важливі деталі.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Уточнення</h3>
+              <p>Якщо інформації мало, ставимо кілька коротких питань без технічного туману.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Технічний огляд</h3>
+              <p>Дмитро дивиться, який підхід потрібен: аудит, налаштування, розробка або консультація.</p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Наступний крок</h3>
+              <p>Ви отримуєте зрозумілий варіант старту, орієнтир по складності та можливий формат роботи.</p>
+            </article>
+          </div>
         </div>
-
-
-        <input type="text" name="_honey" class="hidden" style="display:none!important" tabindex="-1" autocomplete="off" />
-
-        <button type="submit" class="btn-aoi w-full text-center">Надіслати запит</button>
-        <div id="formStatus" class="text-center text-xs text-gray-400 mt-2"></div>
-        </form> -->
-
-      <p class="text-[0.7rem] text-gray-500 mt-6 italic">
-        Надсилаючи форму, ви погоджуєтесь на обробку ваших даних для зворотного зв’язку. Дані не продаються третім сторонам, бо фу.
-      </p>
+      </div>
     </section>
   </main>
-<!-- Вставляємо footer -->
-<div id="footer"></div>
-<!-- 
-  <footer class="relative z-10 text-center text-gray-400 text-xs border-t border-purple-900/40 py-8 px-4 mt-12">
-    <div class="mb-3 text-gray-500">
-      © 2015–2025 It World IT. Created with 💙 by Aoi & Dmytro.
-    </div>
-    <div class="text-[0.7rem] text-gray-600 italic">
-      If it doesn’t work — someone probably pressed the wrong button 😂
-    </div>
-  </footer> -->
 
-  <script src="assets/js/stars.js"></script>
-  <script src="assets/js/main.js"></script>
-    <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch(console.error);
-    });
-  }
-</script>
+  <!-- Footer partial -->
+  <div id="footer"></div>
 
-<script>
-  async function includeHTML(id, file) {
-    const res = await fetch(file);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
-  }
-  includeHTML("header", "/partials/header.html");
-  includeHTML("footer", "/partials/footer.html");
-</script>
-
+  <!-- Scripts -->
+  <script src="/assets/js/stars.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch(console.error);
+      });
+    }
+  </script>
 </body>
 </html>
