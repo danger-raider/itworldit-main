@@ -5,184 +5,61 @@
 <link rel="stylesheet" href="/assets/css/identity-system.css" />
 <link rel="stylesheet" href="/assets/css/brand-polish.css" />
 <link rel="stylesheet" href="/assets/css/brand-mark.css" />
+<link rel="stylesheet" href="/assets/css/cases-nav.css" />
 
 <header id="siteHeader" class="site-header">
   <div class="site-header__inner">
-
-    <!-- Brand -->
-    <a
-      href="/"
-      data-page-path="/"
-      class="site-header__brand"
-      aria-label="It World IT: головна сторінка"
-      data-i18n-aria-label="aria_brand_home">
+    <a href="/" data-page-path="/" class="site-header__brand" aria-label="It World IT: головна сторінка" data-i18n-aria-label="aria_brand_home">
       <span class="site-header__logo">It World IT</span>
-      <span class="site-header__tagline" data-i18n="brand_tagline">
-        Turning complexity into simplicity
-      </span>
+      <span class="site-header__tagline" data-i18n="brand_tagline">Turning complexity into simplicity</span>
     </a>
 
-    <!-- Navigation -->
-    <nav
-      id="mainNav"
-      class="site-header__nav"
-      aria-label="Основна навігація"
-      data-i18n-aria-label="aria_main_navigation">
-      <a href="/" data-page-path="/" class="site-header__nav-link"
-        data-i18n="nav_home">
-        Головна
-      </a>
+    <nav id="mainNav" class="site-header__nav" aria-label="Основна навігація" data-i18n-aria-label="aria_main_navigation">
+      <a href="/" data-page-path="/" class="site-header__nav-link" data-i18n="nav_home">Головна</a>
 
-      <!-- Services dropdown -->
-      <div class="site-header__nav-item site-header__nav-item--has-dropdown"
-        data-dropdown>
-        <button
-          type="button"
-          class="site-header__nav-link site-header__nav-button"
-          data-dropdown-button
-          aria-haspopup="true"
-          aria-expanded="false"
-          aria-controls="servicesSubmenu">
+      <div class="site-header__nav-item site-header__nav-item--has-dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-link site-header__nav-button" data-dropdown-button aria-haspopup="true" aria-expanded="false" aria-controls="servicesSubmenu">
           <span data-i18n="nav_services">Послуги</span>
-
-          <span class="site-header__nav-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M7 9.5 12 14.5 17 9.5" />
-            </svg>
-          </span>
+          <span class="site-header__nav-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 9.5 12 14.5 17 9.5" /></svg></span>
         </button>
-
         <div id="servicesSubmenu" class="site-header__submenu">
-          <a href="/services.html" data-page-path="/services.html"
-            class="site-header__submenu-link" data-i18n="nav_services_all">
-            Усі послуги
-          </a>
-
-          <a href="/services/outsourcing.html"
-            data-page-path="/services/outsourcing.html"
-            class="site-header__submenu-link"
-            data-i18n="nav_service_outsourcing">
-            IT Аутсорсинг
-          </a>
-
-          <a href="/services/consulting.html"
-            data-page-path="/services/consulting.html"
-            class="site-header__submenu-link"
-            data-i18n="nav_service_consulting">
-            IT Консалтинг та аудит
-          </a>
-
-          <a href="/services/mvp.html" data-page-path="/services/mvp.html"
-            class="site-header__submenu-link" data-i18n="nav_service_mvp">
-            Розробка MVP
-          </a>
-
-          <a href="/services/automation.html"
-            data-page-path="/services/automation.html"
-            class="site-header__submenu-link"
-            data-i18n="nav_service_automation">
-            Автоматизація бізнес-процесів
-          </a>
-
-          <a href="/services/webdev.html" data-page-path="/services/webdev.html"
-            class="site-header__submenu-link" data-i18n="nav_service_webdev">
-            Розробка сайтів та інтеграцій
-          </a>
-
-          <a href="/services/security.html"
-            data-page-path="/services/security.html"
-            class="site-header__submenu-link" data-i18n="nav_service_security">
-            Кібербезпека / VPN / Захист пошти
-          </a>
+          <a href="/services.html" data-page-path="/services.html" class="site-header__submenu-link" data-i18n="nav_services_all">Усі послуги</a>
+          <a href="/services/outsourcing.html" data-page-path="/services/outsourcing.html" class="site-header__submenu-link" data-i18n="nav_service_outsourcing">IT Аутсорсинг</a>
+          <a href="/services/consulting.html" data-page-path="/services/consulting.html" class="site-header__submenu-link" data-i18n="nav_service_consulting">IT Консалтинг та аудит</a>
+          <a href="/services/mvp.html" data-page-path="/services/mvp.html" class="site-header__submenu-link" data-i18n="nav_service_mvp">Розробка MVP</a>
+          <a href="/services/automation.html" data-page-path="/services/automation.html" class="site-header__submenu-link" data-i18n="nav_service_automation">Автоматизація бізнес-процесів</a>
+          <a href="/services/webdev.html" data-page-path="/services/webdev.html" class="site-header__submenu-link" data-i18n="nav_service_webdev">Розробка сайтів та інтеграцій</a>
+          <a href="/services/security.html" data-page-path="/services/security.html" class="site-header__submenu-link" data-i18n="nav_service_security">Кібербезпека / VPN / Захист пошти</a>
         </div>
       </div>
+
+      <a href="/cases.html" data-page-path="/cases.html" class="site-header__nav-link">
+        <span class="case-nav-label case-nav-label--uk">Кейси</span>
+        <span class="case-nav-label case-nav-label--en">Case Studies</span>
+        <span class="case-nav-label case-nav-label--ja">導入事例</span>
+      </a>
 
       <!-- Blog is intentionally hidden for now. -->
       <!-- <a href="/blog.html" data-page-path="/blog.html" class="site-header__nav-link" data-i18n="nav_blog">Блог</a> -->
 
-      <a href="/about.html" data-page-path="/about.html"
-        class="site-header__nav-link" data-i18n="nav_about">
-        Про нас
-      </a>
-
-      <a href="/contact.html" data-page-path="/contact.html"
-        class="site-header__nav-link" data-i18n="nav_contact">
-        Контакти
-      </a>
+      <a href="/about.html" data-page-path="/about.html" class="site-header__nav-link" data-i18n="nav_about">Про нас</a>
+      <a href="/contact.html" data-page-path="/contact.html" class="site-header__nav-link" data-i18n="nav_contact">Контакти</a>
     </nav>
 
-    <!-- Controls -->
     <div class="site-header__controls">
-
-      <!-- Language dropdown -->
       <div class="site-dropdown" data-dropdown>
-        <button
-          id="langDropdownButton"
-          type="button"
-          class="site-dropdown__button"
-          aria-haspopup="listbox"
-          aria-expanded="false"
-          aria-label="Обрати мову"
-          data-i18n-aria-label="aria_choose_language">
-          <span id="langCurrent" class="site-dropdown__current">UA</span>
-          <span class="site-dropdown__chevron" aria-hidden="true">▾</span>
+        <button id="langDropdownButton" type="button" class="site-dropdown__button" aria-haspopup="listbox" aria-expanded="false" aria-label="Обрати мову" data-i18n-aria-label="aria_choose_language">
+          <span id="langCurrent" class="site-dropdown__current">UA</span><span class="site-dropdown__chevron" aria-hidden="true">▾</span>
         </button>
-
-        <div
-          class="site-dropdown__menu"
-          role="listbox"
-          aria-labelledby="langDropdownButton">
-          <button
-            type="button"
-            class="site-dropdown__option"
-            role="option"
-            data-lang-value="ua">
-            <span class="site-dropdown__option-main">UA</span>
-            <span class="site-dropdown__option-sub">Українська</span>
-          </button>
-
-          <button
-            type="button"
-            class="site-dropdown__option"
-            role="option"
-            data-lang-value="en">
-            <span class="site-dropdown__option-main">EN</span>
-            <span class="site-dropdown__option-sub">English</span>
-          </button>
-          <button
-            type="button"
-            class="site-dropdown__option"
-            role="option"
-            data-lang-value="ja">
-            <span class="site-dropdown__option-main">JA</span>
-            <span class="site-dropdown__option-sub">日本語</span>
-          </button>
+        <div class="site-dropdown__menu" role="listbox" aria-labelledby="langDropdownButton">
+          <button type="button" class="site-dropdown__option" role="option" data-lang-value="ua"><span class="site-dropdown__option-main">UA</span><span class="site-dropdown__option-sub">Українська</span></button>
+          <button type="button" class="site-dropdown__option" role="option" data-lang-value="en"><span class="site-dropdown__option-main">EN</span><span class="site-dropdown__option-sub">English</span></button>
+          <button type="button" class="site-dropdown__option" role="option" data-lang-value="ja"><span class="site-dropdown__option-main">JA</span><span class="site-dropdown__option-sub">日本語</span></button>
         </div>
       </div>
 
-      <!-- Theme switcher -->
-      <button
-        id="themeToggle"
-        type="button"
-        class="site-header__button"
-        aria-label="Перемкнути тему">
-        <span id="themeIcon" class="site-header__icon"
-          aria-hidden="true">🌙</span>
-        <span id="themeLabel" class="site-header__button-label">Dark</span>
-      </button>
-
-      <!-- Mobile menu button -->
-      <button
-        id="menuToggle"
-        type="button"
-        class="site-header__menu-button"
-        aria-label="Відкрити меню"
-        aria-controls="mainNav"
-        aria-expanded="false">
-        <span id="menuIcon" aria-hidden="true">☰</span>
-      </button>
-
+      <button id="themeToggle" type="button" class="site-header__button" aria-label="Перемкнути тему"><span id="themeIcon" class="site-header__icon" aria-hidden="true">🌙</span><span id="themeLabel" class="site-header__button-label">Dark</span></button>
+      <button id="menuToggle" type="button" class="site-header__menu-button" aria-label="Відкрити меню" aria-controls="mainNav" aria-expanded="false"><span id="menuIcon" aria-hidden="true">☰</span></button>
     </div>
-
   </div>
 </header>
