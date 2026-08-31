@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">It World IT brand mark</title>
+  <desc id="desc">A connected four-node technical signal mark in violet, blue, cyan and vermilion.</desc>
+  <defs>
+    <linearGradient id="frame" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="0.45" stop-color="#8B5CF6"/>
+      <stop offset="0.78" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="0.58" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect x="9" y="9" width="46" height="46" rx="15" fill="#0C1020" fill-opacity=".92" stroke="url(#frame)" stroke-width="2"/>
+  <path d="M22 22h20M22 42h20M22 22v20M42 22v20M22 22l20 20M42 22L22 42" stroke="url(#signal)" stroke-width="2" stroke-linecap="round" opacity=".72"/>
+  <circle cx="22" cy="22" r="4.5" fill="#C4B5FD"/>
+  <circle cx="42" cy="22" r="4.5" fill="#E5484D"/>
+  <circle cx="22" cy="42" r="4.5" fill="#3B82F6"/>
+  <circle cx="42" cy="42" r="4.5" fill="#38BDF8"/>
+  <circle cx="32" cy="32" r="3" fill="#F8FAFC" opacity=".94"/>
+</svg>
