@@ -1,0 +1,490 @@
+/* =========================================================
+   IT WORLD IT — IDENTITY LAYER v0.1
+   System / signal / connection visual language
+   ========================================================= */
+
+:root {
+  --iw-violet: #8b5cf6;
+  --iw-violet-soft: #a78bfa;
+  --iw-blue: #3b82f6;
+  --iw-cyan: #38bdf8;
+  --iw-signal: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 38%, #3b82f6 72%, #38bdf8 100%);
+  --iw-border: rgba(139, 92, 246, 0.28);
+  --iw-border-hot: rgba(96, 165, 250, 0.52);
+  --iw-glow: rgba(139, 92, 246, 0.20);
+  --iw-blue-glow: rgba(56, 189, 248, 0.14);
+  --iw-card-lift: translateY(-4px);
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.42);
+  color: #fff;
+}
+
+/* ---------- Brand mark: system node ---------- */
+.site-header__brand {
+  position: relative;
+  padding-left: 31px;
+}
+
+.site-header__brand::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 21px;
+  height: 21px;
+  border: 1px solid rgba(167, 139, 250, 0.58);
+  border-radius: 7px;
+  background:
+    radial-gradient(circle at 28% 28%, #c4b5fd 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 28%, #8b5cf6 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 28% 72%, #3b82f6 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 72%, #38bdf8 0 1.7px, transparent 2.2px),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.17), rgba(56, 189, 248, 0.06));
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.05),
+    0 0 22px rgba(139, 92, 246, 0.20);
+  transform: translateY(-50%) rotate(0deg);
+  transition:
+    transform 360ms var(--motion-ease-soft),
+    border-color 220ms var(--motion-ease),
+    box-shadow 220ms var(--motion-ease);
+}
+
+.site-header__brand:hover::before,
+.site-header__brand:focus-visible::before {
+  transform: translateY(-50%) rotate(45deg);
+  border-color: rgba(56, 189, 248, 0.72);
+  box-shadow:
+    0 0 0 5px rgba(139, 92, 246, 0.07),
+    0 0 28px rgba(56, 189, 248, 0.22);
+}
+
+.site-header__logo {
+  background: var(--iw-signal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 28px rgba(139, 92, 246, 0.10);
+}
+
+/* ---------- Navigation identity ---------- */
+.site-header__nav-link {
+  position: relative;
+}
+
+.site-header__nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 4px;
+  height: 1px;
+  border-radius: 999px;
+  background: var(--iw-signal);
+  opacity: 0;
+  transition:
+    left 220ms var(--motion-ease),
+    right 220ms var(--motion-ease),
+    opacity 180ms var(--motion-ease),
+    box-shadow 220ms var(--motion-ease);
+}
+
+.site-header__nav-link:hover::after,
+.site-header__nav-link:focus-visible::after,
+.site-header__nav-link.is-active::after,
+.site-header__nav-link[aria-current="page"]::after {
+  left: 18%;
+  right: 18%;
+  opacity: 1;
+  box-shadow: 0 0 13px rgba(139, 92, 246, 0.42);
+}
+
+/* ---------- Signature labels ---------- */
+.eyebrow,
+.hero-kiyo__kicker {
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--iw-cyan);
+  box-shadow:
+    0 0 0 4px rgba(56, 189, 248, 0.07),
+    0 0 14px rgba(56, 189, 248, 0.45);
+}
+
+.hero-kiyo__kicker::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, var(--iw-cyan), var(--iw-violet));
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.28);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -80%;
+  bottom: -80%;
+  left: -42%;
+  width: 24%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36), transparent);
+  transform: rotate(18deg) translateX(-220%);
+  transition: transform 620ms var(--motion-ease-soft);
+  pointer-events: none;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: rotate(18deg) translateX(720%);
+}
+
+.btn--primary {
+  border-color: rgba(139, 92, 246, 0.66);
+  background: var(--iw-signal);
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.20),
+    0 0 28px rgba(139, 92, 246, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 38px rgba(99, 102, 241, 0.26),
+    0 0 36px rgba(56, 189, 248, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible,
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  border-color: rgba(96, 165, 250, 0.42);
+  background: rgba(42, 42, 83, 0.48);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16), 0 0 24px rgba(56, 189, 248, 0.08);
+}
+
+/* ---------- Interactive card family ---------- */
+:where(
+  .service-card,
+  .feature-card,
+  .cta-card,
+  .about-stat-card,
+  .about-pro-competencies article,
+  .about-pro-collab__grid > div,
+  .about-capability,
+  .about-principles article,
+  .about-process article,
+  .automation-impact__item,
+  .webdev-value__items > div,
+  .security-posture__items > div,
+  .contact-method,
+  .blog-card,
+  .blog-mini-card,
+  .media-card,
+  .info-panel
+) {
+  transform: translateZ(0);
+  transition:
+    transform 260ms var(--motion-ease-soft),
+    border-color 240ms var(--motion-ease),
+    box-shadow 280ms var(--motion-ease-soft),
+    filter 240ms var(--motion-ease);
+}
+
+:where(
+  .service-card,
+  .feature-card,
+  .about-stat-card,
+  .about-pro-competencies article,
+  .about-pro-collab__grid > div,
+  .about-capability,
+  .about-principles article,
+  .about-process article,
+  .automation-impact__item,
+  .webdev-value__items > div,
+  .security-posture__items > div,
+  .contact-method,
+  .blog-card,
+  .blog-mini-card
+):hover {
+  transform: var(--iw-card-lift);
+  border-color: var(--iw-border-hot);
+  box-shadow:
+    0 24px 58px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(139, 92, 246, 0.10),
+    0 0 34px rgba(139, 92, 246, 0.12),
+    inset 3px 0 0 rgba(56, 189, 248, 0.46);
+  filter: saturate(1.06);
+}
+
+/* Links are actual interactive cards, make intent obvious. */
+a.service-card,
+a.blog-card,
+a.blog-mini-card,
+a.contact-method {
+  cursor: pointer;
+}
+
+/* ---------- Icon behavior ---------- */
+:where(
+  .service-card,
+  .about-stat-card,
+  .about-capability,
+  .about-principles article
+) :where(
+  .service-card__icon,
+  .about-stat-card__icon,
+  .about-capability__icon,
+  .about-principle-card__icon
+) {
+  transition:
+    transform 300ms var(--motion-ease-soft),
+    border-color 240ms var(--motion-ease),
+    box-shadow 280ms var(--motion-ease-soft),
+    background 240ms var(--motion-ease);
+}
+
+:where(
+  .service-card,
+  .about-stat-card,
+  .about-capability,
+  .about-principles article
+):hover :where(
+  .service-card__icon,
+  .about-stat-card__icon,
+  .about-capability__icon,
+  .about-principle-card__icon
+) {
+  transform: translateY(-2px) scale(1.055);
+  border-color: rgba(96, 165, 250, 0.48);
+  background:
+    radial-gradient(circle at 35% 28%, rgba(56, 189, 248, 0.18), transparent 56%),
+    rgba(139, 92, 246, 0.11);
+  box-shadow:
+    0 0 0 5px rgba(139, 92, 246, 0.05),
+    0 10px 26px rgba(0, 0, 0, 0.16),
+    0 0 26px rgba(56, 189, 248, 0.15);
+}
+
+:where(
+  .service-card__icon,
+  .about-stat-card__icon,
+  .about-capability__icon,
+  .about-principle-card__icon
+) svg {
+  transition: transform 320ms var(--motion-ease-soft), filter 240ms var(--motion-ease);
+}
+
+:where(
+  .service-card,
+  .about-stat-card,
+  .about-capability,
+  .about-principles article
+):hover :where(
+  .service-card__icon,
+  .about-stat-card__icon,
+  .about-capability__icon,
+  .about-principle-card__icon
+) svg {
+  transform: scale(1.06) rotate(-2deg);
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.24));
+}
+
+/* ---------- Card links: signal movement ---------- */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 220ms var(--motion-ease), transform 240ms var(--motion-ease-soft);
+}
+
+.service-card:hover .card-link,
+.blog-card:hover .card-link,
+.blog-mini-card:hover .card-link {
+  color: #a5f3fc;
+  transform: translateX(4px);
+}
+
+/* ---------- Numbers become part of the visual system ---------- */
+.card-number,
+.about-pro-competencies article > span {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.14em;
+  background: linear-gradient(90deg, var(--iw-violet-soft), var(--iw-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* ---------- Hero controls ---------- */
+.hero-kiyo__dot {
+  box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+}
+
+.hero-kiyo__dot:hover,
+.hero-kiyo__dot.is-active {
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.09), 0 0 18px rgba(56, 189, 248, 0.18);
+}
+
+/* ---------- Image blocks feel connected to the system ---------- */
+.service-image,
+.contact-visual,
+.about-pro-card {
+  border-color: rgba(139, 92, 246, 0.30);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.20),
+    0 0 36px rgba(139, 92, 246, 0.08);
+}
+
+.service-image:hover img,
+.contact-visual:hover img {
+  transform: scale(1.035);
+}
+
+.service-image img,
+.contact-visual img {
+  transition: transform 700ms var(--motion-ease-soft), filter 320ms var(--motion-ease);
+}
+
+/* ---------- Light mode ---------- */
+body[data-theme="light"] .site-header__brand::before {
+  border-color: rgba(124, 58, 237, 0.34);
+  background:
+    radial-gradient(circle at 28% 28%, #7c3aed 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 28%, #8b5cf6 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 28% 72%, #2563eb 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 72%, #0891b2 0 1.7px, transparent 2.2px),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.10), rgba(56, 189, 248, 0.06));
+}
+
+body[data-theme="light"] :where(
+  .service-card,
+  .feature-card,
+  .about-stat-card,
+  .about-pro-competencies article,
+  .about-pro-collab__grid > div,
+  .about-capability,
+  .about-principles article,
+  .about-process article,
+  .automation-impact__item,
+  .webdev-value__items > div,
+  .security-posture__items > div,
+  .contact-method,
+  .blog-card,
+  .blog-mini-card
+):hover {
+  border-color: rgba(124, 58, 237, 0.34);
+  box-shadow:
+    0 20px 52px rgba(17, 24, 39, 0.10),
+    0 0 0 1px rgba(124, 58, 237, 0.06),
+    0 0 28px rgba(56, 189, 248, 0.08),
+    inset 3px 0 0 rgba(37, 99, 235, 0.28);
+}
+
+/* ---------- Responsive / accessibility ---------- */
+@media (max-width: 720px) {
+  .site-header__brand {
+    padding-left: 27px;
+  }
+
+  .site-header__brand::before {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+  }
+}
+
+@media (hover: none) {
+  :where(
+    .service-card,
+    .feature-card,
+    .about-stat-card,
+    .about-pro-competencies article,
+    .about-pro-collab__grid > div,
+    .about-capability,
+    .about-principles article,
+    .about-process article,
+    .automation-impact__item,
+    .webdev-value__items > div,
+    .security-posture__items > div,
+    .contact-method,
+    .blog-card,
+    .blog-mini-card
+  ):hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header__brand::before,
+  .btn::before,
+  :where(
+    .service-card,
+    .feature-card,
+    .cta-card,
+    .about-stat-card,
+    .about-pro-competencies article,
+    .about-pro-collab__grid > div,
+    .about-capability,
+    .about-principles article,
+    .about-process article,
+    .automation-impact__item,
+    .webdev-value__items > div,
+    .security-posture__items > div,
+    .contact-method,
+    .blog-card,
+    .blog-mini-card,
+    .service-image img,
+    .contact-visual img
+  ) {
+    transition-duration: 0.01ms !important;
+  }
+
+  .site-header__brand:hover::before,
+  .site-header__brand:focus-visible::before,
+  :where(
+    .service-card,
+    .feature-card,
+    .about-stat-card,
+    .about-pro-competencies article,
+    .about-pro-collab__grid > div,
+    .about-capability,
+    .about-principles article,
+    .about-process article,
+    .automation-impact__item,
+    .webdev-value__items > div,
+    .security-posture__items > div,
+    .contact-method,
+    .blog-card,
+    .blog-mini-card
+  ):hover {
+    transform: none !important;
+  }
+}

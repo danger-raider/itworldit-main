@@ -1,9 +1,61 @@
 // assets/js/stars.js
-// Lightweight animated background.
+// Lightweight animated background + identity interaction layer.
 // Optimized for mobile, reduced motion and inactive browser tabs.
 
 (() => {
   const canvas = document.getElementById("starsCanvas");
+
+  const reducedMotionQuery = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+
+  function initIdentityInteractions() {
+    if (reducedMotionQuery.matches || window.matchMedia("(hover: none)").matches) {
+      return;
+    }
+
+    const selector = [
+      ".service-card",
+      ".feature-card",
+      ".about-stat-card",
+      ".about-pro-competencies article",
+      ".about-pro-collab__grid > div",
+      ".about-capability",
+      ".about-principles article",
+      ".about-process article",
+      ".automation-impact__item",
+      ".webdev-value__items > div",
+      ".security-posture__items > div",
+      ".contact-method",
+      ".blog-card",
+      ".blog-mini-card",
+      ".cta-card",
+    ].join(",");
+
+    document.querySelectorAll(selector).forEach((card) => {
+      card.classList.add("iw-interactive-card");
+
+      card.addEventListener("pointermove", (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rx = ((event.clientY - rect.top) / rect.height - 0.5) * -2.2;
+        const ry = ((event.clientX - rect.left) / rect.width - 0.5) * 2.2;
+
+        card.style.setProperty("--iw-x", `${x}px`);
+        card.style.setProperty("--iw-y", `${y}px`);
+        card.style.setProperty("--iw-rx", `${rx}deg`);
+        card.style.setProperty("--iw-ry", `${ry}deg`);
+      }, { passive: true });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.removeProperty("--iw-rx");
+        card.style.removeProperty("--iw-ry");
+      }, { passive: true });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initIdentityInteractions, { once: true });
 
   if (!canvas) {
     return;
@@ -14,10 +66,6 @@
   if (!ctx) {
     return;
   }
-
-  const reducedMotionQuery = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  );
 
   let width = 0;
   let height = 0;
