@@ -1,0 +1,309 @@
+/* =========================================================
+   IT WORLD IT — IDENTITY SYSTEM PASS v0.2
+   Typography / rhythm / surfaces / controls / responsive polish
+   ========================================================= */
+
+:root {
+  --iw-ink: #f7f7fb;
+  --iw-muted: #b8bfd0;
+  --iw-muted-soft: #8e97aa;
+  --iw-deep: #090914;
+  --iw-deep-2: #101024;
+  --iw-panel: rgba(18, 20, 43, 0.62);
+  --iw-panel-strong: rgba(13, 14, 31, 0.84);
+  --iw-line: rgba(167, 139, 250, 0.20);
+  --iw-line-strong: rgba(96, 165, 250, 0.34);
+  --iw-radius-card: 24px;
+  --iw-radius-control: 14px;
+  --iw-space-section: clamp(58px, 7.4vw, 104px);
+  --iw-space-compact: clamp(42px, 5vw, 70px);
+  --iw-copy-width: 760px;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(139, 92, 246, 0.15), transparent 34%),
+    radial-gradient(circle at 82% 6%, rgba(56, 189, 248, 0.07), transparent 28%),
+    linear-gradient(180deg, #090914 0%, #0b0b18 42%, #090914 100%);
+}
+
+.section {
+  padding-top: var(--iw-space-section);
+  padding-bottom: var(--iw-space-section);
+}
+
+.section--compact {
+  padding-top: var(--iw-space-compact);
+  padding-bottom: var(--iw-space-compact);
+}
+
+.section-header {
+  max-width: 880px;
+}
+
+.section-header--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.section-title--large,
+.section-title--hero,
+.hero-kiyo__title {
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+}
+
+.section-summary,
+.section-text,
+.text-lead,
+.hero-kiyo__text,
+.cta-text {
+  max-width: var(--iw-copy-width);
+  color: var(--iw-muted);
+  line-height: 1.72;
+}
+
+.eyebrow,
+.hero-kiyo__kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+/* Header becomes a calm control bar, not a floating collection of buttons. */
+.site-header {
+  backdrop-filter: blur(18px) saturate(1.12);
+  -webkit-backdrop-filter: blur(18px) saturate(1.12);
+}
+
+.site-header__inner {
+  border-bottom: 1px solid rgba(167, 139, 250, 0.12);
+}
+
+.site-header__brand {
+  min-width: 176px;
+}
+
+.site-header__logo {
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.site-header__tagline {
+  color: var(--iw-muted-soft);
+  letter-spacing: 0.015em;
+}
+
+.site-header__nav-link,
+.site-dropdown__button,
+.site-header__button {
+  font-weight: 700;
+}
+
+.site-header__nav-link {
+  border-radius: 10px;
+}
+
+.site-header__nav-link:hover,
+.site-header__nav-link:focus-visible {
+  background: rgba(139, 92, 246, 0.055);
+}
+
+.site-header__submenu,
+.site-dropdown__menu {
+  border: 1px solid var(--iw-line);
+  background:
+    linear-gradient(145deg, rgba(139, 92, 246, 0.08), transparent 44%),
+    var(--iw-panel-strong);
+  box-shadow:
+    0 24px 68px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255,255,255,0.02);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+/* Shared card language */
+:where(
+  .service-card,
+  .feature-card,
+  .cta-card,
+  .contact-method,
+  .blog-card,
+  .blog-mini-card,
+  .media-card,
+  .info-panel,
+  .automation-impact__item,
+  .webdev-value__items > div,
+  .security-posture__items > div
+) {
+  border-radius: var(--iw-radius-card);
+  border-color: var(--iw-line);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(139, 92, 246, 0.09), transparent 34%),
+    linear-gradient(180deg, rgba(30, 32, 68, 0.42), rgba(15, 16, 36, 0.54));
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+:where(.service-card,.feature-card,.blog-card,.blog-mini-card) h3 {
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+}
+
+:where(.service-card,.feature-card,.blog-card,.blog-mini-card) p {
+  color: var(--iw-muted);
+  line-height: 1.64;
+}
+
+/* Controls align to one system. */
+.btn {
+  min-height: 48px;
+  padding-inline: 21px;
+  border-radius: var(--iw-radius-control);
+  font-size: 0.93rem;
+  letter-spacing: -0.01em;
+}
+
+.btn--primary {
+  color: #080812;
+}
+
+.btn--secondary,
+.btn--ghost {
+  border-color: rgba(167, 139, 250, 0.24);
+  background: rgba(20, 22, 48, 0.48);
+}
+
+.actions {
+  gap: 10px;
+}
+
+/* Hero: stronger editorial hierarchy while keeping current artwork. */
+.hero-kiyo__content {
+  max-width: 900px;
+}
+
+.hero-kiyo__text {
+  max-width: 720px;
+}
+
+.hero-kiyo__caption {
+  border-color: rgba(167, 139, 250, 0.16);
+  background: rgba(9, 9, 20, 0.50);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Footer: quieter than the main stage. */
+.site-footer {
+  border-top: 1px solid rgba(167, 139, 250, 0.12);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #c4b5fd;
+}
+
+/* Light theme: same hierarchy, less glass/neon. */
+body[data-theme="light"] {
+  --iw-ink: #111827;
+  --iw-muted: #4b5563;
+  --iw-muted-soft: #6b7280;
+  --iw-panel: rgba(255, 255, 255, 0.76);
+  --iw-panel-strong: rgba(255, 255, 255, 0.94);
+  --iw-line: rgba(124, 58, 237, 0.14);
+  --iw-line-strong: rgba(37, 99, 235, 0.24);
+}
+
+body[data-theme="light"] :where(
+  .service-card,
+  .feature-card,
+  .cta-card,
+  .contact-method,
+  .blog-card,
+  .blog-mini-card,
+  .media-card,
+  .info-panel,
+  .automation-impact__item,
+  .webdev-value__items > div,
+  .security-posture__items > div
+) {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(124, 58, 237, 0.055), transparent 34%),
+    rgba(255, 255, 255, 0.76);
+  border-color: var(--iw-line);
+  box-shadow: 0 18px 46px rgba(17, 24, 39, 0.07);
+}
+
+body[data-theme="light"] .site-header__submenu,
+body[data-theme="light"] .site-dropdown__menu {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: var(--iw-line);
+  box-shadow: 0 20px 48px rgba(17, 24, 39, 0.10);
+}
+
+body[data-theme="light"] .section-summary,
+body[data-theme="light"] .section-text,
+body[data-theme="light"] .text-lead,
+body[data-theme="light"] .hero-kiyo__text,
+body[data-theme="light"] .cta-text,
+body[data-theme="light"] :where(.service-card,.feature-card,.blog-card,.blog-mini-card) p {
+  color: var(--iw-muted);
+}
+
+/* Japanese pages get slightly more breathing room for mixed scripts. */
+html[lang="ja"] .section-title,
+html[lang="ja"] .hero-kiyo__title {
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+html[lang="ja"] .section-summary,
+html[lang="ja"] .section-text,
+html[lang="ja"] .hero-kiyo__text {
+  line-height: 1.88;
+}
+
+@media (max-width: 979px) {
+  :root {
+    --iw-space-section: clamp(48px, 8vw, 72px);
+    --iw-space-compact: clamp(34px, 6vw, 54px);
+  }
+
+  .site-header__brand {
+    min-width: 0;
+  }
+
+  .hero-kiyo__content {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-title--large,
+  .section-title--hero,
+  .hero-kiyo__title {
+    letter-spacing: -0.045em;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding-inline: 17px;
+    border-radius: 13px;
+  }
+
+  .actions {
+    gap: 8px;
+  }
+}
