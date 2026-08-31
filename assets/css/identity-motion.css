@@ -1,0 +1,41 @@
+/* IT World IT identity motion layer */
+.iw-interactive-card {
+  --iw-rx: 0deg;
+  --iw-ry: 0deg;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.iw-interactive-card:hover {
+  transform:
+    perspective(1100px)
+    translateY(-4px)
+    rotateX(var(--iw-rx))
+    rotateY(var(--iw-ry));
+}
+
+.iw-interactive-card :where(h2,h3,strong,.card-number,.about-stat-card__value,.service-card__icon,.about-stat-card__icon,.about-capability__icon) {
+  transform: translateZ(0);
+  transition: transform 280ms var(--motion-ease-soft);
+}
+
+.iw-interactive-card:hover :where(h2,h3,strong,.card-number,.about-stat-card__value) {
+  transform: translateZ(7px);
+}
+
+.iw-interactive-card:hover :where(.service-card__icon,.about-stat-card__icon,.about-capability__icon) {
+  transform: translateZ(12px) translateY(-2px) scale(1.05);
+}
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .iw-interactive-card,
+  .iw-interactive-card:hover {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .iw-interactive-card:hover :where(h2,h3,strong,.card-number,.about-stat-card__value,.service-card__icon,.about-stat-card__icon,.about-capability__icon) {
+    transform: none !important;
+  }
+}

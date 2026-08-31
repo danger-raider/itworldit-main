@@ -1,0 +1,244 @@
+/* =========================================================
+   IT WORLD IT — JAPANESE ACCENT LAYER v0.1
+   Restrained vermilion, slash motion, kaizen-style progression
+   ========================================================= */
+
+:root {
+  --iw-aka: #e5484d;
+  --iw-aka-soft: #ff6b6f;
+  --iw-aka-deep: #b82f35;
+  --iw-aka-glow: rgba(229, 72, 77, 0.22);
+}
+
+/* One red node keeps the brand system from becoming monochrome neon. */
+.site-header__brand::before {
+  background:
+    radial-gradient(circle at 28% 28%, #c4b5fd 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 28%, var(--iw-aka) 0 1.8px, transparent 2.3px),
+    radial-gradient(circle at 28% 72%, #3b82f6 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 72%, #38bdf8 0 1.7px, transparent 2.2px),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.17), rgba(56, 189, 248, 0.06));
+}
+
+.site-header__brand:hover::before,
+.site-header__brand:focus-visible::before {
+  box-shadow:
+    0 0 0 5px rgba(139, 92, 246, 0.07),
+    8px -6px 24px rgba(229, 72, 77, 0.14),
+    -8px 8px 28px rgba(56, 189, 248, 0.18);
+}
+
+/* Active navigation gets a small vermilion terminal point. */
+.site-header__nav-link[aria-current="page"]::after,
+.site-header__nav-item.is-active > .site-header__nav-link::after {
+  background: linear-gradient(90deg, var(--iw-violet-soft), var(--iw-cyan) 78%, var(--iw-aka));
+  box-shadow:
+    0 0 13px rgba(139, 92, 246, 0.34),
+    7px 0 12px rgba(229, 72, 77, 0.24);
+}
+
+/* Eyebrow nodes alternate very subtly between signal-blue and aka-red. */
+main > section:nth-of-type(3n + 2) .eyebrow::before {
+  background: var(--iw-aka);
+  box-shadow:
+    0 0 0 4px rgba(229, 72, 77, 0.06),
+    0 0 14px rgba(229, 72, 77, 0.36);
+}
+
+/* Short diagonal brush / blade mark beside selected section titles. */
+.section-header.has-line .section-title,
+.section-title.has-line {
+  isolation: isolate;
+}
+
+.section-header.has-line .section-title::before,
+.section-title.has-line::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0.13em;
+  width: 3px;
+  height: 28px;
+  border-radius: 999px 999px 2px 2px;
+  background: linear-gradient(180deg, var(--iw-aka-soft), var(--iw-aka-deep));
+  box-shadow: 0 0 16px rgba(229, 72, 77, 0.18);
+  transform: rotate(13deg) scaleY(0.72);
+  transform-origin: center;
+  opacity: 0.82;
+}
+
+.section-header.has-line .section-title::after,
+.section-title.has-line::after {
+  background: linear-gradient(90deg, var(--iw-aka) 0 10%, var(--iw-violet) 24%, rgba(56, 189, 248, 0.65) 55%, transparent 100%);
+}
+
+/* Samurai-inspired slash: only service cards have the dedicated shine element. */
+.service-card__shine {
+  opacity: 0;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 0 43%,
+      rgba(229, 72, 77, 0.00) 44%,
+      rgba(229, 72, 77, 0.55) 48%,
+      rgba(255, 143, 146, 0.20) 50%,
+      rgba(229, 72, 77, 0.00) 54%,
+      transparent 55% 100%
+    );
+  transform: translateX(-34%) skewX(-9deg);
+  transition:
+    transform 560ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 180ms ease;
+  pointer-events: none;
+}
+
+.service-card:hover .service-card__shine,
+.service-card:focus-within .service-card__shine {
+  opacity: 0.72;
+  transform: translateX(34%) skewX(-9deg);
+}
+
+/* A red edge appears only at peak interaction, not at rest. */
+.iw-interactive-card:hover {
+  box-shadow:
+    0 24px 58px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(139, 92, 246, 0.09),
+    0 0 34px rgba(139, 92, 246, 0.10),
+    inset 3px 0 0 rgba(56, 189, 248, 0.40),
+    inset -1px -1px 0 rgba(229, 72, 77, 0.18);
+}
+
+/* Numbered cards read more like deliberate steps, a quiet kaizen cue. */
+.card-number,
+.about-pro-competencies article > span {
+  position: relative;
+}
+
+.card-number::after,
+.about-pro-competencies article > span::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-left: 7px;
+  border-radius: 50%;
+  background: var(--iw-aka);
+  box-shadow: 0 0 9px rgba(229, 72, 77, 0.34);
+  vertical-align: middle;
+}
+
+/* Kaizen-style progressive assembly on modern browsers.
+   No JS dependency: unsupported browsers simply keep the normal layout. */
+@supports (animation-timeline: view()) {
+  :where(
+    .services-grid > .service-card,
+    .about-pro-competencies > article,
+    .about-intro__stats > *,
+    .about-pro-collab__grid > *,
+    .automation-impact__items > *,
+    .security-posture__items > *,
+    .webdev-value__items > *
+  ) {
+    animation-name: iw-kaizen-enter;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 3% cover 25%;
+  }
+
+  :where(
+    .services-grid > .service-card,
+    .about-pro-competencies > article,
+    .about-intro__stats > *,
+    .about-pro-collab__grid > *
+  ):nth-child(2n) {
+    animation-range: entry 7% cover 29%;
+  }
+
+  :where(
+    .services-grid > .service-card,
+    .about-pro-competencies > article,
+    .about-intro__stats > *,
+    .about-pro-collab__grid > *
+  ):nth-child(3n) {
+    animation-range: entry 11% cover 33%;
+  }
+}
+
+@keyframes iw-kaizen-enter {
+  from {
+    opacity: 0.28;
+    transform: translateY(18px) scale(0.986);
+    filter: saturate(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: saturate(1);
+  }
+}
+
+/* Small pulse, more like a status light than an arcade effect. */
+@keyframes iw-aka-status {
+  0%, 76%, 100% {
+    box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.05), 0 0 10px rgba(229, 72, 77, 0.22);
+  }
+  84% {
+    box-shadow: 0 0 0 6px rgba(229, 72, 77, 0.02), 0 0 18px rgba(229, 72, 77, 0.42);
+  }
+}
+
+main > section:nth-of-type(3n + 2) .eyebrow::before {
+  animation: iw-aka-status 5.5s ease-in-out infinite;
+}
+
+/* Light theme keeps the vermilion warmer and less neon. */
+body[data-theme="light"] .site-header__brand::before {
+  background:
+    radial-gradient(circle at 28% 28%, #7c3aed 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 28%, #c93e43 0 1.8px, transparent 2.3px),
+    radial-gradient(circle at 28% 72%, #2563eb 0 1.7px, transparent 2.2px),
+    radial-gradient(circle at 72% 72%, #0891b2 0 1.7px, transparent 2.2px),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.10), rgba(56, 189, 248, 0.06));
+}
+
+body[data-theme="light"] .section-header.has-line .section-title::before,
+body[data-theme="light"] .section-title.has-line::before {
+  background: linear-gradient(180deg, #e85d61, #b83238);
+  box-shadow: 0 0 10px rgba(201, 62, 67, 0.12);
+}
+
+@media (max-width: 720px) {
+  .section-header.has-line .section-title::before,
+  .section-title.has-line::before {
+    left: -10px;
+    width: 2px;
+    height: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card__shine,
+  main > section:nth-of-type(3n + 2) .eyebrow::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  @supports (animation-timeline: view()) {
+    :where(
+      .services-grid > .service-card,
+      .about-pro-competencies > article,
+      .about-intro__stats > *,
+      .about-pro-collab__grid > *,
+      .automation-impact__items > *,
+      .security-posture__items > *,
+      .webdev-value__items > *
+    ) {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+}
