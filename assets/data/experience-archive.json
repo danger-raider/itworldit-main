@@ -1,15 +1,28 @@
 {
-  "source": "Freelancehunt public profile",
-  "profile": "https://freelancehunt.com/ua/freelancer/DANGER_RAIDER.html",
+  "sources": [
+    {
+      "type": "public_profile",
+      "name": "Freelancehunt public profile",
+      "url": "https://freelancehunt.com/ua/freelancer/DANGER_RAIDER.html"
+    },
+    {
+      "type": "user_confirmed_history",
+      "name": "User-confirmed historical projects"
+    }
+  ],
   "proof": {
     "client_collaborations": 20,
     "reviews": 25,
     "portfolio_items": 19,
-    "primary_specializations": ["System and network administration", "Software and server setup"]
+    "primary_specializations": [
+      "System and network administration",
+      "Software and server setup"
+    ]
   },
   "selected_work": [
     {
       "slug": "windows-server-cloud-migration",
+      "source": "Freelancehunt public profile",
       "title_uk": "Міграція Windows Server у хмару",
       "title_en": "Windows Server cloud migration",
       "title_ja": "Windows Serverのクラウド移行",
@@ -22,6 +35,7 @@
     },
     {
       "slug": "mssql-1c-administration",
+      "source": "Freelancehunt public profile",
       "title_uk": "Адміністрування MSSQL та 1C-серверів",
       "title_en": "MSSQL and 1C server administration",
       "title_ja": "MSSQL・1Cサーバー運用",
@@ -34,6 +48,7 @@
     },
     {
       "slug": "vps-recovery-troubleshooting",
+      "source": "Freelancehunt public profile",
       "title_uk": "Відновлення та діагностика VPS/серверів",
       "title_en": "VPS recovery and server troubleshooting",
       "title_ja": "VPS・サーバー障害復旧",
@@ -45,16 +60,17 @@
       "value_ja": "原因を特定して復旧し、症状だけでなく根本原因へ対応しました。"
     },
     {
-      "slug": "bitrix24-access-security",
-      "title_uk": "Контроль доступу та безпеки в Bitrix24",
-      "title_en": "Bitrix24 access and security cleanup",
-      "title_ja": "Bitrix24のアクセス・セキュリティ整理",
-      "problem_uk": "Колишні співробітники та некоректні права доступу створювали ризик для конфіденційної інформації компанії.",
-      "value_uk": "Перегляд доступів і адміністрування Bitrix24 зменшили ризик несанкціонованого доступу до робочих даних.",
-      "problem_en": "Former employees and incorrect access permissions created risk around confidential company information.",
-      "value_en": "Access cleanup and Bitrix24 administration reduced the risk of unauthorized access to business data.",
-      "problem_ja": "退職者アカウントや不適切な権限が、企業の機密情報へのリスクを生んでいました。",
-      "value_ja": "アクセス権の整理とBitrix24管理により、業務データへの不正アクセスリスクを低減しました。"
+      "slug": "world-public-camera-map",
+      "source": "User-confirmed historical project",
+      "title_uk": "Інтерактивна мапа світу з публічними камерами",
+      "title_en": "Interactive world map of public cameras",
+      "title_ja": "公開カメラを表示する世界インタラクティブマップ",
+      "problem_uk": "Відкриті вебкамери з різних країн існували окремо, без зручного способу знайти потрібне місце географічно та одразу зрозуміти, що саме показує камера.",
+      "value_uk": "Інтерактивна мапа об'єднувала географічний пошук і перегляд публічних камер: користувач обирав точку на карті, відкривав зображення або потік у спливаючому вікні та отримував інформацію про місце й об'єкт.",
+      "problem_en": "Public webcams from different countries existed as isolated links without an intuitive geographic way to discover a location and understand what each camera showed.",
+      "value_en": "The interactive map combined geographic discovery with public camera viewing: selecting a point opened the available image or stream in a popup together with location and camera context.",
+      "problem_ja": "各国の公開Webカメラは個別のリンクとして存在しており、地理的に探し、カメラが何を映しているかをすぐ理解する方法がありませんでした。",
+      "value_ja": "世界地図上の地点を選ぶと、公開カメラの画像またはストリームをポップアップで表示し、場所や対象の情報も確認できるインタラクティブな閲覧体験を構築しました。"
     }
   ]
 }
