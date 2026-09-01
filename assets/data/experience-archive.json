@@ -1,0 +1,60 @@
+{
+  "source": "Freelancehunt public profile",
+  "profile": "https://freelancehunt.com/ua/freelancer/DANGER_RAIDER.html",
+  "proof": {
+    "client_collaborations": 20,
+    "reviews": 25,
+    "portfolio_items": 19,
+    "primary_specializations": ["System and network administration", "Software and server setup"]
+  },
+  "selected_work": [
+    {
+      "slug": "windows-server-cloud-migration",
+      "title_uk": "Міграція Windows Server у хмару",
+      "title_en": "Windows Server cloud migration",
+      "title_ja": "Windows Serverのクラウド移行",
+      "problem_uk": "Робочий Windows Server потрібно було винести в хмарне середовище без втрати доступності та збереження звичних серверних функцій.",
+      "value_uk": "Перенесення зменшило залежність від локального заліза та дало кероване віддалене серверне середовище.",
+      "problem_en": "A production Windows Server needed to be moved to cloud infrastructure without losing availability or its existing server roles.",
+      "value_en": "The migration reduced dependence on local hardware and provided a manageable remote server environment.",
+      "problem_ja": "稼働中のWindows Serverを、既存機能と可用性を維持したままクラウドへ移行する必要がありました。",
+      "value_ja": "ローカル機器への依存を減らし、管理しやすいリモートサーバー環境へ移行しました。"
+    },
+    {
+      "slug": "mssql-1c-administration",
+      "title_uk": "Адміністрування MSSQL та 1C-серверів",
+      "title_en": "MSSQL and 1C server administration",
+      "title_ja": "MSSQL・1Cサーバー運用",
+      "problem_uk": "Критичні бізнес-системи залежали від MSSQL, 1C та суміжної Windows Server інфраструктури, яка потребувала стабільної експлуатації й підтримки.",
+      "value_uk": "Забезпечувалась робоча база для бухгалтерських і бізнес-процесів: бази даних, 1C, термінальний доступ і пов'язані серверні ролі.",
+      "problem_en": "Critical business workflows depended on MSSQL, 1C and related Windows Server infrastructure that required stable operation and support.",
+      "value_en": "Provided a dependable platform for accounting and business processes across databases, 1C, terminal access and related server roles.",
+      "problem_ja": "重要な業務がMSSQL、1C、および関連するWindows Server基盤に依存しており、安定運用が必要でした。",
+      "value_ja": "データベース、1C、ターミナルアクセス、関連サーバー役割を含む業務基盤を安定運用しました。"
+    },
+    {
+      "slug": "vps-recovery-troubleshooting",
+      "title_uk": "Відновлення та діагностика VPS/серверів",
+      "title_en": "VPS recovery and server troubleshooting",
+      "title_ja": "VPS・サーバー障害復旧",
+      "problem_uk": "Серверні проблеми залишались невирішеними після попереднього адміністрування та впливали на доступність сервісів.",
+      "value_uk": "Діагностика повертала сервіси до робочого стану й усувала першопричини, а не лише симптоми.",
+      "problem_en": "Server issues remained unresolved after previous administration and affected service availability.",
+      "value_en": "Troubleshooting restored service operation and addressed root causes rather than only symptoms.",
+      "problem_ja": "以前の管理では解決できなかったサーバー問題が残り、サービスの可用性に影響していました。",
+      "value_ja": "原因を特定して復旧し、症状だけでなく根本原因へ対応しました。"
+    },
+    {
+      "slug": "bitrix24-access-security",
+      "title_uk": "Контроль доступу та безпеки в Bitrix24",
+      "title_en": "Bitrix24 access and security cleanup",
+      "title_ja": "Bitrix24のアクセス・セキュリティ整理",
+      "problem_uk": "Колишні співробітники та некоректні права доступу створювали ризик для конфіденційної інформації компанії.",
+      "value_uk": "Перегляд доступів і адміністрування Bitrix24 зменшили ризик несанкціонованого доступу до робочих даних.",
+      "problem_en": "Former employees and incorrect access permissions created risk around confidential company information.",
+      "value_en": "Access cleanup and Bitrix24 administration reduced the risk of unauthorized access to business data.",
+      "problem_ja": "退職者アカウントや不適切な権限が、企業の機密情報へのリスクを生んでいました。",
+      "value_ja": "アクセス権の整理とBitrix24管理により、業務データへの不正アクセスリスクを低減しました。"
+    }
+  ]
+}
