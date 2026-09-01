@@ -1,0 +1,106 @@
+{
+  "japan-welfare-research": {
+    "problem_uk": "Правила, регіональні відмінності, доплати та відкриті дані японської системи соціальної підтримки розкидані по різних джерелах і складні для порівняння.",
+    "value_uk": "Перетворює фрагментовані нормативні та статистичні дані на єдину дослідницьку систему, де їх можна перевіряти, порівнювати та пояснювати.",
+    "problem_en": "Rules, regional differences, add-ons and public data in Japan's welfare system are fragmented across sources and difficult to compare.",
+    "value_en": "Turns fragmented regulatory and statistical data into one research system that can be validated, compared and explained.",
+    "problem_ja": "日本の福祉制度に関するルール、地域差、加算、公開データが複数の情報源に分散し、比較が難しいという課題があります。",
+    "value_ja": "分散した制度・統計情報を、検証・比較・説明できる一つの研究システムへ整理します。"
+  },
+  "aoilocal": {
+    "problem_uk": "Хмарні AI-сервіси не завжди підходять для приватних даних, локальних знань і процесів, де потрібен контроль над пам'яттю та інструментами.",
+    "value_uk": "Дає local-first AI-контур із контрольованими знаннями, пам'яттю та tool calls без повної залежності від зовнішнього провайдера.",
+    "problem_en": "Cloud AI services are not always appropriate for private data, local knowledge and workflows that require control over memory and tools.",
+    "value_en": "Provides a local-first AI layer with controlled knowledge, memory and tool calls without full dependence on an external provider.",
+    "problem_ja": "機密データやローカル知識、記憶・ツールを制御したい業務では、クラウドAIだけでは要件を満たせない場合があります。",
+    "value_ja": "外部サービスへの完全依存を避けながら、管理された知識・記憶・ツール実行を持つlocal-first AI基盤を提供します。"
+  },
+  "aoi-family-budget": {
+    "problem_uk": "Сімейні фінанси або ведуться вручну в таблицях, або передаються зовнішнім сервісам разом із чутливими даними.",
+    "value_uk": "Створює приватний local-first простір для регулярного обліку, де структура даних не заважає щоденному використанню.",
+    "problem_en": "Household finance is often managed manually in spreadsheets or handed to third-party services together with sensitive data.",
+    "value_en": "Creates a private local-first environment for recurring budgeting where structured data does not get in the way of everyday use.",
+    "problem_ja": "家計管理は表計算で手作業になりやすく、または機密性の高いデータを外部サービスへ預ける必要があります。",
+    "value_ja": "日常利用を邪魔しない構造化データと、プライバシーを重視したlocal-first家計管理環境を提供します。"
+  },
+  "aoi-fop-tax": {
+    "problem_uk": "Податкові правила для ФОП містять багато умов, а ручний розрахунок або складні бухгалтерські інтерфейси створюють зайве тертя.",
+    "value_uk": "Перетворює прикладну податкову логіку на швидкий і зрозумілий калькулятор із читабельним результатом.",
+    "problem_en": "Tax rules for Ukrainian sole proprietors contain many conditions, while manual calculations and complex accounting interfaces add friction.",
+    "value_en": "Turns practical tax logic into a fast, understandable calculator with readable output.",
+    "problem_ja": "ウクライナの個人事業主向け税制には多くの条件があり、手計算や複雑な会計画面は負担になります。",
+    "value_ja": "実務的な税計算ロジックを、素早く理解できるWeb計算ツールへ変換します。"
+  },
+  "miner-detection": {
+    "problem_uk": "Небажаний майнінг може маскуватися під звичайні процеси, споживати ресурси та залишатися непоміченим до появи явних симптомів.",
+    "value_uk": "Переносить захист від разового пошуку відомого файлу до поведінкового виявлення й контрольованої реакції.",
+    "problem_en": "Unwanted cryptomining can hide behind normal-looking processes, consume resources and remain unnoticed until obvious symptoms appear.",
+    "value_en": "Moves protection from one-off known-file removal toward behavioral detection and controlled response.",
+    "problem_ja": "不要なマイニングは通常プロセスに紛れ、リソースを消費しながら明確な症状が出るまで気付かれないことがあります。",
+    "value_ja": "既知ファイルの単発削除ではなく、振る舞い検知と制御された対応へ防御を移行します。"
+  },
+  "layered-infrastructure-security": {
+    "problem_uk": "Один firewall, VPN або endpoint-засіб не захищає інфраструктуру, якщо інші шари доступу й конфігурації залишаються слабкими.",
+    "value_uk": "Створює defense-in-depth модель із кількома незалежними бар'єрами та передбачуваним доступом замість однієї точки відмови.",
+    "problem_en": "One firewall, VPN or endpoint control cannot protect infrastructure when other access and configuration layers remain weak.",
+    "value_en": "Creates a defense-in-depth model with multiple independent barriers and predictable access instead of one security point of failure.",
+    "problem_ja": "ファイアウォール、VPN、endpoint製品の一つだけでは、他のアクセス・設定層が弱い場合にインフラ全体を守れません。",
+    "value_ja": "単一障害点に依存せず、複数の独立した防御層と予測可能なアクセスモデルを構築します。"
+  },
+  "technical-documentation": {
+    "problem_uk": "Критичне знання про систему було розпорошене між людьми, конфігураціями та застарілими матеріалами.",
+    "value_uk": "Зменшує залежність від усної пам'яті й робить систему підтримуваною, передаваною та безпечнішою для змін.",
+    "problem_en": "Critical system knowledge was fragmented across people, configuration and outdated material.",
+    "value_en": "Reduces dependence on verbal memory and makes the system easier to support, hand over and change safely.",
+    "problem_ja": "重要なシステム知識が担当者、設定、古い資料に分散していました。",
+    "value_ja": "口頭知識への依存を減らし、保守・引き継ぎ・安全な変更を行いやすくします。"
+  },
+  "software-methodology": {
+    "problem_uk": "Нових користувачів доводилося навчати через усні пояснення й розрізнені матеріали.",
+    "value_uk": "Перетворює знання про продукт на повторюваний onboarding і self-service learning, зменшуючи залежність від окремих людей.",
+    "problem_en": "New users had to be trained through verbal explanations and disconnected material.",
+    "value_en": "Turns product knowledge into repeatable onboarding and self-service learning, reducing dependence on individual people.",
+    "problem_ja": "新しい利用者の教育が口頭説明や分散した資料に依存していました。",
+    "value_ja": "製品知識を再利用可能なオンボーディングとself-service learningへ変換し、特定担当者への依存を減らします。"
+  },
+  "local-ai-learning": {
+    "problem_uk": "Внутрішні знання не завжди можна безпечно передавати зовнішнім AI-сервісам, а звичайний чат-бот не гарантує контрольованого джерела відповіді.",
+    "value_uk": "Вбудовує local AI у knowledge workflow із контрольованими матеріалами та retrieval, роблячи AI частиною процесу, а не окремою іграшкою.",
+    "problem_en": "Internal knowledge cannot always be safely sent to external AI services, while a generic chatbot does not provide a controlled source of truth.",
+    "value_en": "Integrates local AI into a knowledge workflow with controlled material and retrieval, making AI part of the process rather than a standalone novelty.",
+    "problem_ja": "社内知識を外部AIへ安全に送れない場合があり、一般的なチャットボットでは回答元を制御できません。",
+    "value_ja": "管理された資料と検索をlocal AIへ統合し、AIを単独のチャットではなくナレッジ業務の一部にします。"
+  },
+  "windows-update-orchestration": {
+    "problem_uk": "Сліпа автоматизація оновлень не розуміє, чи оновлення потрібне, чи воно завершилось і чи стан системи справді змінився.",
+    "value_uk": "Перетворює оновлення на контрольований state-driven workflow із перевіркою manifests, logs та фактичного результату.",
+    "problem_en": "Blind update automation cannot reliably tell whether an update is required, completed or actually changed system state.",
+    "value_en": "Turns updating into a controlled state-driven workflow with manifest, log and outcome validation.",
+    "problem_ja": "単純な更新自動化では、更新が必要か、完了したか、実際に状態が変わったかを判断できません。",
+    "value_ja": "manifest、log、実結果を検証するstate-drivenな更新ワークフローへ変換します。"
+  },
+  "safe-vpn-windows-server": {
+    "problem_uk": "Неправильний VPN-route на віддаленому Windows Server може миттєво відрізати адміністратора від RDP.",
+    "value_uk": "Дозволяє впроваджувати VPN як поетапну перевірену мережеву зміну без ризикованого full-tunnel перемикання.",
+    "problem_en": "A bad VPN route on a remote Windows Server can immediately lock the administrator out of RDP.",
+    "value_en": "Allows VPN to be introduced as a staged, verified network change rather than a risky full-tunnel switch.",
+    "problem_ja": "リモートWindows Serverで誤ったVPN routeを設定すると、管理者自身がRDPから切断される危険があります。",
+    "value_ja": "危険なfull-tunnel切替ではなく、段階的に検証できるネットワーク変更としてVPNを導入します。"
+  },
+  "self-hosted-collaboration": {
+    "problem_uk": "Команді потрібен приватний сервіс комунікації з контролем даних, але одноразове ручне розгортання важко підтримувати й відновлювати.",
+    "value_uk": "Дає repeatable self-hosted deployment із TLS, access control, health checks, secret management і recovery path.",
+    "problem_en": "A team needs private communications and data control, but a one-off manual deployment is difficult to maintain and recover.",
+    "value_en": "Provides a repeatable self-hosted deployment with TLS, access control, health checks, secret management and a recovery path.",
+    "problem_ja": "チームにはデータを管理できるプライベートなコミュニケーション基盤が必要ですが、一度きりの手動構築は保守・復旧が困難です。",
+    "value_ja": "TLS、アクセス制御、health check、secret管理、復旧手順を備えた再現可能なself-hosted deploymentを提供します。"
+  },
+  "mail-domain-hardening": {
+    "problem_uk": "Без контрольованої SPF/DKIM/DMARC моделі домен вразливий до spoofing, а сторонні джерела відправки важко побачити й контролювати.",
+    "value_uk": "Створює прозору модель поштової автентифікації та дозволяє поступово посилювати захист без ламання легітимної доставки.",
+    "problem_en": "Without a controlled SPF/DKIM/DMARC model, a domain is vulnerable to spoofing and third-party sending sources are difficult to see and govern.",
+    "value_en": "Creates a transparent mail-authentication model and enables progressive hardening without breaking legitimate delivery.",
+    "problem_ja": "SPF/DKIM/DMARCが管理されていないと、spoofingに弱く、外部送信元の把握と制御も困難です。",
+    "value_ja": "メール認証を可視化・管理し、正規配信を壊さず段階的にセキュリティを強化します。"
+  }
+}
